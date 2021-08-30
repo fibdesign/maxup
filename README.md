@@ -1,5 +1,4 @@
 # Maxup
-# Status : Development
 ![GitHub tag (latest SemVer pre-release)](https://img.shields.io/github/v/tag/fibdesign/maxup?include_prereleases)
 
 ## Introduction
