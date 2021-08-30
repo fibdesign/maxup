@@ -1,0 +1,74 @@
+@use "_variables";
+:root{
+  font-size: 16px;
+}
+body{padding: 0;margin: 0;}
+*{
+    a{text-decoration: none;color: unset;display: inline-block;}
+    ul{list-style: none;}scroll-behavior: smooth;
+
+    p, a{font-size: 1rem;font-weight: 300;}
+    h1, .h1{font-size: 4.2rem;}
+    h2, .h2{font-size: 3.56rem;}
+    h3, .h3{font-size: 2.92rem;}
+    h4, .h4{font-size: 2.28rem ;}
+    h5, .h5{font-size: 1.64rem ;}
+    h6, .h6{font-size: 1.2rem;}
+
+
+    p{margin: 0!important;line-height: 2;}
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        margin: 0!important;
+        font-weight: 500;
+        color: inherit;
+        line-height: 2;
+    }
+
+    :focus{
+        outline: none!important;
+    }
+
+}
+*, *:before, *:after {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+hr{opacity: 0.3;}
+.listCircle{list-style: circle!important;}
+.p-{
+    &abs{position: absolute;}
+    &fixed{position: fixed}
+    &rel{position: relative;}
+    &sticky{position: sticky;}
+}
+.d-{
+    &block{display: block;}
+    &flex{display: flex;}
+    &flexCenter{display: flex;align-items: center}
+    &none{display: none;}
+    &inline{display: inline;}
+    &unset{display: unset;}
+    &none{display: none;}
+}
+.z-{
+    &1{z-index: 1;}
+    &2{z-index: 2;}
+    &3{z-index: 3;}
+    &4{z-index: 4;}
+    &5{z-index: 5;}
+    &6{z-index: 6;}
+    &7{z-index: 7;}
+    &8{z-index: 8;}
+    &9{z-index: 9;}
+    &10{z-index: 1000;}
+}
+.image{
+    &Cover{object-fit: cover;}
+    &BgCover{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+.t-0{top: 0;}
+.b-0{bottom: 0;}
+.l-0{left: 0;}
+.r-0{right: 0;}
+.inset{inset: 0}

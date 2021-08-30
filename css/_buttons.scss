@@ -1,0 +1,228 @@
+@use "_variables";
+
+.btn-block{@extend .w-100;}
+.borderless{border: none!important;}
+button{
+  @extend .rounded, .trans-2;
+  padding: .8em 1.5em;
+  cursor: pointer;
+  border: unset;
+}
+.disabled{
+  @extend .opt-5, .bg-secondary;
+  pointer-events: none;
+}
+.btn , a.btn {
+  @extend button;
+
+  &-primary{
+    @extend .f-light,.bg-primary;
+    &:hover , &.active{background-color: variables.$primaryHA;}
+    &-block{@extend .btn-block, .btn-primary;}
+    &-r{
+      @extend .btn-primary,.round-50;
+      &-block{@extend .btn-block, .btn-primary-r;}
+    }
+  }
+  &-light{
+    background-color: variables.$light;
+    color: variables.$dark;
+    &:hover , &.active{background-color: variables.$lightHA;}
+    &-block{@extend .btn-block, .btn-light;}
+    &-r{
+      @extend .btn-light, .round-50;
+      &-block{@extend .btn-block,.btn-light-r;}
+    }
+  }
+  &-dark{
+    @extend .f-light,.bg-dark;
+    &:hover , &.active{background-color: variables.$darkHA ;}
+    &-block{@extend .btn-block,.btn-dark;}
+    &-r{
+      @extend .btn-dark,.round-50;
+      &-block{@extend .btn-block, .btn-dark-r;}
+    }
+  }
+  &-warning{
+    @extend .f-light,.bg-warning;
+    &:hover , &.active{background-color: variables.$warningHA;}
+    &-block{@extend .btn-block, .btn-warning; }
+    &-r{
+      @extend .btn-warning,.round-50;
+      &-block{@extend .btn-block, .btn-warning-r;}
+    }
+  }
+  &-danger{
+    @extend .f-light,.bg-danger;
+    &:hover , &.active{background-color: variables.$dangerHA;}
+    &-block{@extend .btn-block, .btn-danger;}
+    &-r{
+      @extend .btn-danger,.round-50;
+      &-block{@extend .btn-block, .btn-danger-r;}
+    }
+
+  }
+  &-info{
+    @extend .f-light,.bg-info;
+    &:hover , &.active{background-color: variables.$infoHA;}
+    &-block{@extend .btn-block,.btn-info; }
+    &-r{
+      @extend .btn-info,.round-50;
+      &-block{@extend .btn-block,.btn-info-r;}
+    }
+  }
+  &-success{
+    @extend .f-light,.bg-success;
+    &:hover , &.active{background-color: variables.$successHA;}
+    &-block{@extend .btn-block,.btn-success;}
+    &-r{
+      @extend .btn-success,.round-50;
+      &-block{@extend .btn-block, .btn-success-r;}
+    }
+  }
+  &-white{
+    @extend .f-dark;
+    background-color: white;
+    &-block{@extend .btn-block, .btn-white;}
+    &-r{
+      @extend .btn-white,.round-50;
+      &-block{@extend .btn-block, .btn-white-r;}
+    }
+  }
+  &-secondary{
+    @extend .f-light,.bg-secondary;
+    &:hover , &.active{background-color: variables.$secondaryHA;}
+    &-block{@extend .btn-block, .btn-secondary;}
+    &-r{
+      @extend .btn-secondary, .round-50;
+      &-block{@extend .btn-block, .btn-secondary-r;}
+    }
+  }
+  &-bee{
+    @extend .f-dark,.bg-bee;
+    &:hover , &.active{background-color: variables.$beeHA;}
+    &-block{@extend .btn-block, .btn-bee;}
+    &-r{
+      @extend .btn-bee, .round-50;
+      &-block{@extend .btn-block, .btn-bee-r;}
+
+    }
+
+  }
+
+  &-o{
+    &-primary{
+      background-color: unset;
+      color: variables.$primary;
+      border: solid 1px variables.$primary;
+      &:hover , &.active{background-color: variables.$primary;color: white;}
+      &-block{@extend .btn-block, .btn-o-primary;}
+      &-r{
+        @extend .btn-o-primary, .round-50;
+        &-block{@extend .btn-block, .btn-o-primary-r;}
+      }
+    }
+    &-light{
+      background-color: unset;
+      color: variables.$light;
+      border: solid 1px variables.$light;
+      &:hover , &.active{background-color: variables.$light;
+        color: variables.$dark;
+      }
+      &-block{@extend .btn-block, .btn-o-light;}
+      &-r{
+        @extend .btn-o-light,.round-50;
+        &-block{@extend .btn-block, .btn-o-light-r;}
+      }
+    }
+    &-dark{
+      background-color: unset;
+      color: variables.$dark;
+      border: solid 1px variables.$dark;
+      &:hover , &.active{background-color: variables.$dark;color: white;}
+      &-block{@extend .btn-block,.btn-o-dark;}
+      &-r{
+        @extend .btn-o-dark,.round-50;
+        &-block{@extend .btn-block,.btn-o-dark-r;}
+      }
+    }
+    &-warning{
+      background-color: unset;
+      color: variables.$warning;
+      border: solid 1px variables.$warning;
+      &:hover , &.active{background-color: variables.$warning;color: white;}
+      &-block{@extend .btn-block,.btn-o-warning;}
+      &-r{
+        @extend .btn-o-warning, .round-50;
+        &-block{@extend .btn-block, .btn-o-warning-r;}
+      }
+    }
+    &-danger{
+      background-color: unset;
+      color: variables.$danger;
+      border: solid 1px variables.$danger;
+      &:hover , &.active{background-color: variables.$danger;color: white;}
+      &-block{@extend .btn-block, .btn-o-danger;}
+      &-r{
+        @extend .btn-o-danger, .round-50;
+        &-block{@extend .btn-block, .btn-o-danger-r;}
+      }
+    }
+    &-info{
+      background-color: unset;
+      color: variables.$info;
+      border: solid 1px variables.$info;
+      &:hover , &.active{background-color: variables.$info;color: white;}
+      &-block{@extend .btn-block, .btn-o-info;}
+      &-r{
+        @extend .btn-o-info, .round-50;
+        &-block{@extend .btn-block, .btn-o-info-r;}
+      }
+    }
+    &-success{
+      background-color: unset;
+      color: variables.$success;
+      border: solid 1px variables.$success;
+      &:hover , &.active{background-color: variables.$success;color: white;}
+      &-block{@extend .btn-block, .btn-o-success;}
+      &-r{
+        @extend .btn-o-success, .round-50;
+        &-block{@extend .btn-block, .btn-o-success-r;}
+      }
+    }
+    &-white{
+      background-color: unset;
+      color: white;
+      border: solid 1px white;
+      &:hover , &.active{background-color: white;color: variables.$dark;}
+      &-block{@extend .btn-block, .btn-o-white;}
+      &-r{
+        @extend .btn-o-white, .round-50;
+        &-block{@extend .btn-block, .btn-o-white-r;}
+      }
+    }
+    &-secondary{
+      background-color: unset;
+      color: variables.$secondary;
+      border: solid 1px variables.$secondary;
+      &:hover , &.active{background-color: variables.$secondary;color: white;}
+      &-block{@extend .btn-block, .btn-o-secondary;}
+      &-r{
+        @extend .btn-o-secondary, .round-50;
+        &-block{@extend .btn-block, .btn-o-secondary-r;}
+      }
+    }
+    &-bee{
+      background-color: unset;
+      color: variables.$bee;
+      border: solid 1px variables.$bee;
+      &:hover , &.active{background-color: variables.$bee;color: white;}
+      &-block{@extend .btn-block, .btn-o-bee;}
+      &-r{
+        @extend .btn-o-bee, .round-50;
+        &-block{@extend .btn-block, .btn-o-bee-r;}
+      }
+    }
+  }
+
+}

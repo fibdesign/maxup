@@ -1,0 +1,175 @@
+@use "variables";
+.navigation{
+  @extend .trans-5,.p-rel,.d-flexCenter,.box-s;
+  z-index: variables.$zLayoutNavigation;
+  flex-wrap:  nowrap ;
+  max-height: 60px;
+  *{padding: 0 5px;color: black;}
+  .brand{
+    @extend .d-flexCenter;
+    height: 60px;
+    &.rtlB{margin-right: 2em;}
+    &.ltrB{margin-left: 2em;}
+    img{height: 50px;}
+  }
+  .nav-toggle{
+    @extend .d-none, .rounded;
+    background-color: transparent;
+    i *{color: black!important;}
+    &.rtlT{
+      margin-right: auto;
+      margin-left: 1em;
+    }
+    &.ltrT{
+      margin-right: 1em;
+      margin-left: auto;
+    }
+  }
+  ul{
+    @extend .d-flex;list-style: none;
+    li{
+      @extend .d-flexCenter;
+      a:not(.btn){
+        text-transform: capitalize;opacity: 0.6;transition: 0.2s ease-in-out;
+        &:hover , &.activeLink{opacity: 1;font-weight: bold;}
+      }
+    }
+  }
+
+  &.fixed{@extend .t-0, .l-0, .w-100, .p-sticky;}
+
+  &.noshadow{box-shadow: unset;}
+
+  &.navLight {
+    *{color: variables.$dark;}
+  }
+
+  &.navDark {
+    *{color: variables.$light;}
+    background-color: variables.$dark;
+  }
+  &.navIsActive{max-height: 100vh!important;}
+}
+/*if width was less @800 */
+@media screen and (max-width:800px){
+
+  .navigation {
+    flex-wrap:  wrap ;
+    overflow: hidden;
+    brand{flex: 0 0 80%;}
+    .nav-toggle{flex: 0 0 10%;display: block;}
+    ul{flex: 0 0 100%;flex-wrap:  wrap ;
+      li{flex: 0 0 100%;}
+    }
+  }
+}
+table{
+  width:100%;
+
+  tbody {
+    tr{
+      &:nth-child(even) {background-color: #eee;}
+      &:nth-child(odd) {background-color: #fff;}
+      th{
+        text-align: right;
+        &:first-child{width: 60px}
+      }
+      td:not(.name) , table th{color: black}
+      th, td {padding: 10px 5px;}
+    }
+  }
+  thead {
+    font-weight: bold;
+    background-color: #eee;
+    th{padding: 5px;}
+  }
+}
+.alert{
+  @extend .w-100,.rounded,.f-14,.f-center;
+  margin: 5px 0;
+  padding: 5px;
+  &-primary{
+    @extend .alert;
+    background-color: variables.$primaryG;
+    border: 1px solid variables.$primaryHA;
+    color: variables.$primaryHA;
+  }
+  &-light{
+    @extend .alert;
+    background-color: variables.$lightG;
+    border: 1px solid variables.$lightHA;
+    color: variables.$lightHA;
+  }
+  &-dark{
+    @extend .alert;
+    background-color: variables.$lightG;
+    border: 1px solid variables.$darkHA;
+    color: variables.$darkHA;
+  }
+  &-warning{
+    @extend .alert;
+    background-color: variables.$warningG;
+    border: 1px solid variables.$warningHA;
+    color: variables.$warningHA;
+  }
+  &-danger{
+    @extend .alert;
+    background-color: variables.$dangerG;
+    border: 1px solid variables.$dangerHA;
+    color: variables.$dangerHA;
+  }
+  &-info{
+    @extend .alert;
+    background-color: variables.$infoG;
+    border: 1px solid variables.$infoHA;
+    color: variables.$infoHA;
+  }
+  &-success{
+    @extend .alert;
+    background-color: variables.$successG;
+    border: 1px solid variables.$successHA;
+    color: variables.$successHA;
+  }
+  &-secondary{
+    @extend .alert;
+    background-color: variables.$secondaryG;
+    border: 1px solid variables.$secondaryHA;
+    color: variables.$secondaryHA;
+  }
+  &-bee{
+    @extend .alert;
+    background-color: variables.$beeG;
+    border: 1px solid variables.$beeHA;
+    color: variables.$beeHA;
+  }
+}
+.pagination{
+  display: flex;
+  .disabled{opacity: 0.5}
+  .active{background-color: #3B69B1;color: white;}
+  li{
+    padding: 10px;
+    border: solid 1px #00000015;
+    &:last-child{
+      margin-right: 5px;
+      border-top-left-radius: 7px;
+      border-bottom-left-radius: 7px;
+    }
+    &:first-child{
+      margin-left: 5px;
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px;
+    }
+    &:last-child , &:first-child{
+      background-color: #3B69B1;
+      color: white;
+    }
+  }
+}
+
+.avatar{
+  width: 80px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  @extend .row-c;
+}
