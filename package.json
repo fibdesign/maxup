@@ -1,5 +1,5 @@
 {
-  "name": "@fibdesign/maxup",
+  "name": "fib-maxup",
   "style": "css/index.css",
   "version": "1.4.0",
   "description": "a css framework",
@@ -7,7 +7,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fibdesign/MaxUp.git"
+    "url": "git+https://github.com/fibdesign/maxup.git"
   },
   "keywords": [
     "css",
@@ -17,7 +17,7 @@
   "author": "Sadegh Ghaderi <msghaderi99@gmail.com> (http://twitter.com/msghaderi99)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fibdesign/MaxUp/issues"
+    "url": "https://github.com/fibdesign/maxup/issues"
   },
   "homepage": "https://maxup.fibdesign.ir"
 }
