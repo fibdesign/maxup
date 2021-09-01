@@ -20,12 +20,12 @@
 .xcol{
   flex: 0 0 100%;max-width: 100%;
   &-body{
-    flex: 0 0 70%;
-    max-width: 70%;
+    flex: 0 0 80%;
+    max-width: 80%;
   }
   &-info{
-    flex: 0 0 30%;
-    max-width: 30%;
+    flex: 0 0 20%;
+    max-width: 20%;
   }
   @for $i from 1 through 6 {
     &-#{$i} {

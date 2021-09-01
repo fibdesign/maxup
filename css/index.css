@@ -964,12 +964,12 @@ table thead th {
   max-width: 100%;
 }
 .xcol-body {
-  flex: 0 0 70%;
-  max-width: 70%;
+  flex: 0 0 80%;
+  max-width: 80%;
 }
 .xcol-info {
-  flex: 0 0 30%;
-  max-width: 30%;
+  flex: 0 0 20%;
+  max-width: 20%;
 }
 .xcol-1, .xcol-1-6-2, .xcol-1-6, .xcol-1-5-2, .xcol-1-5, .xcol-1-4-2, .xcol-1-4, .xcol-1-3-2, .xcol-1-3, .xcol-1-2-2, .xcol-1-2, .xcol-1-1-2, .xcol-1-1, .rox-1 {
   flex: 0 0 100%;
