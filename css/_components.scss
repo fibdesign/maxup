@@ -16,8 +16,8 @@
     @extend .d-none, .rounded;
     background-color: transparent;
     i *{color: black!important;}
-    margin-inline-start: 1em;
-    margin-inline-end: auto;
+    margin-inline-start: auto;
+    margin-inline-end:1em ;
   }
   ul{
     @extend .d-flex;list-style: none;
@@ -50,7 +50,7 @@
   .navigation {
     flex-wrap:  wrap ;
     overflow: hidden;
-    brand{flex: 0 0 80%;}
+    .brand{flex: 0 0 80%;}
     .nav-toggle{flex: 0 0 10%;display: block;}
     ul{flex: 0 0 100%;flex-wrap:  wrap ;
       li{flex: 0 0 100%;}

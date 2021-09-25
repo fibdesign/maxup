@@ -778,8 +778,8 @@
 }
 .navigation .nav-toggle {
   background-color: transparent;
-  margin-inline-start: 1em;
-  margin-inline-end: auto;
+  margin-inline-start: auto;
+  margin-inline-end: 1em;
 }
 .navigation .nav-toggle i * {
   color: black !important;
@@ -818,7 +818,7 @@
     flex-wrap: wrap;
     overflow: hidden;
   }
-  .navigation brand {
+  .navigation .brand {
     flex: 0 0 80%;
   }
   .navigation .nav-toggle {
