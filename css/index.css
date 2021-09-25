@@ -133,6 +133,18 @@
   transform: translateY(-5px);
 }
 
+.space {
+  justify-content: space-between;
+}
+
+.spaceStart {
+  margin-inline-start: auto;
+}
+
+.spaceEnd {
+  margin-inline-end: auto;
+}
+
 .m-0 {
   margin: 0;
 }
