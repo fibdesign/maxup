@@ -762,16 +762,10 @@
 }
 .navigation * {
   padding: 0 5px;
-  color: black;
 }
 .navigation .brand {
   height: 60px;
-}
-.navigation .brand.rtlB {
-  margin-right: 2em;
-}
-.navigation .brand.ltrB {
-  margin-left: 2em;
+  margin-inline-end: 2em;
 }
 .navigation .brand img {
   height: 50px;
@@ -779,10 +773,6 @@
 .navigation .nav-toggle {
   background-color: transparent;
   margin-inline-start: auto;
-  margin-inline-end: 1em;
-}
-.navigation .nav-toggle i * {
-  color: black !important;
 }
 .navigation ul {
   list-style: none;
@@ -799,13 +789,10 @@
 .navigation.noshadow {
   box-shadow: unset;
 }
-.navigation.navLight * {
+.navigation.navLight *:not(.brand *) {
   color: #161d20;
 }
-.navigation.navDark {
-  background-color: #161d20;
-}
-.navigation.navDark * {
+.navigation.navDark *:not(.brand *) {
   color: #f1f1f1;
 }
 .navigation.navIsActive {
@@ -823,7 +810,7 @@
   }
   .navigation .nav-toggle {
     flex: 0 0 10%;
-    display: block;
+    display: block !important;
   }
   .navigation ul {
     flex: 0 0 100%;
