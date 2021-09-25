@@ -16,14 +16,8 @@
     @extend .d-none, .rounded;
     background-color: transparent;
     i *{color: black!important;}
-    &.rtlT{
-      margin-right: auto;
-      margin-left: 1em;
-    }
-    &.ltrT{
-      margin-right: 1em;
-      margin-left: auto;
-    }
+    margin-inline-start: 1em;
+    margin-inline-end: auto;
   }
   ul{
     @extend .d-flex;list-style: none;

@@ -778,17 +778,11 @@
 }
 .navigation .nav-toggle {
   background-color: transparent;
+  margin-inline-start: 1em;
+  margin-inline-end: auto;
 }
 .navigation .nav-toggle i * {
   color: black !important;
-}
-.navigation .nav-toggle.rtlT {
-  margin-right: auto;
-  margin-left: 1em;
-}
-.navigation .nav-toggle.ltrT {
-  margin-right: 1em;
-  margin-left: auto;
 }
 .navigation ul {
   list-style: none;
