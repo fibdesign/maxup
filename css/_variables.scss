@@ -41,7 +41,7 @@ $above : 1;
 $below : -1;
 
 
-$zLayoutNavigation : $above + $base;
+$zLayoutNavigation : $above + $above;
 $zLayoutFooter : $above + $base;
 $zLayoutModal : $above + $zLayoutNavigation;
 $zLayoutPopUpAd : $above + $zLayoutModal;
