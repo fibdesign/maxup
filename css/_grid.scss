@@ -19,14 +19,10 @@
 [class^=xcol]{position: relative;padding: 10px;}
 .xcol{
   flex: 0 0 100%;max-width: 100%;
-  &-body{
-    flex: 0 0 80%;
-    max-width: 80%;
-  }
-  &-info{
-    flex: 0 0 20%;
-    max-width: 20%;
-  }
+  &-body{flex: 0 0 80%;max-width: 80%;}
+  &-info{flex: 0 0 20%;max-width: 20%;}
+  &-body-spaced{flex: 0 0 70%;max-width: 70%;}
+  &-info-spaced{flex: 0 0 30%;max-width: 30%;}
   @for $i from 1 through 6 {
     &-#{$i} {
       flex: 0 0 (1% * (100/$i));
@@ -127,7 +123,7 @@
     }
   }
   .xcol{
-    &-body, &-info{
+    &-body, &-info, &-body-spaced, &-info-spaced{
       flex: 0 0 100%;
       max-width: 100%;
     }
