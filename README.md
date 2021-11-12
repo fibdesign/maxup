@@ -11,11 +11,11 @@ Maxup is a css framework to make your project beautiful & fast to end it.
 You can use `github` or `npm` to install.
 
 ```bash
-git clone https://github.com/msghaderi77/MaxUp.git
+git clone https://github.com/fibdesign/maxup
 ```
 or
 ```bash
-npm i fibdesign_maxup
+npm i fib_maxup
 ```
 
 ## Usage
