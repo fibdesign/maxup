@@ -1,7 +1,7 @@
 {
   "name": "fib-maxup",
   "style": "css/index.css",
-  "version": "1.4.6",
+  "version": "1.4.61",
   "description": "a css framework",
   "main": "js/MaxUp.js",
   "scripts": {},

@@ -138,11 +138,13 @@
 }
 
 .spaceStart {
-  margin-inline-start: auto;
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
 }
 
 .spaceEnd {
-  margin-inline-end: auto;
+  -webkit-margin-end: auto;
+          margin-inline-end: auto;
 }
 
 .aspectRatioCube {
@@ -757,6 +759,26 @@
   .w-75-all {
     width: 100%;
   }
+
+  .order-1 {
+    order: 1;
+  }
+
+  .order-2 {
+    order: 2;
+  }
+
+  .order-3 {
+    order: 3;
+  }
+
+  .order-4 {
+    order: 4;
+  }
+
+  .order-5 {
+    order: 5;
+  }
 }
 /*colors*/
 .navigation {
@@ -775,7 +797,8 @@
 }
 .navigation .nav-toggle {
   background-color: transparent;
-  margin-inline-start: auto;
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
 }
 .navigation ul {
   list-style: none;
@@ -1000,30 +1023,37 @@ table thead th {
   max-width: 16.6666666667%;
 }
 .column, .column-3-2-2, .column-3-2-3, .column-3-3-2, .column-3-3-3, .column-3-2, .column-3-3, .column-3, .column-2-2-2, .column-2-2-3, .column-2-3-2, .column-2-3-3, .column-2-2, .column-2-3, .column-2, .column-1-2-2, .column-1-2-3, .column-1-3-2, .column-1-3-3, .column-1-2, .column-1-3, .column-1 {
-  columns: auto;
+  -moz-columns: auto;
+       columns: auto;
   display: block;
   orphans: 1;
   widows: 1;
-  column-fill: balance;
+  -moz-column-fill: balance;
+       column-fill: balance;
   padding: 10px;
 }
 .column .vcol, .column-3-2-2 .vcol, .column-3-2-3 .vcol, .column-3-3-2 .vcol, .column-3-3-3 .vcol, .column-3-2 .vcol, .column-3-3 .vcol, .column-3 .vcol, .column-2-2-2 .vcol, .column-2-2-3 .vcol, .column-2-3-2 .vcol, .column-2-3-3 .vcol, .column-2-2 .vcol, .column-2-3 .vcol, .column-2 .vcol, .column-1-2-2 .vcol, .column-1-2-3 .vcol, .column-1-3-2 .vcol, .column-1-3-3 .vcol, .column-1-2 .vcol, .column-1-3 .vcol, .column-1 .vcol {
   width: 100%;
-  break-inside: avoid;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
   display: inline-block;
 }
 .column .vcol-span, .column-3-2-2 .vcol-span, .column-3-2-3 .vcol-span, .column-3-3-2 .vcol-span, .column-3-3-3 .vcol-span, .column-3-2 .vcol-span, .column-3-3 .vcol-span, .column-3 .vcol-span, .column-2-2-2 .vcol-span, .column-2-2-3 .vcol-span, .column-2-3-2 .vcol-span, .column-2-3-3 .vcol-span, .column-2-2 .vcol-span, .column-2-3 .vcol-span, .column-2 .vcol-span, .column-1-2-2 .vcol-span, .column-1-2-3 .vcol-span, .column-1-3-2 .vcol-span, .column-1-3-3 .vcol-span, .column-1-2 .vcol-span, .column-1-3 .vcol-span, .column-1 .vcol-span {
-  column-span: all;
+  -moz-column-span: all;
+       column-span: all;
   display: block;
 }
 .column-1, .column-1-2-2, .column-1-2-3, .column-1-3-2, .column-1-3-3, .column-1-2, .column-1-3 {
-  column-count: 1;
+  -moz-column-count: 1;
+       column-count: 1;
 }
 .column-2, .column-2-2-2, .column-2-2-3, .column-2-3-2, .column-2-3-3, .column-2-2, .column-2-3 {
-  column-count: 2;
+  -moz-column-count: 2;
+       column-count: 2;
 }
 .column-3, .column-3-2-2, .column-3-2-3, .column-3-3-2, .column-3-3-3, .column-3-2, .column-3-3 {
-  column-count: 3;
+  -moz-column-count: 3;
+       column-count: 3;
 }
 @media (max-width: 920px) {
   .container, .corow, .corow-c {
@@ -1060,13 +1090,16 @@ table thead th {
   }
 
   .column_base_tablet-1, .column-3-3-1, .column-3-2-1, .column-3-1-1, .column-3-1, .column-3, .column-3-2, .column-3-3, .column-3-2-2, .column-3-2-3, .column-3-3-2, .column-3-3-3, .column-2-3-1, .column-2-2-1, .column-2-1-1, .column-2-1, .column-2, .column-2-2, .column-2-3, .column-2-2-2, .column-2-2-3, .column-2-3-2, .column-2-3-3, .column-1-3-1, .column-1-2-1, .column-1-1-1, .column-1-1, .column-1, .column-1-2, .column-1-3, .column-1-2-2, .column-1-2-3, .column-1-3-2, .column-1-3-3 {
-    column-count: 1;
+    -moz-column-count: 1;
+         column-count: 1;
   }
   .column_base_tablet-2, .column-3-3-2, .column-3-2-2, .column-3-2, .column-3-1-2, .column-2-3-2, .column-2-2-2, .column-2-2, .column-2-1-2, .column-1-3-2, .column-1-2-2, .column-1-2, .column-1-1-2 {
-    column-count: 2;
+    -moz-column-count: 2;
+         column-count: 2;
   }
   .column_base_tablet-3, .column-3-3-3, .column-3-3, .column-3-2-3, .column-3-1-3, .column-2-3-3, .column-2-3, .column-2-2-3, .column-2-1-3, .column-1-3-3, .column-1-3, .column-1-2-3, .column-1-1-3 {
-    column-count: 3;
+    -moz-column-count: 3;
+         column-count: 3;
   }
 }
 @media (max-width: 500px) {
@@ -1108,13 +1141,16 @@ table thead th {
     max-width: 100%;
   }
   .column_base_mobile-1, .column-3-3-1, .column-3-2-1, .column-3-1-1, .column-3-1, .column-3, .column-3-2, .column-3-3, .column-3-2-2, .column-3-2-3, .column-3-3-2, .column-3-3-3, .column-2-3-1, .column-2-2-1, .column-2-1-1, .column-2-1, .column-2, .column-2-2, .column-2-3, .column-2-2-2, .column-2-2-3, .column-2-3-2, .column-2-3-3, .column-1-3-1, .column-1-2-1, .column-1-1-1, .column-1-1, .column-1, .column-1-2, .column-1-3, .column-1-2-2, .column-1-2-3, .column-1-3-2, .column-1-3-3 {
-    column-count: 1;
+    -moz-column-count: 1;
+         column-count: 1;
   }
   .column_base_mobile-2, .column-3-3-2, .column-3-2-2, .column-3-1-2, .column-2-3-2, .column-2-2-2, .column-2-1-2, .column-1-3-2, .column-1-2-2, .column-1-1-2 {
-    column-count: 2;
+    -moz-column-count: 2;
+         column-count: 2;
   }
   .column_base_mobile-3, .column-3-3-3, .column-3-2-3, .column-3-1-3, .column-2-3-3, .column-2-2-3, .column-2-1-3, .column-1-3-3, .column-1-2-3, .column-1-1-3 {
-    column-count: 3;
+    -moz-column-count: 3;
+         column-count: 3;
   }
 }
 /*colors*/
@@ -1268,12 +1304,24 @@ button, .btn, a.btn {
   border: solid 1px rgba(0, 0, 0, 0.3);
   min-height: 30px;
 }
+.form::-moz-placeholder, .form-r::-moz-placeholder, .form-aria::-moz-placeholder {
+  color: #b4b4b4;
+}
+.form:-ms-input-placeholder, .form-r:-ms-input-placeholder, .form-aria:-ms-input-placeholder {
+  color: #b4b4b4;
+}
 .form::placeholder, .form-r::placeholder, .form-aria::placeholder {
   color: #b4b4b4;
 }
 .form.failed, .failed.form-r, .failed.form-aria {
   border: 1px solid #d9534f;
   color: #d9534f;
+}
+.form.failed::-moz-placeholder, .failed.form-r::-moz-placeholder, .failed.form-aria::-moz-placeholder {
+  color: rgba(205, 78, 74, 0.3);
+}
+.form.failed:-ms-input-placeholder, .failed.form-r:-ms-input-placeholder, .failed.form-aria:-ms-input-placeholder {
+  color: rgba(205, 78, 74, 0.3);
 }
 .form.failed::placeholder, .failed.form-r::placeholder, .failed.form-aria::placeholder {
   color: rgba(205, 78, 74, 0.3);
@@ -1296,7 +1344,10 @@ button, .btn, a.btn {
   border-radius: 10px;
   padding: 5px 10px;
   border: 1px solid #00000030;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
 }
 .xSelect .xSelect__label .xSelect__label__icon {
@@ -1309,7 +1360,8 @@ button, .btn, a.btn {
   padding: 50px 5px 5px 5px;
   border: 1px solid #00000030;
   z-index: 2;
-  clip-path: inset(0 0 100% 0);
+  -webkit-clip-path: inset(0 0 100% 0);
+          clip-path: inset(0 0 100% 0);
 }
 .xSelect .xSelect__options .xSelect__search {
   height: 40px;
@@ -1323,7 +1375,8 @@ button, .btn, a.btn {
   z-index: -1;
 }
 .xSelect .xToggle {
-  clip-path: inset(0 0 0 0);
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
 }
 .xSelect .xToggleArrow {
   transform: scaleY(-1);
@@ -1375,7 +1428,10 @@ button, .btn, a.btn {
   outline: 0;
   opacity: 0.5;
   pointer-events: none;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .file .file__label {
   width: 100%;
@@ -1461,8 +1517,6 @@ body {
 }
 
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -1484,6 +1538,7 @@ hr {
   position: relative;
 }
 .p-sticky, .navigation.fixed {
+  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -1542,7 +1597,8 @@ hr {
 }
 
 .imageCover {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .imageBgCover {
   background-size: cover;
@@ -1568,6 +1624,4 @@ hr {
 
 .inset {
   inset: 0;
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
