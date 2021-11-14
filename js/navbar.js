@@ -1,4 +1,4 @@
-export default class {
+class navbar {
     constructor(navigation) {
         this.navigation = document.querySelector(navigation);
         this.navToggleBtn = this.navigation.querySelector('.nav-toggle');

@@ -749,6 +749,16 @@
   font-size: 80px;
 }
 
+.rm-margin {
+  margin: unset;
+}
+.rm-padding {
+  padding: unset;
+}
+.rm-input {
+  all: unset;
+}
+
 @media screen and (max-width: 500px) {
   .w-25-all {
     width: 100%;
@@ -778,6 +788,16 @@
 
   .order-5 {
     order: 5;
+  }
+
+  .rm-m-margin {
+    margin: unset;
+  }
+  .rm-m-padding {
+    padding: unset;
+  }
+  .rm-m-input {
+    all: unset;
   }
 }
 /*colors*/
