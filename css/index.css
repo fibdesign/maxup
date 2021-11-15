@@ -32,7 +32,8 @@
 .round-0 {
   border-radius: 0 !important;
 }
-.rounded, .xSelect .xSelect__options, .form, .form-r, .form-aria, button, .btn, a.btn, .alert, .alert-bee, .alert-secondary, .alert-success, .alert-info, .alert-danger, .alert-warning, .alert-dark, .alert-light, .alert-primary, .navigation .nav-toggle {
+.rounded, .xSelect .xSelect__options, .form, .form-r, .form-aria, button, .btn,
+a.btn, .alert, .alert-bee, .alert-secondary, .alert-success, .alert-info, .alert-danger, .alert-warning, .alert-dark, .alert-light, .alert-primary, .navigation .nav-toggle {
   border-radius: 5px !important;
 }
 .round-10 {
@@ -47,7 +48,47 @@
 .round-40 {
   border-radius: 40px !important;
 }
-.round-50, .progress .progressbar, .progress, .form-r, .btn-o-bee-r, .btn-o-bee-r-block, a.btn-o-bee-r-block, a.btn-o-bee-r, .btn-o-secondary-r, .btn-o-secondary-r-block, a.btn-o-secondary-r-block, a.btn-o-secondary-r, .btn-o-white-r, .btn-o-white-r-block, a.btn-o-white-r-block, a.btn-o-white-r, .btn-o-success-r, .btn-o-success-r-block, a.btn-o-success-r-block, a.btn-o-success-r, .btn-o-info-r, .btn-o-info-r-block, a.btn-o-info-r-block, a.btn-o-info-r, .btn-o-danger-r, .btn-o-danger-r-block, a.btn-o-danger-r-block, a.btn-o-danger-r, .btn-o-warning-r, .btn-o-warning-r-block, a.btn-o-warning-r-block, a.btn-o-warning-r, .btn-o-dark-r, .btn-o-dark-r-block, a.btn-o-dark-r-block, a.btn-o-dark-r, .btn-o-light-r, .btn-o-light-r-block, a.btn-o-light-r-block, a.btn-o-light-r, .btn-o-primary-r, .btn-o-primary-r-block, a.btn-o-primary-r-block, a.btn-o-primary-r, .btn-bee-r, .btn-bee-r-block, a.btn-bee-r-block, a.btn-bee-r, .btn-secondary-r, .btn-secondary-r-block, a.btn-secondary-r-block, a.btn-secondary-r, .btn-white-r, .btn-white-r-block, a.btn-white-r-block, a.btn-white-r, .btn-success-r, .btn-success-r-block, a.btn-success-r-block, a.btn-success-r, .btn-info-r, .btn-info-r-block, a.btn-info-r-block, a.btn-info-r, .btn-danger-r, .btn-danger-r-block, a.btn-danger-r-block, a.btn-danger-r, .btn-warning-r, .btn-warning-r-block, a.btn-warning-r-block, a.btn-warning-r, .btn-dark-r, .btn-dark-r-block, a.btn-dark-r-block, a.btn-dark-r, .btn-light-r, .btn-light-r-block, a.btn-light-r-block, a.btn-light-r, .btn-primary-r, .btn-primary-r-block, a.btn-primary-r-block, a.btn-primary-r {
+.round-50, .progress .progressbar, .progress, .form-r, .btn-o-bee-r, .btn-o-bee-r-block,
+a.btn-o-bee-r-block,
+a.btn-o-bee-r, .btn-o-secondary-r, .btn-o-secondary-r-block,
+a.btn-o-secondary-r-block,
+a.btn-o-secondary-r, .btn-o-white-r, .btn-o-white-r-block,
+a.btn-o-white-r-block,
+a.btn-o-white-r, .btn-o-success-r, .btn-o-success-r-block,
+a.btn-o-success-r-block,
+a.btn-o-success-r, .btn-o-info-r, .btn-o-info-r-block,
+a.btn-o-info-r-block,
+a.btn-o-info-r, .btn-o-danger-r, .btn-o-danger-r-block,
+a.btn-o-danger-r-block,
+a.btn-o-danger-r, .btn-o-warning-r, .btn-o-warning-r-block,
+a.btn-o-warning-r-block,
+a.btn-o-warning-r, .btn-o-dark-r, .btn-o-dark-r-block,
+a.btn-o-dark-r-block,
+a.btn-o-dark-r, .btn-o-light-r, .btn-o-light-r-block,
+a.btn-o-light-r-block,
+a.btn-o-light-r, .btn-o-primary-r, .btn-o-primary-r-block,
+a.btn-o-primary-r-block,
+a.btn-o-primary-r, .btn-bee-r, .btn-bee-r-block,
+a.btn-bee-r-block,
+a.btn-bee-r, .btn-secondary-r, .btn-secondary-r-block,
+a.btn-secondary-r-block,
+a.btn-secondary-r, .btn-white-r, .btn-white-r-block,
+a.btn-white-r-block,
+a.btn-white-r, .btn-success-r, .btn-success-r-block,
+a.btn-success-r-block,
+a.btn-success-r, .btn-info-r, .btn-info-r-block,
+a.btn-info-r-block,
+a.btn-info-r, .btn-danger-r, .btn-danger-r-block,
+a.btn-danger-r-block,
+a.btn-danger-r, .btn-warning-r, .btn-warning-r-block,
+a.btn-warning-r-block,
+a.btn-warning-r, .btn-dark-r, .btn-dark-r-block,
+a.btn-dark-r-block,
+a.btn-dark-r, .btn-light-r, .btn-light-r-block,
+a.btn-light-r-block,
+a.btn-light-r, .btn-primary-r, .btn-primary-r-block,
+a.btn-primary-r-block,
+a.btn-primary-r {
   border-radius: 50px !important;
 }
 .round-circle {
@@ -57,7 +98,8 @@
 .trans-1 {
   transition: 0.1s ease-in-out;
 }
-.trans-2, button, .btn, a.btn {
+.trans-2, button, .btn,
+a.btn {
   transition: 0.2s ease-in-out;
 }
 .trans-3 {
@@ -79,7 +121,47 @@
 .w-75, .w-75-all {
   width: 75%;
 }
-.w-100, .xSelect .xSelect__options .xSelect__option .xSelect__option__name, .xSelect .xSelect__options .xSelect__search, .xSelect .xSelect__options, .xSelect, .progress, .form, .form-r, .form-aria, .btn-block, .btn-o-bee-r-block, a.btn-o-bee-r-block, .btn-o-bee-block, a.btn-o-bee-block, .btn-o-secondary-r-block, a.btn-o-secondary-r-block, .btn-o-secondary-block, a.btn-o-secondary-block, .btn-o-white-r-block, a.btn-o-white-r-block, .btn-o-white-block, a.btn-o-white-block, .btn-o-success-r-block, a.btn-o-success-r-block, .btn-o-success-block, a.btn-o-success-block, .btn-o-info-r-block, a.btn-o-info-r-block, .btn-o-info-block, a.btn-o-info-block, .btn-o-danger-r-block, a.btn-o-danger-r-block, .btn-o-danger-block, a.btn-o-danger-block, .btn-o-warning-r-block, a.btn-o-warning-r-block, .btn-o-warning-block, a.btn-o-warning-block, .btn-o-dark-r-block, a.btn-o-dark-r-block, .btn-o-dark-block, a.btn-o-dark-block, .btn-o-light-r-block, a.btn-o-light-r-block, .btn-o-light-block, a.btn-o-light-block, .btn-o-primary-r-block, a.btn-o-primary-r-block, .btn-o-primary-block, a.btn-o-primary-block, .btn-bee-r-block, a.btn-bee-r-block, .btn-bee-block, a.btn-bee-block, .btn-secondary-r-block, a.btn-secondary-r-block, .btn-secondary-block, a.btn-secondary-block, .btn-white-r-block, a.btn-white-r-block, .btn-white-block, a.btn-white-block, .btn-success-r-block, a.btn-success-r-block, .btn-success-block, a.btn-success-block, .btn-info-r-block, a.btn-info-r-block, .btn-info-block, a.btn-info-block, .btn-danger-r-block, a.btn-danger-r-block, .btn-danger-block, a.btn-danger-block, .btn-warning-r-block, a.btn-warning-r-block, .btn-warning-block, a.btn-warning-block, .btn-dark-r-block, a.btn-dark-r-block, .btn-dark-block, a.btn-dark-block, .btn-light-r-block, a.btn-light-r-block, .btn-light-block, a.btn-light-block, .btn-primary-r-block, a.btn-primary-r-block, .btn-primary-block, a.btn-primary-block, .alert, .alert-bee, .alert-secondary, .alert-success, .alert-info, .alert-danger, .alert-warning, .alert-dark, .alert-light, .alert-primary, .navigation.fixed {
+.w-100, .xSelect .xSelect__options .xSelect__option .xSelect__option__name, .xSelect .xSelect__options .xSelect__search, .xSelect .xSelect__options, .xSelect, .progress, .form, .form-r, .form-aria, .btn-block, .btn-o-bee-r-block,
+a.btn-o-bee-r-block, .btn-o-bee-block,
+a.btn-o-bee-block, .btn-o-secondary-r-block,
+a.btn-o-secondary-r-block, .btn-o-secondary-block,
+a.btn-o-secondary-block, .btn-o-white-r-block,
+a.btn-o-white-r-block, .btn-o-white-block,
+a.btn-o-white-block, .btn-o-success-r-block,
+a.btn-o-success-r-block, .btn-o-success-block,
+a.btn-o-success-block, .btn-o-info-r-block,
+a.btn-o-info-r-block, .btn-o-info-block,
+a.btn-o-info-block, .btn-o-danger-r-block,
+a.btn-o-danger-r-block, .btn-o-danger-block,
+a.btn-o-danger-block, .btn-o-warning-r-block,
+a.btn-o-warning-r-block, .btn-o-warning-block,
+a.btn-o-warning-block, .btn-o-dark-r-block,
+a.btn-o-dark-r-block, .btn-o-dark-block,
+a.btn-o-dark-block, .btn-o-light-r-block,
+a.btn-o-light-r-block, .btn-o-light-block,
+a.btn-o-light-block, .btn-o-primary-r-block,
+a.btn-o-primary-r-block, .btn-o-primary-block,
+a.btn-o-primary-block, .btn-bee-r-block,
+a.btn-bee-r-block, .btn-bee-block,
+a.btn-bee-block, .btn-secondary-r-block,
+a.btn-secondary-r-block, .btn-secondary-block,
+a.btn-secondary-block, .btn-white-r-block,
+a.btn-white-r-block, .btn-white-block,
+a.btn-white-block, .btn-success-r-block,
+a.btn-success-r-block, .btn-success-block,
+a.btn-success-block, .btn-info-r-block,
+a.btn-info-r-block, .btn-info-block,
+a.btn-info-block, .btn-danger-r-block,
+a.btn-danger-r-block, .btn-danger-block,
+a.btn-danger-block, .btn-warning-r-block,
+a.btn-warning-r-block, .btn-warning-block,
+a.btn-warning-block, .btn-dark-r-block,
+a.btn-dark-r-block, .btn-dark-block,
+a.btn-dark-block, .btn-light-r-block,
+a.btn-light-r-block, .btn-light-block,
+a.btn-light-block, .btn-primary-r-block,
+a.btn-primary-r-block, .btn-primary-block,
+a.btn-primary-block, .alert, .alert-bee, .alert-secondary, .alert-success, .alert-info, .alert-danger, .alert-warning, .alert-dark, .alert-light, .alert-primary, .navigation.fixed {
   width: 100%;
 }
 .w-auto {
@@ -645,38 +727,106 @@
 .bg-light, .xSelect .xSelect__options .xSelect__option:hover, .progress {
   background-color: #f1f1f1;
 }
-.bg-dark, .btn-dark, .btn-dark-r, .btn-dark-r-block, a.btn-dark-r-block, a.btn-dark-r, .btn-dark-block, a.btn-dark-block, a.btn-dark {
+.bg-dark, .btn-dark, .btn-dark-r, .btn-dark-r-block,
+a.btn-dark-r-block,
+a.btn-dark-r, .btn-dark-block,
+a.btn-dark-block,
+a.btn-dark {
   background-color: #161d20;
 }
-.bg-danger, .btn-danger, .btn-danger-r, .btn-danger-r-block, a.btn-danger-r-block, a.btn-danger-r, .btn-danger-block, a.btn-danger-block, a.btn-danger {
+.bg-danger, .btn-danger, .btn-danger-r, .btn-danger-r-block,
+a.btn-danger-r-block,
+a.btn-danger-r, .btn-danger-block,
+a.btn-danger-block,
+a.btn-danger {
   background-color: #d9534f;
 }
-.bg-warning, .btn-warning, .btn-warning-r, .btn-warning-r-block, a.btn-warning-r-block, a.btn-warning-r, .btn-warning-block, a.btn-warning-block, a.btn-warning {
+.bg-warning, .btn-warning, .btn-warning-r, .btn-warning-r-block,
+a.btn-warning-r-block,
+a.btn-warning-r, .btn-warning-block,
+a.btn-warning-block,
+a.btn-warning {
   background-color: #ec4908;
 }
-.bg-success, .progress .progressbar, .btn-success, .btn-success-r, .btn-success-r-block, a.btn-success-r-block, a.btn-success-r, .btn-success-block, a.btn-success-block, a.btn-success {
+.bg-success, .progress .progressbar, .btn-success, .btn-success-r, .btn-success-r-block,
+a.btn-success-r-block,
+a.btn-success-r, .btn-success-block,
+a.btn-success-block,
+a.btn-success {
   background-color: #009774;
 }
-.bg-info, .btn-info, .btn-info-r, .btn-info-r-block, a.btn-info-r-block, a.btn-info-r, .btn-info-block, a.btn-info-block, a.btn-info {
+.bg-info, .btn-info, .btn-info-r, .btn-info-r-block,
+a.btn-info-r-block,
+a.btn-info-r, .btn-info-block,
+a.btn-info-block,
+a.btn-info {
   background-color: #5bc0de;
 }
-.bg-primary, .btn-primary, .btn-primary-r, .btn-primary-r-block, a.btn-primary-r-block, a.btn-primary-r, .btn-primary-block, a.btn-primary-block, a.btn-primary {
+.bg-primary, .btn-primary, .btn-primary-r, .btn-primary-r-block,
+a.btn-primary-r-block,
+a.btn-primary-r, .btn-primary-block,
+a.btn-primary-block,
+a.btn-primary {
   background-color: #6182b7;
 }
-.bg-secondary, .btn-secondary, .btn-secondary-r, .btn-secondary-r-block, a.btn-secondary-r-block, a.btn-secondary-r, .btn-secondary-block, a.btn-secondary-block, a.btn-secondary, .disabled {
+.bg-secondary, .btn-secondary, .btn-secondary-r, .btn-secondary-r-block,
+a.btn-secondary-r-block,
+a.btn-secondary-r, .btn-secondary-block,
+a.btn-secondary-block,
+a.btn-secondary, .disabled {
   background-color: #655653;
 }
-.bg-bee, .btn-bee, .btn-bee-r, .btn-bee-r-block, a.btn-bee-r-block, a.btn-bee-r, .btn-bee-block, a.btn-bee-block, a.btn-bee {
+.bg-bee, .btn-bee, .btn-bee-r, .btn-bee-r-block,
+a.btn-bee-r-block,
+a.btn-bee-r, .btn-bee-block,
+a.btn-bee-block,
+a.btn-bee {
   background-color: #ffc40e;
 }
 .bg-white {
   background-color: #fff;
 }
 
-.f-light, .btn-secondary, .btn-secondary-r, .btn-secondary-r-block, a.btn-secondary-r-block, a.btn-secondary-r, .btn-secondary-block, a.btn-secondary-block, a.btn-secondary, .btn-success, .btn-success-r, .btn-success-r-block, a.btn-success-r-block, a.btn-success-r, .btn-success-block, a.btn-success-block, a.btn-success, .btn-info, .btn-info-r, .btn-info-r-block, a.btn-info-r-block, a.btn-info-r, .btn-info-block, a.btn-info-block, a.btn-info, .btn-danger, .btn-danger-r, .btn-danger-r-block, a.btn-danger-r-block, a.btn-danger-r, .btn-danger-block, a.btn-danger-block, a.btn-danger, .btn-warning, .btn-warning-r, .btn-warning-r-block, a.btn-warning-r-block, a.btn-warning-r, .btn-warning-block, a.btn-warning-block, a.btn-warning, .btn-dark, .btn-dark-r, .btn-dark-r-block, a.btn-dark-r-block, a.btn-dark-r, .btn-dark-block, a.btn-dark-block, a.btn-dark, .btn-primary, .btn-primary-r, .btn-primary-r-block, a.btn-primary-r-block, a.btn-primary-r, .btn-primary-block, a.btn-primary-block, a.btn-primary {
+.f-light, .btn-secondary, .btn-secondary-r, .btn-secondary-r-block,
+a.btn-secondary-r-block,
+a.btn-secondary-r, .btn-secondary-block,
+a.btn-secondary-block,
+a.btn-secondary, .btn-success, .btn-success-r, .btn-success-r-block,
+a.btn-success-r-block,
+a.btn-success-r, .btn-success-block,
+a.btn-success-block,
+a.btn-success, .btn-info, .btn-info-r, .btn-info-r-block,
+a.btn-info-r-block,
+a.btn-info-r, .btn-info-block,
+a.btn-info-block,
+a.btn-info, .btn-danger, .btn-danger-r, .btn-danger-r-block,
+a.btn-danger-r-block,
+a.btn-danger-r, .btn-danger-block,
+a.btn-danger-block,
+a.btn-danger, .btn-warning, .btn-warning-r, .btn-warning-r-block,
+a.btn-warning-r-block,
+a.btn-warning-r, .btn-warning-block,
+a.btn-warning-block,
+a.btn-warning, .btn-dark, .btn-dark-r, .btn-dark-r-block,
+a.btn-dark-r-block,
+a.btn-dark-r, .btn-dark-block,
+a.btn-dark-block,
+a.btn-dark, .btn-primary, .btn-primary-r, .btn-primary-r-block,
+a.btn-primary-r-block,
+a.btn-primary-r, .btn-primary-block,
+a.btn-primary-block,
+a.btn-primary {
   color: #f1f1f1;
 }
-.f-dark, .btn-bee, .btn-bee-r, .btn-bee-r-block, a.btn-bee-r-block, a.btn-bee-r, .btn-bee-block, a.btn-bee-block, a.btn-bee, .btn-white, .btn-white-r, .btn-white-r-block, a.btn-white-r-block, a.btn-white-r, .btn-white-block, a.btn-white-block, a.btn-white {
+.f-dark, .btn-bee, .btn-bee-r, .btn-bee-r-block,
+a.btn-bee-r-block,
+a.btn-bee-r, .btn-bee-block,
+a.btn-bee-block,
+a.btn-bee, .btn-white, .btn-white-r, .btn-white-r-block,
+a.btn-white-r-block,
+a.btn-white-r, .btn-white-block,
+a.btn-white-block,
+a.btn-white {
   color: #161d20;
 }
 .f-danger {
@@ -988,10 +1138,13 @@ table thead th {
   display: flex;
   flex-wrap: wrap;
 }
-.row-c, .corow-c, .avatar {
+.row-c, .corow-c, .row-cc, .avatar {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.row-cc {
+  flex-direction: column;
 }
 [class^=xcol] {
   position: relative;
@@ -1178,7 +1331,8 @@ table thead th {
   border: none !important;
 }
 
-button, .btn, a.btn {
+button, .btn,
+a.btn {
   padding: 0.8em 1.5em;
   cursor: pointer;
   border: unset;
@@ -1188,127 +1342,213 @@ button, .btn, a.btn {
   pointer-events: none;
 }
 
-.btn-primary:hover, .btn-primary-r:hover, .btn-primary-r-block:hover, .btn-primary-block:hover, .btn-primary.active, .active.btn-primary-r, .active.btn-primary-r-block, .active.btn-primary-block, a.btn-primary:hover, a.btn-primary.active {
+.btn-primary:hover, .btn-primary-r:hover, .btn-primary-r-block:hover, .btn-primary-block:hover, .btn-primary.active, .active.btn-primary-r, .active.btn-primary-r-block, .active.btn-primary-block,
+a.btn-primary:hover,
+a.btn-primary.active {
   background-color: #5a79ab;
 }
-.btn-light, .btn-light-r, .btn-light-r-block, a.btn-light-r-block, a.btn-light-r, .btn-light-block, a.btn-light-block, a.btn-light {
+.btn-light, .btn-light-r, .btn-light-r-block,
+a.btn-light-r-block,
+a.btn-light-r, .btn-light-block,
+a.btn-light-block,
+a.btn-light {
   background-color: #f1f1f1;
   color: #161d20;
 }
-.btn-light:hover, .btn-light-r:hover, .btn-light-r-block:hover, .btn-light-block:hover, .btn-light.active, .active.btn-light-r, .active.btn-light-r-block, .active.btn-light-block, a.btn-light:hover, a.btn-light.active {
+.btn-light:hover, .btn-light-r:hover, .btn-light-r-block:hover, .btn-light-block:hover, .btn-light.active, .active.btn-light-r, .active.btn-light-r-block, .active.btn-light-block,
+a.btn-light:hover,
+a.btn-light.active {
   background-color: #e5e5e5;
 }
-.btn-dark:hover, .btn-dark-r:hover, .btn-dark-r-block:hover, .btn-dark-block:hover, .btn-dark.active, .active.btn-dark-r, .active.btn-dark-r-block, .active.btn-dark-block, a.btn-dark:hover, a.btn-dark.active {
+.btn-dark:hover, .btn-dark-r:hover, .btn-dark-r-block:hover, .btn-dark-block:hover, .btn-dark.active, .active.btn-dark-r, .active.btn-dark-r-block, .active.btn-dark-block,
+a.btn-dark:hover,
+a.btn-dark.active {
   background-color: #0d1113;
 }
-.btn-warning:hover, .btn-warning-r:hover, .btn-warning-r-block:hover, .btn-warning-block:hover, .btn-warning.active, .active.btn-warning-r, .active.btn-warning-r-block, .active.btn-warning-block, a.btn-warning:hover, a.btn-warning.active {
+.btn-warning:hover, .btn-warning-r:hover, .btn-warning-r-block:hover, .btn-warning-block:hover, .btn-warning.active, .active.btn-warning-r, .active.btn-warning-r-block, .active.btn-warning-block,
+a.btn-warning:hover,
+a.btn-warning.active {
   background-color: #de450a;
 }
-.btn-danger:hover, .btn-danger-r:hover, .btn-danger-r-block:hover, .btn-danger-block:hover, .btn-danger.active, .active.btn-danger-r, .active.btn-danger-r-block, .active.btn-danger-block, a.btn-danger:hover, a.btn-danger.active {
+.btn-danger:hover, .btn-danger-r:hover, .btn-danger-r-block:hover, .btn-danger-block:hover, .btn-danger.active, .active.btn-danger-r, .active.btn-danger-r-block, .active.btn-danger-block,
+a.btn-danger:hover,
+a.btn-danger.active {
   background-color: #cd4e4a;
 }
-.btn-info:hover, .btn-info-r:hover, .btn-info-r-block:hover, .btn-info-block:hover, .btn-info.active, .active.btn-info-r, .active.btn-info-r-block, .active.btn-info-block, a.btn-info:hover, a.btn-info.active {
+.btn-info:hover, .btn-info-r:hover, .btn-info-r-block:hover, .btn-info-block:hover, .btn-info.active, .active.btn-info-r, .active.btn-info-r-block, .active.btn-info-block,
+a.btn-info:hover,
+a.btn-info.active {
   background-color: #0099CC;
 }
-.btn-success:hover, .btn-success-r:hover, .btn-success-r-block:hover, .btn-success-block:hover, .btn-success.active, .active.btn-success-r, .active.btn-success-r-block, .active.btn-success-block, a.btn-success:hover, a.btn-success.active {
+.btn-success:hover, .btn-success-r:hover, .btn-success-r-block:hover, .btn-success-block:hover, .btn-success.active, .active.btn-success-r, .active.btn-success-r-block, .active.btn-success-block,
+a.btn-success:hover,
+a.btn-success.active {
   background-color: #008668;
 }
-.btn-white, .btn-white-r, .btn-white-r-block, a.btn-white-r-block, a.btn-white-r, .btn-white-block, a.btn-white-block, a.btn-white {
+.btn-white, .btn-white-r, .btn-white-r-block,
+a.btn-white-r-block,
+a.btn-white-r, .btn-white-block,
+a.btn-white-block,
+a.btn-white {
   background-color: white;
 }
-.btn-secondary:hover, .btn-secondary-r:hover, .btn-secondary-r-block:hover, .btn-secondary-block:hover, .btn-secondary.active, .active.btn-secondary-r, .active.btn-secondary-r-block, .active.btn-secondary-block, a.btn-secondary:hover, a.btn-secondary.active {
+.btn-secondary:hover, .btn-secondary-r:hover, .btn-secondary-r-block:hover, .btn-secondary-block:hover, .btn-secondary.active, .active.btn-secondary-r, .active.btn-secondary-r-block, .active.btn-secondary-block,
+a.btn-secondary:hover,
+a.btn-secondary.active {
   background-color: #5f514e;
 }
-.btn-bee:hover, .btn-bee-r:hover, .btn-bee-r-block:hover, .btn-bee-block:hover, .btn-bee.active, .active.btn-bee-r, .active.btn-bee-r-block, .active.btn-bee-block, a.btn-bee:hover, a.btn-bee.active {
+.btn-bee:hover, .btn-bee-r:hover, .btn-bee-r-block:hover, .btn-bee-block:hover, .btn-bee.active, .active.btn-bee-r, .active.btn-bee-r-block, .active.btn-bee-block,
+a.btn-bee:hover,
+a.btn-bee.active {
   background-color: #efb90e;
 }
-.btn-o-primary, .btn-o-primary-r, .btn-o-primary-r-block, a.btn-o-primary-r-block, a.btn-o-primary-r, .btn-o-primary-block, a.btn-o-primary-block, a.btn-o-primary {
+.btn-o-primary, .btn-o-primary-r, .btn-o-primary-r-block,
+a.btn-o-primary-r-block,
+a.btn-o-primary-r, .btn-o-primary-block,
+a.btn-o-primary-block,
+a.btn-o-primary {
   background-color: unset;
   color: #6182b7;
   border: solid 1px #6182b7;
 }
-.btn-o-primary:hover, .btn-o-primary-r:hover, .btn-o-primary-r-block:hover, .btn-o-primary-block:hover, .btn-o-primary.active, .active.btn-o-primary-r, .active.btn-o-primary-r-block, .active.btn-o-primary-block, a.btn-o-primary:hover, a.btn-o-primary.active {
+.btn-o-primary:hover, .btn-o-primary-r:hover, .btn-o-primary-r-block:hover, .btn-o-primary-block:hover, .btn-o-primary.active, .active.btn-o-primary-r, .active.btn-o-primary-r-block, .active.btn-o-primary-block,
+a.btn-o-primary:hover,
+a.btn-o-primary.active {
   background-color: #6182b7;
   color: white;
 }
-.btn-o-light, .btn-o-light-r, .btn-o-light-r-block, a.btn-o-light-r-block, a.btn-o-light-r, .btn-o-light-block, a.btn-o-light-block, a.btn-o-light {
+.btn-o-light, .btn-o-light-r, .btn-o-light-r-block,
+a.btn-o-light-r-block,
+a.btn-o-light-r, .btn-o-light-block,
+a.btn-o-light-block,
+a.btn-o-light {
   background-color: unset;
   color: #f1f1f1;
   border: solid 1px #f1f1f1;
 }
-.btn-o-light:hover, .btn-o-light-r:hover, .btn-o-light-r-block:hover, .btn-o-light-block:hover, .btn-o-light.active, .active.btn-o-light-r, .active.btn-o-light-r-block, .active.btn-o-light-block, a.btn-o-light:hover, a.btn-o-light.active {
+.btn-o-light:hover, .btn-o-light-r:hover, .btn-o-light-r-block:hover, .btn-o-light-block:hover, .btn-o-light.active, .active.btn-o-light-r, .active.btn-o-light-r-block, .active.btn-o-light-block,
+a.btn-o-light:hover,
+a.btn-o-light.active {
   background-color: #f1f1f1;
   color: #161d20;
 }
-.btn-o-dark, .btn-o-dark-r, .btn-o-dark-r-block, a.btn-o-dark-r-block, a.btn-o-dark-r, .btn-o-dark-block, a.btn-o-dark-block, a.btn-o-dark {
+.btn-o-dark, .btn-o-dark-r, .btn-o-dark-r-block,
+a.btn-o-dark-r-block,
+a.btn-o-dark-r, .btn-o-dark-block,
+a.btn-o-dark-block,
+a.btn-o-dark {
   background-color: unset;
   color: #161d20;
   border: solid 1px #161d20;
 }
-.btn-o-dark:hover, .btn-o-dark-r:hover, .btn-o-dark-r-block:hover, .btn-o-dark-block:hover, .btn-o-dark.active, .active.btn-o-dark-r, .active.btn-o-dark-r-block, .active.btn-o-dark-block, a.btn-o-dark:hover, a.btn-o-dark.active {
+.btn-o-dark:hover, .btn-o-dark-r:hover, .btn-o-dark-r-block:hover, .btn-o-dark-block:hover, .btn-o-dark.active, .active.btn-o-dark-r, .active.btn-o-dark-r-block, .active.btn-o-dark-block,
+a.btn-o-dark:hover,
+a.btn-o-dark.active {
   background-color: #161d20;
   color: white;
 }
-.btn-o-warning, .btn-o-warning-r, .btn-o-warning-r-block, a.btn-o-warning-r-block, a.btn-o-warning-r, .btn-o-warning-block, a.btn-o-warning-block, a.btn-o-warning {
+.btn-o-warning, .btn-o-warning-r, .btn-o-warning-r-block,
+a.btn-o-warning-r-block,
+a.btn-o-warning-r, .btn-o-warning-block,
+a.btn-o-warning-block,
+a.btn-o-warning {
   background-color: unset;
   color: #ec4908;
   border: solid 1px #ec4908;
 }
-.btn-o-warning:hover, .btn-o-warning-r:hover, .btn-o-warning-r-block:hover, .btn-o-warning-block:hover, .btn-o-warning.active, .active.btn-o-warning-r, .active.btn-o-warning-r-block, .active.btn-o-warning-block, a.btn-o-warning:hover, a.btn-o-warning.active {
+.btn-o-warning:hover, .btn-o-warning-r:hover, .btn-o-warning-r-block:hover, .btn-o-warning-block:hover, .btn-o-warning.active, .active.btn-o-warning-r, .active.btn-o-warning-r-block, .active.btn-o-warning-block,
+a.btn-o-warning:hover,
+a.btn-o-warning.active {
   background-color: #ec4908;
   color: white;
 }
-.btn-o-danger, .btn-o-danger-r, .btn-o-danger-r-block, a.btn-o-danger-r-block, a.btn-o-danger-r, .btn-o-danger-block, a.btn-o-danger-block, a.btn-o-danger {
+.btn-o-danger, .btn-o-danger-r, .btn-o-danger-r-block,
+a.btn-o-danger-r-block,
+a.btn-o-danger-r, .btn-o-danger-block,
+a.btn-o-danger-block,
+a.btn-o-danger {
   background-color: unset;
   color: #d9534f;
   border: solid 1px #d9534f;
 }
-.btn-o-danger:hover, .btn-o-danger-r:hover, .btn-o-danger-r-block:hover, .btn-o-danger-block:hover, .btn-o-danger.active, .active.btn-o-danger-r, .active.btn-o-danger-r-block, .active.btn-o-danger-block, a.btn-o-danger:hover, a.btn-o-danger.active {
+.btn-o-danger:hover, .btn-o-danger-r:hover, .btn-o-danger-r-block:hover, .btn-o-danger-block:hover, .btn-o-danger.active, .active.btn-o-danger-r, .active.btn-o-danger-r-block, .active.btn-o-danger-block,
+a.btn-o-danger:hover,
+a.btn-o-danger.active {
   background-color: #d9534f;
   color: white;
 }
-.btn-o-info, .btn-o-info-r, .btn-o-info-r-block, a.btn-o-info-r-block, a.btn-o-info-r, .btn-o-info-block, a.btn-o-info-block, a.btn-o-info {
+.btn-o-info, .btn-o-info-r, .btn-o-info-r-block,
+a.btn-o-info-r-block,
+a.btn-o-info-r, .btn-o-info-block,
+a.btn-o-info-block,
+a.btn-o-info {
   background-color: unset;
   color: #5bc0de;
   border: solid 1px #5bc0de;
 }
-.btn-o-info:hover, .btn-o-info-r:hover, .btn-o-info-r-block:hover, .btn-o-info-block:hover, .btn-o-info.active, .active.btn-o-info-r, .active.btn-o-info-r-block, .active.btn-o-info-block, a.btn-o-info:hover, a.btn-o-info.active {
+.btn-o-info:hover, .btn-o-info-r:hover, .btn-o-info-r-block:hover, .btn-o-info-block:hover, .btn-o-info.active, .active.btn-o-info-r, .active.btn-o-info-r-block, .active.btn-o-info-block,
+a.btn-o-info:hover,
+a.btn-o-info.active {
   background-color: #5bc0de;
   color: white;
 }
-.btn-o-success, .btn-o-success-r, .btn-o-success-r-block, a.btn-o-success-r-block, a.btn-o-success-r, .btn-o-success-block, a.btn-o-success-block, a.btn-o-success {
+.btn-o-success, .btn-o-success-r, .btn-o-success-r-block,
+a.btn-o-success-r-block,
+a.btn-o-success-r, .btn-o-success-block,
+a.btn-o-success-block,
+a.btn-o-success {
   background-color: unset;
   color: #009774;
   border: solid 1px #009774;
 }
-.btn-o-success:hover, .btn-o-success-r:hover, .btn-o-success-r-block:hover, .btn-o-success-block:hover, .btn-o-success.active, .active.btn-o-success-r, .active.btn-o-success-r-block, .active.btn-o-success-block, a.btn-o-success:hover, a.btn-o-success.active {
+.btn-o-success:hover, .btn-o-success-r:hover, .btn-o-success-r-block:hover, .btn-o-success-block:hover, .btn-o-success.active, .active.btn-o-success-r, .active.btn-o-success-r-block, .active.btn-o-success-block,
+a.btn-o-success:hover,
+a.btn-o-success.active {
   background-color: #009774;
   color: white;
 }
-.btn-o-white, .btn-o-white-r, .btn-o-white-r-block, a.btn-o-white-r-block, a.btn-o-white-r, .btn-o-white-block, a.btn-o-white-block, a.btn-o-white {
+.btn-o-white, .btn-o-white-r, .btn-o-white-r-block,
+a.btn-o-white-r-block,
+a.btn-o-white-r, .btn-o-white-block,
+a.btn-o-white-block,
+a.btn-o-white {
   background-color: unset;
   color: white;
   border: solid 1px white;
 }
-.btn-o-white:hover, .btn-o-white-r:hover, .btn-o-white-r-block:hover, .btn-o-white-block:hover, .btn-o-white.active, .active.btn-o-white-r, .active.btn-o-white-r-block, .active.btn-o-white-block, a.btn-o-white:hover, a.btn-o-white.active {
+.btn-o-white:hover, .btn-o-white-r:hover, .btn-o-white-r-block:hover, .btn-o-white-block:hover, .btn-o-white.active, .active.btn-o-white-r, .active.btn-o-white-r-block, .active.btn-o-white-block,
+a.btn-o-white:hover,
+a.btn-o-white.active {
   background-color: white;
   color: #161d20;
 }
-.btn-o-secondary, .btn-o-secondary-r, .btn-o-secondary-r-block, a.btn-o-secondary-r-block, a.btn-o-secondary-r, .btn-o-secondary-block, a.btn-o-secondary-block, a.btn-o-secondary {
+.btn-o-secondary, .btn-o-secondary-r, .btn-o-secondary-r-block,
+a.btn-o-secondary-r-block,
+a.btn-o-secondary-r, .btn-o-secondary-block,
+a.btn-o-secondary-block,
+a.btn-o-secondary {
   background-color: unset;
   color: #655653;
   border: solid 1px #655653;
 }
-.btn-o-secondary:hover, .btn-o-secondary-r:hover, .btn-o-secondary-r-block:hover, .btn-o-secondary-block:hover, .btn-o-secondary.active, .active.btn-o-secondary-r, .active.btn-o-secondary-r-block, .active.btn-o-secondary-block, a.btn-o-secondary:hover, a.btn-o-secondary.active {
+.btn-o-secondary:hover, .btn-o-secondary-r:hover, .btn-o-secondary-r-block:hover, .btn-o-secondary-block:hover, .btn-o-secondary.active, .active.btn-o-secondary-r, .active.btn-o-secondary-r-block, .active.btn-o-secondary-block,
+a.btn-o-secondary:hover,
+a.btn-o-secondary.active {
   background-color: #655653;
   color: white;
 }
-.btn-o-bee, .btn-o-bee-r, .btn-o-bee-r-block, a.btn-o-bee-r-block, a.btn-o-bee-r, .btn-o-bee-block, a.btn-o-bee-block, a.btn-o-bee {
+.btn-o-bee, .btn-o-bee-r, .btn-o-bee-r-block,
+a.btn-o-bee-r-block,
+a.btn-o-bee-r, .btn-o-bee-block,
+a.btn-o-bee-block,
+a.btn-o-bee {
   background-color: unset;
   color: #ffc40e;
   border: solid 1px #ffc40e;
 }
-.btn-o-bee:hover, .btn-o-bee-r:hover, .btn-o-bee-r-block:hover, .btn-o-bee-block:hover, .btn-o-bee.active, .active.btn-o-bee-r, .active.btn-o-bee-r-block, .active.btn-o-bee-block, a.btn-o-bee:hover, a.btn-o-bee.active {
+.btn-o-bee:hover, .btn-o-bee-r:hover, .btn-o-bee-r-block:hover, .btn-o-bee-block:hover, .btn-o-bee.active, .active.btn-o-bee-r, .active.btn-o-bee-r-block, .active.btn-o-bee-block,
+a.btn-o-bee:hover,
+a.btn-o-bee.active {
   background-color: #ffc40e;
   color: white;
 }
@@ -1500,33 +1740,54 @@ body {
 * ul {
   list-style: none;
 }
-* p, * a {
+* p,
+* a:not(.btn) {
   font-size: 1rem;
   font-weight: 300;
 }
-* h1, * .h1 {
+* a.btn {
+  font-size: 0.8rem;
+}
+* h1,
+* .h1 {
   font-size: 4.2rem;
 }
-* h2, * .h2 {
+* h2,
+* .h2 {
   font-size: 3.56rem;
 }
-* h3, * .h3 {
+* h3,
+* .h3 {
   font-size: 2.92rem;
 }
-* h4, * .h4 {
+* h4,
+* .h4 {
   font-size: 2.28rem;
 }
-* h5, * .h5 {
+* h5,
+* .h5 {
   font-size: 1.64rem;
 }
-* h6, * .h6 {
+* h6,
+* .h6 {
   font-size: 1.2rem;
 }
 * p {
   margin: 0 !important;
   line-height: 2;
 }
-* h1, * h2, * h3, * h4, * h5, * h6, * .h1, * .h2, * .h3, * .h4, * .h5, * .h6 {
+* h1,
+* h2,
+* h3,
+* h4,
+* h5,
+* h6,
+* .h1,
+* .h2,
+* .h3,
+* .h4,
+* .h5,
+* .h6 {
   margin: 0 !important;
   font-weight: 500;
   color: inherit;
@@ -1536,7 +1797,9 @@ body {
   outline: none !important;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
