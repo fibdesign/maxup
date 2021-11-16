@@ -394,6 +394,14 @@
   }
 
   &t {
+    
+    &-2n {
+      margin-top: -20px;
+    }
+    &-1n {
+      margin-top: -10px;
+    }
+
     &-0 {
       margin-top: 0;
     }
@@ -424,6 +432,13 @@
   }
 
   &b {
+    
+    &-2n {
+      margin-bottom: -20px;
+    }
+    &-1n {
+      margin-bottom: -10px;
+    }
     &-0 {
       margin-bottom: 0;
     }

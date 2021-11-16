@@ -380,6 +380,12 @@ a.btn-primary-block, .alert, .alert-bee, .alert-secondary, .alert-success, .aler
 .m-auto-5 {
   margin: auto 50px;
 }
+.mt-2n {
+  margin-top: -20px;
+}
+.mt-1n {
+  margin-top: -10px;
+}
 .mt-0 {
   margin-top: 0;
 }
@@ -400,6 +406,12 @@ a.btn-primary-block, .alert, .alert-bee, .alert-secondary, .alert-success, .aler
 }
 .mt-auto {
   margin-top: auto;
+}
+.mb-2n {
+  margin-bottom: -20px;
+}
+.mb-1n {
+  margin-bottom: -10px;
 }
 .mb-0 {
   margin-bottom: 0;
@@ -1848,6 +1860,15 @@ hr {
   display: none;
 }
 
+.z-3n {
+  z-index: -3;
+}
+.z-2n {
+  z-index: -2;
+}
+.z-1n {
+  z-index: -1;
+}
 .z-1 {
   z-index: 1;
 }
