@@ -115,8 +115,14 @@ a.btn {
 .w-25, .w-25-all {
   width: 25%;
 }
+.w-33, .w-33-all {
+  width: 33%;
+}
 .w-50, .w-50-all {
   width: 50%;
+}
+.w-66, .w-66-all {
+  width: 25%;
 }
 .w-75, .w-75-all {
   width: 75%;
@@ -192,7 +198,7 @@ a.btn-primary-block, .alert, .alert-bee, .alert-secondary, .alert-success, .aler
 .h-100 {
   height: 100%;
 }
-.h-auto, .form-aria {
+.h-auto {
   width: auto;
 }
 .hv-25 {
@@ -694,7 +700,7 @@ a.btn-primary-block, .alert, .alert-bee, .alert-secondary, .alert-success, .aler
 .opt-4 {
   opacity: 0.4;
 }
-.opt-5, .disabled {
+.opt-5, .btnDisabled {
   opacity: 0.5;
 }
 .opt-6 {
@@ -785,7 +791,7 @@ a.btn-primary {
 a.btn-secondary-r-block,
 a.btn-secondary-r, .btn-secondary-block,
 a.btn-secondary-block,
-a.btn-secondary, .disabled {
+a.btn-secondary, .btnDisabled {
   background-color: #655653;
 }
 .bg-bee, .btn-bee, .btn-bee-r, .btn-bee-r-block,
@@ -912,23 +918,46 @@ a.btn-white {
 }
 
 .rm-margin {
-  margin: unset;
+  margin: unset !important;
 }
 .rm-padding {
-  padding: unset;
+  padding: unset !important;
 }
-.rm-input {
+.rm-input, .rm-btn {
   all: unset;
 }
 
+@media screen and (max-width: 990px) {
+  .hiddenInTablet {
+    display: none;
+  }
+
+  .order-t-1 {
+    order: 1;
+  }
+
+  .order-t-2 {
+    order: 2;
+  }
+
+  .order-t-3 {
+    order: 3;
+  }
+
+  .order-t-4 {
+    order: 4;
+  }
+
+  .order-t-5 {
+    order: 5;
+  }
+}
 @media screen and (max-width: 500px) {
-  .w-25-all {
-    width: 100%;
+  .hiddenInMobile {
+    display: none;
   }
-  .w-50-all {
-    width: 100%;
-  }
-  .w-75-all {
+
+  .w-25-all, .w-33-all, .w-66-all, .w-75-all {
     width: 100%;
   }
 
@@ -1007,8 +1036,7 @@ a.btn-white {
   max-height: 100vh !important;
 }
 
-/*if width was less @800 */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 990px) {
   .navigation {
     flex-wrap: wrap;
     overflow: hidden;
@@ -1043,10 +1071,12 @@ table tbody tr th {
 table tbody tr th:first-child {
   width: 60px;
 }
-table tbody tr td:not(.name), table tbody tr table th {
+table tbody tr td:not(.name),
+table tbody tr table th {
   color: black;
 }
-table tbody tr th, table tbody tr td {
+table tbody tr th,
+table tbody tr td {
   padding: 10px 5px;
 }
 table thead {
@@ -1137,7 +1167,6 @@ table thead th {
 }
 
 .avatar {
-  width: 80px;
   aspect-ratio: 1/1;
   border-radius: 50%;
 }
@@ -1146,9 +1175,12 @@ table thead th {
   padding: 0 8rem;
 }
 
-.row, .corow {
+.row, .corow, .column-reverse, .column, .row-reverse {
   display: flex;
   flex-wrap: wrap;
+}
+.row-reverse {
+  flex-direction: row-reverse;
 }
 .row-c, .corow-c, .row-cc, .avatar {
   display: flex;
@@ -1158,6 +1190,13 @@ table thead th {
 .row-cc {
   flex-direction: column;
 }
+.column {
+  flex-direction: column;
+}
+.column-reverse {
+  flex-direction: column-reverse;
+}
+
 [class^=xcol] {
   position: relative;
   padding: 10px;
@@ -1183,108 +1222,62 @@ table thead th {
   flex: 0 0 30%;
   max-width: 30%;
 }
-.xcol-1, .xcol-1-6-2, .xcol-1-6, .xcol-1-5-2, .xcol-1-5, .xcol-1-4-2, .xcol-1-4, .xcol-1-3-2, .xcol-1-3, .xcol-1-2-2, .xcol-1-2, .xcol-1-1-2, .xcol-1-1, .rox-1 {
+.xcol-1, .xcol-1-6-3, .xcol-1-6-2, .xcol-1-6, .xcol-1-5-3, .xcol-1-5-2, .xcol-1-5, .xcol-1-4-3, .xcol-1-4-2, .xcol-1-4, .xcol-1-3-3, .xcol-1-3-2, .xcol-1-3, .xcol-1-2-3, .xcol-1-2-2, .xcol-1-2, .xcol-1-1-3, .xcol-1-1-2, .xcol-1-1, .rox-1 {
   flex: 0 0 100%;
   max-width: 100%;
 }
-.xcol-2, .xcol-2-6-2, .xcol-2-6, .xcol-2-5-2, .xcol-2-5, .xcol-2-4-2, .xcol-2-4, .xcol-2-3-2, .xcol-2-3, .xcol-2-2-2, .xcol-2-2, .xcol-2-1-2, .xcol-2-1, .rox-2 {
+.xcol-2, .xcol-2-6-3, .xcol-2-6-2, .xcol-2-6, .xcol-2-5-3, .xcol-2-5-2, .xcol-2-5, .xcol-2-4-3, .xcol-2-4-2, .xcol-2-4, .xcol-2-3-3, .xcol-2-3-2, .xcol-2-3, .xcol-2-2-3, .xcol-2-2-2, .xcol-2-2, .xcol-2-1-3, .xcol-2-1-2, .xcol-2-1, .rox-2 {
   flex: 0 0 50%;
   max-width: 50%;
 }
-.xcol-3, .xcol-3-6-2, .xcol-3-6, .xcol-3-5-2, .xcol-3-5, .xcol-3-4-2, .xcol-3-4, .xcol-3-3-2, .xcol-3-3, .xcol-3-2-2, .xcol-3-2, .xcol-3-1-2, .xcol-3-1, .rox-3 {
+.xcol-3, .xcol-3-6-3, .xcol-3-6-2, .xcol-3-6, .xcol-3-5-3, .xcol-3-5-2, .xcol-3-5, .xcol-3-4-3, .xcol-3-4-2, .xcol-3-4, .xcol-3-3-3, .xcol-3-3-2, .xcol-3-3, .xcol-3-2-3, .xcol-3-2-2, .xcol-3-2, .xcol-3-1-3, .xcol-3-1-2, .xcol-3-1, .rox-3 {
   flex: 0 0 33.3333333333%;
   max-width: 33.3333333333%;
 }
-.xcol-4, .xcol-4-6-2, .xcol-4-6, .xcol-4-5-2, .xcol-4-5, .xcol-4-4-2, .xcol-4-4, .xcol-4-3-2, .xcol-4-3, .xcol-4-2-2, .xcol-4-2, .xcol-4-1-2, .xcol-4-1, .rox-4 {
+.xcol-4, .xcol-4-6-3, .xcol-4-6-2, .xcol-4-6, .xcol-4-5-3, .xcol-4-5-2, .xcol-4-5, .xcol-4-4-3, .xcol-4-4-2, .xcol-4-4, .xcol-4-3-3, .xcol-4-3-2, .xcol-4-3, .xcol-4-2-3, .xcol-4-2-2, .xcol-4-2, .xcol-4-1-3, .xcol-4-1-2, .xcol-4-1, .rox-4 {
   flex: 0 0 25%;
   max-width: 25%;
 }
-.xcol-5, .xcol-5-6-2, .xcol-5-6, .xcol-5-5-2, .xcol-5-5, .xcol-5-4-2, .xcol-5-4, .xcol-5-3-2, .xcol-5-3, .xcol-5-2-2, .xcol-5-2, .xcol-5-1-2, .xcol-5-1, .rox-5 {
+.xcol-5, .xcol-5-6-3, .xcol-5-6-2, .xcol-5-6, .xcol-5-5-3, .xcol-5-5-2, .xcol-5-5, .xcol-5-4-3, .xcol-5-4-2, .xcol-5-4, .xcol-5-3-3, .xcol-5-3-2, .xcol-5-3, .xcol-5-2-3, .xcol-5-2-2, .xcol-5-2, .xcol-5-1-3, .xcol-5-1-2, .xcol-5-1, .rox-5 {
   flex: 0 0 20%;
   max-width: 20%;
 }
-.xcol-6, .xcol-6-6-2, .xcol-6-6, .xcol-6-5-2, .xcol-6-5, .xcol-6-4-2, .xcol-6-4, .xcol-6-3-2, .xcol-6-3, .xcol-6-2-2, .xcol-6-2, .xcol-6-1-2, .xcol-6-1, .rox-6 {
+.xcol-6, .xcol-6-6-3, .xcol-6-6-2, .xcol-6-6, .xcol-6-5-3, .xcol-6-5-2, .xcol-6-5, .xcol-6-4-3, .xcol-6-4-2, .xcol-6-4, .xcol-6-3-3, .xcol-6-3-2, .xcol-6-3, .xcol-6-2-3, .xcol-6-2-2, .xcol-6-2, .xcol-6-1-3, .xcol-6-1-2, .xcol-6-1, .rox-6 {
   flex: 0 0 16.6666666667%;
   max-width: 16.6666666667%;
-}
-.column, .column-3-2-2, .column-3-2-3, .column-3-3-2, .column-3-3-3, .column-3-2, .column-3-3, .column-3, .column-2-2-2, .column-2-2-3, .column-2-3-2, .column-2-3-3, .column-2-2, .column-2-3, .column-2, .column-1-2-2, .column-1-2-3, .column-1-3-2, .column-1-3-3, .column-1-2, .column-1-3, .column-1 {
-  -moz-columns: auto;
-       columns: auto;
-  display: block;
-  orphans: 1;
-  widows: 1;
-  -moz-column-fill: balance;
-       column-fill: balance;
-  padding: 10px;
-}
-.column .vcol, .column-3-2-2 .vcol, .column-3-2-3 .vcol, .column-3-3-2 .vcol, .column-3-3-3 .vcol, .column-3-2 .vcol, .column-3-3 .vcol, .column-3 .vcol, .column-2-2-2 .vcol, .column-2-2-3 .vcol, .column-2-3-2 .vcol, .column-2-3-3 .vcol, .column-2-2 .vcol, .column-2-3 .vcol, .column-2 .vcol, .column-1-2-2 .vcol, .column-1-2-3 .vcol, .column-1-3-2 .vcol, .column-1-3-3 .vcol, .column-1-2 .vcol, .column-1-3 .vcol, .column-1 .vcol {
-  width: 100%;
-  -moz-column-break-inside: avoid;
-       break-inside: avoid;
-  display: inline-block;
-}
-.column .vcol-span, .column-3-2-2 .vcol-span, .column-3-2-3 .vcol-span, .column-3-3-2 .vcol-span, .column-3-3-3 .vcol-span, .column-3-2 .vcol-span, .column-3-3 .vcol-span, .column-3 .vcol-span, .column-2-2-2 .vcol-span, .column-2-2-3 .vcol-span, .column-2-3-2 .vcol-span, .column-2-3-3 .vcol-span, .column-2-2 .vcol-span, .column-2-3 .vcol-span, .column-2 .vcol-span, .column-1-2-2 .vcol-span, .column-1-2-3 .vcol-span, .column-1-3-2 .vcol-span, .column-1-3-3 .vcol-span, .column-1-2 .vcol-span, .column-1-3 .vcol-span, .column-1 .vcol-span {
-  -moz-column-span: all;
-       column-span: all;
-  display: block;
-}
-.column-1, .column-1-2-2, .column-1-2-3, .column-1-3-2, .column-1-3-3, .column-1-2, .column-1-3 {
-  -moz-column-count: 1;
-       column-count: 1;
-}
-.column-2, .column-2-2-2, .column-2-2-3, .column-2-3-2, .column-2-3-3, .column-2-2, .column-2-3 {
-  -moz-column-count: 2;
-       column-count: 2;
-}
-.column-3, .column-3-2-2, .column-3-2-3, .column-3-3-2, .column-3-3-3, .column-3-2, .column-3-3 {
-  -moz-column-count: 3;
-       column-count: 3;
 }
 @media (max-width: 920px) {
   .container, .corow, .corow-c {
     padding: 0 4rem;
   }
 
-  .xcol_media_tablet, .xcol-6, .rox-6, .xcol-6-1, .xcol-6-1-2, .xcol-6-2, .xcol-6-2-2, .xcol-6-3, .xcol-6-3-2, .xcol-6-4, .xcol-6-4-2, .xcol-6-5, .xcol-6-5-2, .xcol-6-6, .xcol-6-6-2, .xcol-5, .rox-5, .xcol-5-1, .xcol-5-1-2, .xcol-5-2, .xcol-5-2-2, .xcol-5-3, .xcol-5-3-2, .xcol-5-4, .xcol-5-4-2, .xcol-5-5, .xcol-5-5-2, .xcol-5-6, .xcol-5-6-2, .xcol-4, .rox-4, .xcol-4-1, .xcol-4-1-2, .xcol-4-2, .xcol-4-2-2, .xcol-4-3, .xcol-4-3-2, .xcol-4-4, .xcol-4-4-2, .xcol-4-5, .xcol-4-5-2, .xcol-4-6, .xcol-4-6-2, .xcol-3, .rox-3, .xcol-3-1, .xcol-3-1-2, .xcol-3-2, .xcol-3-2-2, .xcol-3-3, .xcol-3-3-2, .xcol-3-4, .xcol-3-4-2, .xcol-3-5, .xcol-3-5-2, .xcol-3-6, .xcol-3-6-2, .xcol-2, .rox-2, .xcol-2-1, .xcol-2-1-2, .xcol-2-2, .xcol-2-2-2, .xcol-2-3, .xcol-2-3-2, .xcol-2-4, .xcol-2-4-2, .xcol-2-5, .xcol-2-5-2, .xcol-2-6, .xcol-2-6-2, .xcol-1, .rox-1, .xcol-1-1, .xcol-1-1-2, .xcol-1-2, .xcol-1-2-2, .xcol-1-3, .xcol-1-3-2, .xcol-1-4, .xcol-1-4-2, .xcol-1-5, .xcol-1-5-2, .xcol-1-6, .xcol-1-6-2 {
+  .xcol_media_tablet, .xcol-6, .rox-6, .xcol-6-1, .xcol-6-1-2, .xcol-6-1-3, .xcol-6-2, .xcol-6-2-2, .xcol-6-2-3, .xcol-6-3, .xcol-6-3-2, .xcol-6-3-3, .xcol-6-4, .xcol-6-4-2, .xcol-6-4-3, .xcol-6-5, .xcol-6-5-2, .xcol-6-5-3, .xcol-6-6, .xcol-6-6-2, .xcol-6-6-3, .xcol-5, .rox-5, .xcol-5-1, .xcol-5-1-2, .xcol-5-1-3, .xcol-5-2, .xcol-5-2-2, .xcol-5-2-3, .xcol-5-3, .xcol-5-3-2, .xcol-5-3-3, .xcol-5-4, .xcol-5-4-2, .xcol-5-4-3, .xcol-5-5, .xcol-5-5-2, .xcol-5-5-3, .xcol-5-6, .xcol-5-6-2, .xcol-5-6-3, .xcol-4, .rox-4, .xcol-4-1, .xcol-4-1-2, .xcol-4-1-3, .xcol-4-2, .xcol-4-2-2, .xcol-4-2-3, .xcol-4-3, .xcol-4-3-2, .xcol-4-3-3, .xcol-4-4, .xcol-4-4-2, .xcol-4-4-3, .xcol-4-5, .xcol-4-5-2, .xcol-4-5-3, .xcol-4-6, .xcol-4-6-2, .xcol-4-6-3, .xcol-3, .rox-3, .xcol-3-1, .xcol-3-1-2, .xcol-3-1-3, .xcol-3-2, .xcol-3-2-2, .xcol-3-2-3, .xcol-3-3, .xcol-3-3-2, .xcol-3-3-3, .xcol-3-4, .xcol-3-4-2, .xcol-3-4-3, .xcol-3-5, .xcol-3-5-2, .xcol-3-5-3, .xcol-3-6, .xcol-3-6-2, .xcol-3-6-3, .xcol-2, .rox-2, .xcol-2-1, .xcol-2-1-2, .xcol-2-1-3, .xcol-2-2, .xcol-2-2-2, .xcol-2-2-3, .xcol-2-3, .xcol-2-3-2, .xcol-2-3-3, .xcol-2-4, .xcol-2-4-2, .xcol-2-4-3, .xcol-2-5, .xcol-2-5-2, .xcol-2-5-3, .xcol-2-6, .xcol-2-6-2, .xcol-2-6-3, .xcol-1, .rox-1, .xcol-1-1, .xcol-1-1-2, .xcol-1-1-3, .xcol-1-2, .xcol-1-2-2, .xcol-1-2-3, .xcol-1-3, .xcol-1-3-2, .xcol-1-3-3, .xcol-1-4, .xcol-1-4-2, .xcol-1-4-3, .xcol-1-5, .xcol-1-5-2, .xcol-1-5-3, .xcol-1-6, .xcol-1-6-2, .xcol-1-6-3 {
     flex: 0 0 100%;
     max-width: 100%;
   }
-  .xcol_media_tablet-1, .xcol-6-1-2, .xcol-6-1, .xcol-5-1-2, .xcol-5-1, .xcol-4-1-2, .xcol-4-1, .xcol-3-1-2, .xcol-3-1, .xcol-2-1-2, .xcol-2-1, .xcol-1-1-2, .xcol-1-1 {
+  .xcol_media_tablet-1, .xcol-6-1-3, .xcol-6-1-2, .xcol-6-1, .xcol-5-1-3, .xcol-5-1-2, .xcol-5-1, .xcol-4-1-3, .xcol-4-1-2, .xcol-4-1, .xcol-3-1-3, .xcol-3-1-2, .xcol-3-1, .xcol-2-1-3, .xcol-2-1-2, .xcol-2-1, .xcol-1-1-3, .xcol-1-1-2, .xcol-1-1 {
     flex: 0 0 100%;
     max-width: 100%;
   }
-  .xcol_media_tablet-2, .xcol-6-2-2, .xcol-6-2, .xcol-5-2-2, .xcol-5-2, .xcol-4-2-2, .xcol-4-2, .xcol-3-2-2, .xcol-3-2, .xcol-2-2-2, .xcol-2-2, .xcol-1-2-2, .xcol-1-2 {
+  .xcol_media_tablet-2, .xcol-6-2-3, .xcol-6-2-2, .xcol-6-2, .xcol-5-2-3, .xcol-5-2-2, .xcol-5-2, .xcol-4-2-3, .xcol-4-2-2, .xcol-4-2, .xcol-3-2-3, .xcol-3-2-2, .xcol-3-2, .xcol-2-2-3, .xcol-2-2-2, .xcol-2-2, .xcol-1-2-3, .xcol-1-2-2, .xcol-1-2 {
     flex: 0 0 50%;
     max-width: 50%;
   }
-  .xcol_media_tablet-3, .xcol-6-3-2, .xcol-6-3, .xcol-5-3-2, .xcol-5-3, .xcol-4-3-2, .xcol-4-3, .xcol-3-3-2, .xcol-3-3, .xcol-2-3-2, .xcol-2-3, .xcol-1-3-2, .xcol-1-3 {
+  .xcol_media_tablet-3, .xcol-6-3-3, .xcol-6-3-2, .xcol-6-3, .xcol-5-3-3, .xcol-5-3-2, .xcol-5-3, .xcol-4-3-3, .xcol-4-3-2, .xcol-4-3, .xcol-3-3-3, .xcol-3-3-2, .xcol-3-3, .xcol-2-3-3, .xcol-2-3-2, .xcol-2-3, .xcol-1-3-3, .xcol-1-3-2, .xcol-1-3 {
     flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
-  .xcol_media_tablet-4, .xcol-6-4-2, .xcol-6-4, .xcol-5-4-2, .xcol-5-4, .xcol-4-4-2, .xcol-4-4, .xcol-3-4-2, .xcol-3-4, .xcol-2-4-2, .xcol-2-4, .xcol-1-4-2, .xcol-1-4 {
+  .xcol_media_tablet-4, .xcol-6-4-3, .xcol-6-4-2, .xcol-6-4, .xcol-5-4-3, .xcol-5-4-2, .xcol-5-4, .xcol-4-4-3, .xcol-4-4-2, .xcol-4-4, .xcol-3-4-3, .xcol-3-4-2, .xcol-3-4, .xcol-2-4-3, .xcol-2-4-2, .xcol-2-4, .xcol-1-4-3, .xcol-1-4-2, .xcol-1-4 {
     flex: 0 0 25%;
     max-width: 25%;
   }
-  .xcol_media_tablet-5, .xcol-6-5-2, .xcol-6-5, .xcol-5-5-2, .xcol-5-5, .xcol-4-5-2, .xcol-4-5, .xcol-3-5-2, .xcol-3-5, .xcol-2-5-2, .xcol-2-5, .xcol-1-5-2, .xcol-1-5 {
+  .xcol_media_tablet-5, .xcol-6-5-3, .xcol-6-5-2, .xcol-6-5, .xcol-5-5-3, .xcol-5-5-2, .xcol-5-5, .xcol-4-5-3, .xcol-4-5-2, .xcol-4-5, .xcol-3-5-3, .xcol-3-5-2, .xcol-3-5, .xcol-2-5-3, .xcol-2-5-2, .xcol-2-5, .xcol-1-5-3, .xcol-1-5-2, .xcol-1-5 {
     flex: 0 0 20%;
     max-width: 20%;
   }
-  .xcol_media_tablet-6, .xcol-6-6-2, .xcol-6-6, .xcol-5-6-2, .xcol-5-6, .xcol-4-6-2, .xcol-4-6, .xcol-3-6-2, .xcol-3-6, .xcol-2-6-2, .xcol-2-6, .xcol-1-6-2, .xcol-1-6 {
+  .xcol_media_tablet-6, .xcol-6-6-3, .xcol-6-6-2, .xcol-6-6, .xcol-5-6-3, .xcol-5-6-2, .xcol-5-6, .xcol-4-6-3, .xcol-4-6-2, .xcol-4-6, .xcol-3-6-3, .xcol-3-6-2, .xcol-3-6, .xcol-2-6-3, .xcol-2-6-2, .xcol-2-6, .xcol-1-6-3, .xcol-1-6-2, .xcol-1-6 {
     flex: 0 0 16.6666666667%;
     max-width: 16.6666666667%;
-  }
-
-  .column_base_tablet-1, .column-3-3-1, .column-3-2-1, .column-3-1-1, .column-3-1, .column-3, .column-3-2, .column-3-3, .column-3-2-2, .column-3-2-3, .column-3-3-2, .column-3-3-3, .column-2-3-1, .column-2-2-1, .column-2-1-1, .column-2-1, .column-2, .column-2-2, .column-2-3, .column-2-2-2, .column-2-2-3, .column-2-3-2, .column-2-3-3, .column-1-3-1, .column-1-2-1, .column-1-1-1, .column-1-1, .column-1, .column-1-2, .column-1-3, .column-1-2-2, .column-1-2-3, .column-1-3-2, .column-1-3-3 {
-    -moz-column-count: 1;
-         column-count: 1;
-  }
-  .column_base_tablet-2, .column-3-3-2, .column-3-2-2, .column-3-2, .column-3-1-2, .column-2-3-2, .column-2-2-2, .column-2-2, .column-2-1-2, .column-1-3-2, .column-1-2-2, .column-1-2, .column-1-1-2 {
-    -moz-column-count: 2;
-         column-count: 2;
-  }
-  .column_base_tablet-3, .column-3-3-3, .column-3-3, .column-3-2-3, .column-3-1-3, .column-2-3-3, .column-2-3, .column-2-2-3, .column-2-1-3, .column-1-3-3, .column-1-3, .column-1-2-3, .column-1-1-3 {
-    -moz-column-count: 3;
-         column-count: 3;
   }
 }
 @media (max-width: 500px) {
@@ -1292,7 +1285,7 @@ table thead th {
     padding: 0 2rem;
   }
 
-  .xcol_media_mobile, .xcol-6, .rox-6, .xcol-6-1, .xcol-6-1-2, .xcol-6-2, .xcol-6-2-2, .xcol-6-3, .xcol-6-3-2, .xcol-6-4, .xcol-6-4-2, .xcol-6-5, .xcol-6-5-2, .xcol-6-6, .xcol-6-6-2, .xcol-5, .rox-5, .xcol-5-1, .xcol-5-1-2, .xcol-5-2, .xcol-5-2-2, .xcol-5-3, .xcol-5-3-2, .xcol-5-4, .xcol-5-4-2, .xcol-5-5, .xcol-5-5-2, .xcol-5-6, .xcol-5-6-2, .xcol-4, .rox-4, .xcol-4-1, .xcol-4-1-2, .xcol-4-2, .xcol-4-2-2, .xcol-4-3, .xcol-4-3-2, .xcol-4-4, .xcol-4-4-2, .xcol-4-5, .xcol-4-5-2, .xcol-4-6, .xcol-4-6-2, .xcol-3, .rox-3, .xcol-3-1, .xcol-3-1-2, .xcol-3-2, .xcol-3-2-2, .xcol-3-3, .xcol-3-3-2, .xcol-3-4, .xcol-3-4-2, .xcol-3-5, .xcol-3-5-2, .xcol-3-6, .xcol-3-6-2, .xcol-2, .rox-2, .xcol-2-1, .xcol-2-1-2, .xcol-2-2, .xcol-2-2-2, .xcol-2-3, .xcol-2-3-2, .xcol-2-4, .xcol-2-4-2, .xcol-2-5, .xcol-2-5-2, .xcol-2-6, .xcol-2-6-2, .xcol-1, .rox-1, .xcol-1-1, .xcol-1-1-2, .xcol-1-2, .xcol-1-2-2, .xcol-1-3, .xcol-1-3-2, .xcol-1-4, .xcol-1-4-2, .xcol-1-5, .xcol-1-5-2, .xcol-1-6, .xcol-1-6-2 {
+  .xcol_media_mobile, .xcol-6, .rox-6, .xcol-6-1, .xcol-6-1-2, .xcol-6-1-3, .xcol-6-2, .xcol-6-2-2, .xcol-6-2-3, .xcol-6-3, .xcol-6-3-2, .xcol-6-3-3, .xcol-6-4, .xcol-6-4-2, .xcol-6-4-3, .xcol-6-5, .xcol-6-5-2, .xcol-6-5-3, .xcol-6-6, .xcol-6-6-2, .xcol-6-6-3, .xcol-5, .rox-5, .xcol-5-1, .xcol-5-1-2, .xcol-5-1-3, .xcol-5-2, .xcol-5-2-2, .xcol-5-2-3, .xcol-5-3, .xcol-5-3-2, .xcol-5-3-3, .xcol-5-4, .xcol-5-4-2, .xcol-5-4-3, .xcol-5-5, .xcol-5-5-2, .xcol-5-5-3, .xcol-5-6, .xcol-5-6-2, .xcol-5-6-3, .xcol-4, .rox-4, .xcol-4-1, .xcol-4-1-2, .xcol-4-1-3, .xcol-4-2, .xcol-4-2-2, .xcol-4-2-3, .xcol-4-3, .xcol-4-3-2, .xcol-4-3-3, .xcol-4-4, .xcol-4-4-2, .xcol-4-4-3, .xcol-4-5, .xcol-4-5-2, .xcol-4-5-3, .xcol-4-6, .xcol-4-6-2, .xcol-4-6-3, .xcol-3, .rox-3, .xcol-3-1, .xcol-3-1-2, .xcol-3-1-3, .xcol-3-2, .xcol-3-2-2, .xcol-3-2-3, .xcol-3-3, .xcol-3-3-2, .xcol-3-3-3, .xcol-3-4, .xcol-3-4-2, .xcol-3-4-3, .xcol-3-5, .xcol-3-5-2, .xcol-3-5-3, .xcol-3-6, .xcol-3-6-2, .xcol-3-6-3, .xcol-2, .rox-2, .xcol-2-1, .xcol-2-1-2, .xcol-2-1-3, .xcol-2-2, .xcol-2-2-2, .xcol-2-2-3, .xcol-2-3, .xcol-2-3-2, .xcol-2-3-3, .xcol-2-4, .xcol-2-4-2, .xcol-2-4-3, .xcol-2-5, .xcol-2-5-2, .xcol-2-5-3, .xcol-2-6, .xcol-2-6-2, .xcol-2-6-3, .xcol-1, .rox-1, .xcol-1-1, .xcol-1-1-2, .xcol-1-1-3, .xcol-1-2, .xcol-1-2-2, .xcol-1-2-3, .xcol-1-3, .xcol-1-3-2, .xcol-1-3-3, .xcol-1-4, .xcol-1-4-2, .xcol-1-4-3, .xcol-1-5, .xcol-1-5-2, .xcol-1-5-3, .xcol-1-6, .xcol-1-6-2, .xcol-1-6-3 {
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -1304,7 +1297,7 @@ table thead th {
     flex: 0 0 50%;
     max-width: 50%;
   }
-  .xcol_media_mobile-3 {
+  .xcol_media_mobile-3, .xcol-6-6-3, .xcol-6-5-3, .xcol-6-4-3, .xcol-6-3-3, .xcol-6-2-3, .xcol-6-1-3, .xcol-5-6-3, .xcol-5-5-3, .xcol-5-4-3, .xcol-5-3-3, .xcol-5-2-3, .xcol-5-1-3, .xcol-4-6-3, .xcol-4-5-3, .xcol-4-4-3, .xcol-4-3-3, .xcol-4-2-3, .xcol-4-1-3, .xcol-3-6-3, .xcol-3-5-3, .xcol-3-4-3, .xcol-3-3-3, .xcol-3-2-3, .xcol-3-1-3, .xcol-2-6-3, .xcol-2-5-3, .xcol-2-4-3, .xcol-2-3-3, .xcol-2-2-3, .xcol-2-1-3, .xcol-1-6-3, .xcol-1-5-3, .xcol-1-4-3, .xcol-1-3-3, .xcol-1-2-3, .xcol-1-1-3 {
     flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
@@ -1325,18 +1318,6 @@ table thead th {
     flex: 0 0 100%;
     max-width: 100%;
   }
-  .column_base_mobile-1, .column-3-3-1, .column-3-2-1, .column-3-1-1, .column-3-1, .column-3, .column-3-2, .column-3-3, .column-3-2-2, .column-3-2-3, .column-3-3-2, .column-3-3-3, .column-2-3-1, .column-2-2-1, .column-2-1-1, .column-2-1, .column-2, .column-2-2, .column-2-3, .column-2-2-2, .column-2-2-3, .column-2-3-2, .column-2-3-3, .column-1-3-1, .column-1-2-1, .column-1-1-1, .column-1-1, .column-1, .column-1-2, .column-1-3, .column-1-2-2, .column-1-2-3, .column-1-3-2, .column-1-3-3 {
-    -moz-column-count: 1;
-         column-count: 1;
-  }
-  .column_base_mobile-2, .column-3-3-2, .column-3-2-2, .column-3-1-2, .column-2-3-2, .column-2-2-2, .column-2-1-2, .column-1-3-2, .column-1-2-2, .column-1-1-2 {
-    -moz-column-count: 2;
-         column-count: 2;
-  }
-  .column_base_mobile-3, .column-3-3-3, .column-3-2-3, .column-3-1-3, .column-2-3-3, .column-2-2-3, .column-2-1-3, .column-1-3-3, .column-1-2-3, .column-1-1-3 {
-    -moz-column-count: 3;
-         column-count: 3;
-  }
 }
 /*colors*/
 .borderless {
@@ -1350,7 +1331,7 @@ a.btn {
   border: unset;
 }
 
-.disabled {
+.btnDisabled {
   pointer-events: none;
 }
 
@@ -1566,7 +1547,7 @@ a.btn-o-bee.active {
 }
 /*colors*/
 .form, .form-r, .form-aria {
-  height: calc(2.25rem + 2px);
+  min-height: calc(2.25rem + 2px);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -1720,14 +1701,16 @@ a.btn-o-bee.active {
   font-size: 42px;
   padding-bottom: 16px;
 }
-.file .file__label i, .file .file__label .file__title {
+.file .file__label i,
+.file .file__label .file__title {
   color: #0d1113;
   transition: 200ms color;
 }
 .file .file__label:hover {
   border: 2px solid #0d1113;
 }
-.file .file__label:hover i, .file .file__label:hover .file__title {
+.file .file__label:hover i,
+.file .file__label:hover .file__title {
   color: #0d1113;
 }
 
@@ -1903,6 +1886,10 @@ hr {
 .imageCover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+.imageFill {
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .imageBgCover {
   background-size: cover;

@@ -1,5 +1,5 @@
-class navbar {
-    constructor(navigation) {
+export default class {
+    constructor(navigation = '.Navigation') {
         this.navigation = document.querySelector(navigation);
         this.navToggleBtn = this.navigation.querySelector('.nav-toggle');
         (this.navToggleBtn)
@@ -10,10 +10,10 @@ class navbar {
 
         this.navToggleBtn.addEventListener('click', this.ToggleNav.bind(this));
     }
-    SetDataCollapseOnNavToggle(){
-        this.navToggleBtn.setAttribute('data-collapse' , (window.innerWidth <= 800));
+    SetDataCollapseOnNavToggle() {
+        this.navToggleBtn.setAttribute('data-collapse', (window.innerWidth <= 800));
     }
-    ToggleNav(){
+    ToggleNav() {
         this.navigation.classList.toggle('navIsActive')
     }
 }

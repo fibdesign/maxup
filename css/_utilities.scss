@@ -94,9 +94,22 @@
     width: 25%;
   }
 
+
+
+  &-33,
+  &-33-all {
+    width: 33%;
+  }
+
   &-50,
   &-50-all {
     width: 50%;
+  }
+
+
+  &-66,
+  &-66-all {
+    width: 25%;
   }
 
   &-75,
@@ -394,10 +407,11 @@
   }
 
   &t {
-    
+
     &-2n {
       margin-top: -20px;
     }
+
     &-1n {
       margin-top: -10px;
     }
@@ -432,13 +446,15 @@
   }
 
   &b {
-    
+
     &-2n {
       margin-bottom: -20px;
     }
+
     &-1n {
       margin-bottom: -10px;
     }
+
     &-0 {
       margin-bottom: 0;
     }
@@ -1031,28 +1047,59 @@
 
 .rm- {
   &margin {
-    margin: unset;
+    margin: unset !important;
   }
 
   &padding {
-    padding: unset;
+    padding: unset !important;
   }
 
-  &input {
+  &input,
+  &btn {
     all: unset;
   }
 }
 
+
+
+@media screen and (max-width: 990px) {
+
+  .hiddenInTablet {
+    display: none;
+  }
+
+  .order-t-1 {
+    order: 1;
+  }
+
+  .order-t-2 {
+    order: 2;
+  }
+
+  .order-t-3 {
+    order: 3;
+  }
+
+  .order-t-4 {
+    order: 4;
+  }
+
+  .order-t-5 {
+    order: 5;
+  }
+
+}
+
 @media screen and (max-width: 500px) {
+  .hiddenInMobile {
+    display: none;
+  }
+
   .w {
-    &-25-all {
-      width: 100%;
-    }
 
-    &-50-all {
-      width: 100%;
-    }
-
+    &-25-all,
+    &-33-all,
+    &-66-all,
     &-75-all {
       width: 100%;
     }

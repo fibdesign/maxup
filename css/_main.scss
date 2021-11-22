@@ -158,9 +158,18 @@ hr {
 }
 
 .z- {
-    &3n{z-index: -3;}
-    &2n{z-index: -2;}
-    &1n{z-index: -1;}
+    &3n {
+        z-index: -3;
+    }
+
+    &2n {
+        z-index: -2;
+    }
+
+    &1n {
+        z-index: -1;
+    }
+
     &1 {
         z-index: 1;
     }
@@ -205,6 +214,10 @@ hr {
 .image {
     &Cover {
         object-fit: cover;
+    }
+
+    &Fill {
+        object-fit: fill;
     }
 
     &BgCover {

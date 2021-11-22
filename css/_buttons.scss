@@ -16,7 +16,7 @@ button {
   border: unset;
 }
 
-.disabled {
+.btnDisabled {
   @extend .opt-5,
   .bg-secondary;
   pointer-events: none;

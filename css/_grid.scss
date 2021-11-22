@@ -7,6 +7,11 @@
     display: flex;
     flex-wrap: wrap;
 
+    &-reverse {
+      @extend .row;
+      flex-direction: row-reverse;
+    }
+
     &-c {
       display: flex;
       justify-content: center;
@@ -25,6 +30,16 @@
         @extend .xcol-#{$i};
       }
     }
+  }
+}
+
+.column {
+  @extend .row;
+  flex-direction: column;
+
+  &-reverse {
+    @extend .row;
+    flex-direction: column-reverse;
   }
 }
 
@@ -79,51 +94,16 @@
           &-2 {
             @extend .xcol-#{$i};
           }
+          
+          &-3 {
+            @extend .xcol-#{$i};
+          }
         }
       }
     }
   }
 }
 
-.column {
-  columns: auto;
-  display: block;
-  orphans: 1;
-  widows: 1;
-  column-fill: balance;
-  padding: 10px;
-
-  .vcol {
-    width: 100%;
-    break-inside: avoid;
-    display: inline-block;
-  }
-
-  .vcol-span {
-    column-span: all;
-    display: block;
-  }
-
-
-  @for $i from 1 through 3 {
-    &-#{$i} {
-      @extend .column;
-      column-count: #{$i};
-
-      &-2,
-      &-3 {
-        @extend .column;
-        @extend .column-#{$i};
-
-        &-2,
-        &-3 {
-          @extend .column;
-          @extend .column-#{$i};
-        }
-      }
-    }
-  }
-}
 
 @media (max-width: 920px) {
   .container {
@@ -154,45 +134,9 @@
             &-2 {
               @extend .xcol_media_tablet-#{$j};
             }
-          }
-        }
-      }
-    }
-  }
-
-  .column_base_tablet {
-    @for $i from 1 through 3 {
-      &-#{$i} {
-        column-count: $i;
-      }
-    }
-  }
-
-  .column {
-    @for $i from 1 through 3 {
-      &-#{$i} {
-        @extend .column_base_tablet-1;
-
-        @for $j from 1 through 3 {
-          &-#{$j} {
-            @if($j==1) {
-              @extend .column_base_tablet-1;
-            }
-
-            @else {
-              @extend .column_base_tablet-#{$j};
-            }
-
-            @for $j from 1 through 3 {
-              &-#{$j} {
-                @if($j==1) {
-                  @extend .column_base_tablet-1;
-                }
-
-                @else {
-                  @extend .column_base_tablet-#{$j};
-                }
-              }
+            
+            &-3 {
+              @extend .xcol_media_tablet-#{$j};
             }
           }
         }
@@ -239,40 +183,9 @@
             &-2 {
               @extend .xcol_media_mobile-2;
             }
-          }
-        }
-      }
-    }
-  }
-
-
-  .column_base_mobile {
-    @for $i from 1 through 3 {
-      &-#{$i} {
-        column-count: $i;
-      }
-    }
-  }
-
-  .column {
-    @for $i from 1 through 3 {
-      &-#{$i} {
-        @extend .column_base_mobile-1;
-
-        @for $j from 1 through 3 {
-          &-#{$j} {
-            @extend .column_base_mobile-1;
-
-            @for $k from 1 through 3 {
-              &-#{$k} {
-                @if($k==1) {
-                  @extend .column_base_mobile-1;
-                }
-
-                @else {
-                  @extend .column_base_mobile-#{$k};
-                }
-              }
+            
+            &-3 {
+              @extend .xcol_media_mobile-3;
             }
           }
         }
