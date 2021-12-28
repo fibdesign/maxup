@@ -1014,12 +1014,12 @@ a.btn-white {
 .navigation ul {
   list-style: none;
 }
-.navigation ul li a:not(.btn) {
+.navigation ul li a:not(.btn, .exlMe) {
   text-transform: capitalize;
   opacity: 0.6;
   transition: 0.2s ease-in-out;
 }
-.navigation ul li a:not(.btn):hover, .navigation ul li a:not(.btn).activeLink {
+.navigation ul li a:not(.btn, .exlMe):hover, .navigation ul li a:not(.btn, .exlMe).activeLink {
   opacity: 1;
   font-weight: bold;
 }
@@ -1056,34 +1056,34 @@ a.btn-white {
     flex: 0 0 100%;
   }
 }
-table {
+.table {
   width: 100%;
 }
-table tbody tr:nth-child(even) {
+.table tbody tr:nth-child(even) {
   background-color: #eee;
 }
-table tbody tr:nth-child(odd) {
+.table tbody tr:nth-child(odd) {
   background-color: #fff;
 }
-table tbody tr th {
+.table tbody tr th {
   text-align: right;
 }
-table tbody tr th:first-child {
+.table tbody tr th:first-child {
   width: 60px;
 }
-table tbody tr td:not(.name),
-table tbody tr table th {
+.table tbody tr td:not(.name),
+.table tbody tr table th {
   color: black;
 }
-table tbody tr th,
-table tbody tr td {
+.table tbody tr th,
+.table tbody tr td {
   padding: 10px 5px;
 }
-table thead {
+.table thead {
   font-weight: bold;
   background-color: #eee;
 }
-table thead th {
+.table thead th {
   padding: 5px;
 }
 

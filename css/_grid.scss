@@ -1,7 +1,9 @@
 .container {
   padding: 0 8rem;
 }
-
+.alignCenter {
+  align-items: center;
+}
 .ro {
   &w {
     display: flex;

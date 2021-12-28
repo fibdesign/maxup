@@ -15,9 +15,9 @@ git clone https://github.com/fibdesign/maxup
 ```
 or
 ```bash
-npm i fib_maxup
+npm i fib-maxup
 ```
 
 ## Usage
-Simply import `css/index.css` and `js/MaxUp.js` to your project
+Simply import `css/index.css` and `js/navbar.js` (if you needed) to your project
 
