@@ -21,9 +21,7 @@ button {
   .bg-secondary;
   pointer-events: none;
 }
-
-
-
+a.btn{width: fit-content;}
 .btn,
 a.btn {
   @extend button;
