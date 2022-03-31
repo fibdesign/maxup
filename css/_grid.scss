@@ -14,6 +14,10 @@
       flex-direction: row-reverse;
     }
 
+    &-a{
+      display: flex;
+      align-items: center;
+    }
     &-c {
       display: flex;
       justify-content: center;
@@ -27,6 +31,11 @@
   }
 
   &x {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+    max-width: 100%;
+
     @for $i from 1 through 6 {
       &-#{$i} {
         @extend .xcol-#{$i};
@@ -38,6 +47,12 @@
 .column {
   @extend .row;
   flex-direction: column;
+
+  &-c{
+    @extend .column;
+    justify-content: center;
+    align-items: center;
+  }
 
   &-reverse {
     @extend .row;

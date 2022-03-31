@@ -1002,7 +1002,7 @@ a.btn-white {
   height: 60px;
 }
 .navigation .brand img {
-  height: 50px;
+  height: 40px;
 }
 .navigation .nav-toggle {
   background-color: transparent;
@@ -1176,12 +1176,16 @@ a.btn-white {
   align-items: center;
 }
 
-.row, .corow, .column-reverse, .column, .row-reverse {
+.row, .corow, .column-reverse, .column, .column-c, .row-reverse {
   display: flex;
   flex-wrap: wrap;
 }
 .row-reverse {
   flex-direction: row-reverse;
+}
+.row-a {
+  display: flex;
+  align-items: center;
 }
 .row-c, .corow-c, .row-cc, .avatar {
   display: flex;
@@ -1191,8 +1195,18 @@ a.btn-white {
 .row-cc {
   flex-direction: column;
 }
-.column {
+.rox {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.column, .column-c {
   flex-direction: column;
+}
+.column-c {
+  justify-content: center;
+  align-items: center;
 }
 .column-reverse {
   flex-direction: column-reverse;
