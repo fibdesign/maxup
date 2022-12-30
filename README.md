@@ -1,4 +1,5 @@
 # Maxup
+Version 2 is here!
 
 [//]: # (![GitHub tag &#40;latest SemVer&#41;]&#40;https://img.shields.io/github/v/tag/fibdesign/maxup&#41;)
 
