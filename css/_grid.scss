@@ -1,19 +1,21 @@
+@use "variables";
 .container {
   padding: 0 8rem;
 }
 .alignCenter {
   align-items: center;
 }
+.justifyCenter{
+  justify-content: center;
+}
 .ro {
   &w {
     display: flex;
     flex-wrap: wrap;
-
     &-reverse {
       @extend .row;
       flex-direction: row-reverse;
     }
-
     &-a{
       display: flex;
       align-items: center;
@@ -22,11 +24,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    &-cc {
-      @extend .row-c;
-      flex-direction: column
     }
   }
 
@@ -61,13 +58,10 @@
 }
 
 .corow {
-  @extend .container,
-  .row;
-
-  &-c {
-    @extend .container,
-    .row-c;
-  }
+  width: calc(100% - 8rem);
+  margin-inline-start: 4rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 [class^=xcol] {
@@ -82,21 +76,25 @@
   &-body {
     flex: 0 0 80%;
     max-width: 80%;
+    &-t{@extend .xcol-body}
   }
 
   &-info {
     flex: 0 0 20%;
     max-width: 20%;
+    &-t{@extend .xcol-info}
   }
 
   &-body-spaced {
     flex: 0 0 70%;
     max-width: 70%;
+    &-t{@extend .xcol-body-spaced}
   }
 
   &-info-spaced {
     flex: 0 0 30%;
     max-width: 30%;
+    &-t{@extend .xcol-info-spaced}
   }
 
   @for $i from 1 through 6 {
@@ -122,9 +120,13 @@
 }
 
 
-@media (max-width: 920px) {
-  .container {
+@media (max-width: variables.$under-desktop-size) {
+  .container{
     padding: 0 4rem;
+  }
+  .corow{
+    width: calc(100% - 4rem);
+    margin-inline-start: 2rem;
   }
 
   .xcol_media_tablet {
@@ -140,6 +142,14 @@
   }
 
   .xcol {
+    &-body-t,
+    &-info-t,
+    &-body-spaced-t,
+    &-info-spaced-t {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
     @for $i from 1 through 6 {
       &-#{$i} {
         @extend .xcol_media_tablet;
@@ -162,11 +172,15 @@
   }
 }
 
-@media (max-width: 500px) {
-  .container {
+@media (max-width: variables.$under-mobile-size) {
+  .container{
     padding: 0 2rem;
   }
 
+  .corow{
+    width: calc(100% - 2rem);
+    margin-inline-start: 1rem;
+  }
   .xcol_media_mobile {
     flex: 0 0 100%;
     max-width: 100%;

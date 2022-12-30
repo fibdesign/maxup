@@ -1,10 +1,8 @@
 {
   "name": "fib-maxup",
   "style": "css/index.css",
-  "version": "1.4.764",
+  "version": "2.0.0",
   "description": "a css framework",
-  "main": "js/MaxUp.js",
-  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fibdesign/maxup.git"
@@ -14,10 +12,10 @@
     "framework",
     "maxup"
   ],
-  "author": "Sadegh Ghaderi <msghaderi99@gmail.com> (http://twitter.com/msghaderi99)",
+  "author": "Sadegh Ghaderi <msghaderi99@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fibdesign/maxup/issues"
   },
-  "homepage": "https://maxup.fibdesign.ir"
+  "homepage": "https://github.com/fibdesign/maxup"
 }

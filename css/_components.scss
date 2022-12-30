@@ -8,7 +8,7 @@
   .p-0-3;
   z-index: variables.$zLayoutNavigation;
   flex-wrap: nowrap;
-  max-height: 60px;
+  height: fit-content;
 
   * {
     padding: 0 5px;
@@ -22,15 +22,26 @@
       height: 40px;
     }
   }
+  #nav-check {
+    display: none;
+    &:checked ~ .nav-links{
+      max-height: 100vh !important;
+    }
+  }
 
   .nav-toggle {
     @extend .d-none,
     .rounded;
     background-color: transparent;
     margin-inline-start: auto;
+    cursor: pointer;
+    width: fit-content;
+    user-select: none;
   }
-
-  ul {
+  .nav-links{
+    transition: 0.5s ease;
+  }
+  ul{
     @extend .d-flex;
     list-style: none;
 
@@ -73,79 +84,50 @@
       color: variables.$light;
     }
   }
-
-  &.navIsActive {
-    max-height: 100vh !important;
-  }
 }
 
-@media screen and (max-width:990px) {
-
-  .navigation {
-    flex-wrap: wrap;
-    overflow: hidden;
-
-    .brand {
-      flex: 0 0 80%;
-    }
-
-    .nav-toggle {
-      flex: 0 0 10%;
-      display: block !important;
-    }
-
-    ul {
-      flex: 0 0 100%;
-      flex-wrap: wrap;
-
-      li {
-        flex: 0 0 100%;
-      }
-    }
-  }
-}
-
-.table {
+.xTable{
   width: 100%;
+  text-align: right;
+  border-collapse: separate;
+  border-spacing: 2px 0.8rem;
+  td,th{
+    padding: 1rem;
+  }
+  thead {
+    tr{
+      position: sticky;
+      top: 60px;
+      box-shadow: 0 0 6px #00000010;
+      border-radius: 15px;
+    }
+    th{
+      background-color:  var(--custom-table-th-bg, #fafafa);
+      &:first-child{border-radius: 0 15px 15px 0}
+      &:last-child{border-radius: 15px 0 0 15px}
+    }
+  }
 
   tbody {
-    tr {
-      &:nth-child(even) {
-        background-color: #eee;
+    td{
+      background-color: var(--custom-table-td-bg, #fff);
+      &:first-child{border-radius: 0 15px 15px 0}
+      &:last-child{border-radius: 15px 0 0 15px}
+      &[colspan]:not([colspan="1"]){
+        border-radius:15px!important;
+
       }
-
-      &:nth-child(odd) {
-        background-color: #fff;
-      }
-
-      th {
-        text-align: right;
-
-        &:first-child {
-          width: 60px
-        }
-      }
-
-      td:not(.name),
-      table th {
-        color: black
-      }
-
-      th,
-      td {
-        padding: 10px 5px;
+    }
+    tr{
+      border-radius: 15px;
+      transition: 0.2s ease-in-out;
+      margin-bottom: 1rem;
+      &:hover{
+        box-shadow: 0 0 10px #00000020;
       }
     }
   }
 
-  thead {
-    font-weight: bold;
-    background-color: #eee;
-
-    th {
-      padding: 5px;
-    }
-  }
 }
 
 .alert {
@@ -260,4 +242,78 @@
   aspect-ratio: 1/1;
   border-radius: 50%;
   @extend .row-c;
+}
+
+@media screen and (max-width: variables.$under-desktop-size) {
+
+  .navigation {
+    flex-wrap: wrap;
+    //overflow: hidden;
+
+
+    .brand {
+      //flex: 0 0 80%;
+    }
+
+    .nav-toggle {
+      //flex: 0 0 10%;
+      display: block !important;
+    }
+
+    .nav-links{
+      flex: 0 0 100%;
+      max-height: 0;
+      overflow: hidden;
+    }
+    ul{
+      flex: 0 0 100%;
+      flex-wrap: wrap;
+
+      li {
+        flex: 0 0 100%;
+      }
+    }
+  }
+
+  .xTable, .xTable tbody, .xTable tr, .xTable td{
+    display: block;
+    width: 100%;
+  }
+  .xTable {
+    thead{
+      display: none;
+    }
+    tr{
+      margin-top:  1rem;
+    }
+    td{
+      text-align: left!important;
+      padding-right: 50%;
+      position: relative;
+      border: solid 1px #00000016;
+
+      &:first-child{
+        border-radius: 15px 15px 0 0!important;
+      }
+      &:last-child{
+        border-radius: 0 0 15px 15px!important;
+      }
+
+      &:before{
+        content: attr(data-label);
+        position: absolute;
+        right: 1rem;
+        width: 50%;
+        text-align: right;
+        font-weight: bold;
+      }
+    }
+  }
+}
+@media screen and (max-width: variables.$under-mobile-size) {
+  .mobile-sidebar{
+    position: fixed !important;
+    bottom: 0;
+    z-index: 9;
+  }
 }

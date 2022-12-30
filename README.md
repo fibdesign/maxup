@@ -4,8 +4,9 @@
 ## Introduction
 Maxup is a css framework to make your project beautiful & fast to end it.
 
+Documentation soon... 
 
-[Documentation](https://maxup.fibdesign.ir/)
+[//]: # ([Documentation]&#40;https://maxup.fibdesign.ir/&#41;)
 
 ## Installation
 You can use `github` or `npm` to install.
@@ -18,6 +19,8 @@ or
 npm i fib-maxup
 ```
 
-## Usage
-Simply import `css/index.css` and `js/navbar.js` (if you needed) to your project
 
+#### change log: 
+[Changes](./CHANGES.md)
+
+Enjoy!

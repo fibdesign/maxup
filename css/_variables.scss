@@ -1,3 +1,21 @@
+:root{
+  --under-mobile-size: 641px;
+  --under-desktop-size: 961px;
+  --tv-size: 1281px;
+
+  --color-primary: #6182b7;
+  --color-light: #f1f1f1;
+  --color-dark: #161d20;
+  --color-warning: #ec4908;
+  --color-danger: #d9534f;
+  --color-info: #5bc0de;
+  --color-success: #009774;
+  --color-secondary: #655653;
+  --color-bee: #ffc40e;
+}
+
+
+
 /*colors*/
 $primary : #6182b7;
 $primaryHA : #5a79ab;
@@ -50,3 +68,8 @@ $zLayoutPopUpAd : $above + $zLayoutModal;
 $zNavMenuBackdrop : $below + $base;
 $zNavMenuPopover : $above + $base;
 $zNavMenuToggle : $above + $zNavMenuPopover;
+
+// sizes
+$under-mobile-size: 641px;
+$under-desktop-size: 961px;
+$tv-size: 1281px;

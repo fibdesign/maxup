@@ -16,15 +16,35 @@ button {
   border: unset;
 }
 
-.btnDisabled {
-  @extend .opt-5,
-  .bg-secondary;
-  pointer-events: none;
-}
 a.btn{width: fit-content;}
 .btn,
 a.btn {
   @extend button;
+
+  &-custom {
+    background-color: var(--custom-btn-bg, variables.$primary);
+    color: var(--custom-btn-color, #fff);
+    &:hover,
+    &.active {
+      background-color: var(--custom-btn-bg-active, variables.$primaryHA);
+      color: var(--custom-btn-color-active, #fff);
+    }
+
+    &-block {
+      @extend .btn-block,
+      .btn-custom;
+    }
+
+    &-r {
+      @extend .btn-custom,
+      .round-50;
+
+      &-block {
+        @extend .btn-block,
+        .btn-custom-r;
+      }
+    }
+  }
 
   &-primary {
     @extend .f-light,
@@ -275,6 +295,34 @@ a.btn {
   }
 
   &-o {
+
+    &-custom {
+      background-color: unset;
+      color: var(--custom-btn-color, variables.$primary);
+      border: solid 1px var(--custom-btn-bg,variables.$primary);
+
+      &:hover,
+      &.active {
+        background-color: var(--custom-btn-bg-active,variables.$primaryHA);
+        border: solid 1px var(--custom-btn-bg-active,variables.$primaryHA);
+        color: var(--custom-btn-color-active, white);
+      }
+
+      &-block {
+        @extend .btn-block,
+        .btn-o-primary;
+      }
+
+      &-r {
+        @extend .btn-o-primary,
+        .round-50;
+
+        &-block {
+          @extend .btn-block,
+          .btn-o-primary-r;
+        }
+      }
+    }
     &-primary {
       background-color: unset;
       color: variables.$primary;
@@ -546,4 +594,22 @@ a.btn {
     }
   }
 
+}
+
+.icon-btn{
+  padding: 10px!important;
+  aspect-ratio: 1/1!important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%!important;
+}
+
+
+.btn-disabled {
+  background-color: variables.$secondary!important;
+  border-color: variables.$secondary!important;
+  color: white!important;
+  opacity: 0.2!important;
+  cursor: not-allowed!important;
 }

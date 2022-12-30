@@ -1,9 +1,8 @@
 @use "variables";
 
 .form {
-  @extend .w-100,
-  .rounded,
-  .p-0-1;
+  @extend .w-100;
+  border-radius: 10px;
   min-height: calc(2.25rem + 2px);
   font-size: 1rem;
   font-weight: 400;
@@ -11,8 +10,8 @@
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
-  border: solid 1px rgba(0, 0, 0, 0.3);
-  min-height: 30px;
+  border: solid 1px #00000010;
+  padding: 0.5rem 0.7rem;
 
   &::placeholder {
     color: #b4b4b4;
@@ -25,10 +24,6 @@
     &::placeholder {
       color: variables.$dangerG
     }
-  }
-
-  &-aria {
-    @extend .form;
   }
 
   &-r {
@@ -51,82 +46,6 @@
   width: 60%;
   height: 10px;
   padding: 5px 0 5px 0;
-}
-
-.xSelect {
-  @extend .w-100,
-  .p-rel;
-
-  .xSelect__label {
-    background-color: #fff;
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    padding: 5px 10px;
-    border: 1px solid #00000030;
-    user-select: none;
-    cursor: pointer;
-
-    .xSelect__label__icon {
-      transition: 0.3s ease-in-out
-    }
-  }
-
-  .xSelect__options {
-    @extend .p-abs,
-    .mt-1,
-    .w-100,
-    .rounded,
-    .trans-4;
-    overflow-y: scroll;
-    background-color: #fff;
-    max-height: 300px;
-    padding: 50px 5px 5px 5px;
-    border: 1px solid #00000030;
-    z-index: variables.$zNavMenuToggle;
-    clip-path: inset(0 0 100% 0);
-
-    .xSelect__search {
-      @extend .p-abs,
-      .w-100,
-      .t-0,
-      .r-0,
-      .p-1;
-      height: 40px;
-      border: none;
-      background-color: #f7f7f7;
-    }
-
-    .xSelect__option {
-      @extend .p-rel;
-
-      .xSelect__option__name {
-        @extend .p-1-2,
-        .w-100;
-        cursor: pointer;
-      }
-
-      &:hover {
-        @extend .bg-light;
-      }
-
-      input {
-        @extend .p-abs,
-        .t-0,
-        .r-0,
-        .opt-0;
-        z-index: variables.$below;
-      }
-    }
-  }
-
-  .xToggle {
-    clip-path: inset(0 0 0 0);
-  }
-
-  .xToggleArrow {
-    transform: scaleY(-1)
-  }
 }
 
 .checkbox {
@@ -170,46 +89,5 @@
 
   &:focus {
     outline: 0;
-  }
-}
-
-.file {
-  padding: 1em;
-  margin: 5px;
-  outline: 0;
-  opacity: 0.5;
-  pointer-events: none;
-  user-select: none;
-
-  .file__label {
-    width: 100%;
-    border: 2px dashed variables.$dark;
-    border-radius: 5px;
-    display: block;
-    padding: 1.2em;
-    transition: border 300ms ease;
-    cursor: pointer;
-    text-align: center;
-
-    i {
-      display: block;
-      font-size: 42px;
-      padding-bottom: 16px;
-    }
-
-    i,
-    .file__title {
-      color: variables.$darkHA;
-      transition: 200ms color;
-    }
-
-    &:hover {
-      border: 2px solid variables.$darkHA;
-
-      i,
-      .file__title {
-        color: variables.$darkHA;
-      }
-    }
   }
 }
