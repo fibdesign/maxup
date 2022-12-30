@@ -7,3 +7,4 @@
 * new and responsive table style
 * icon btn
 * accessible variables with `var(--name-of-variable)`
+* responsive font
