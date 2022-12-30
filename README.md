@@ -1,7 +1,8 @@
 # Maxup
-![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/fibdesign/maxup)
 
-## Introduction
+[//]: # (![GitHub tag &#40;latest SemVer&#41;]&#40;https://img.shields.io/github/v/tag/fibdesign/maxup&#41;)
+
+[//]: # (## Introduction)
 Maxup is a css framework to make your project beautiful & fast to end it.
 
 Documentation soon... 
