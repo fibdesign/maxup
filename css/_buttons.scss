@@ -310,16 +310,16 @@ a.btn {
 
       &-block {
         @extend .btn-block,
-        .btn-o-primary;
+        .btn-o-custom;
       }
 
       &-r {
-        @extend .btn-o-primary,
+        @extend .btn-o-custom,
         .round-50;
 
         &-block {
           @extend .btn-block,
-          .btn-o-primary-r;
+          .btn-o-custom-r;
         }
       }
     }

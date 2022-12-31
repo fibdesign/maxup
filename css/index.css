@@ -85,9 +85,9 @@ a.btn-o-dark-r-block,
 a.btn-o-dark-r, .btn-o-light-r, .btn-o-light-r-block,
 a.btn-o-light-r-block,
 a.btn-o-light-r, .btn-o-primary-r, .btn-o-primary-r-block,
-a.btn-o-primary-r-block, .btn-o-custom-r-block,
+a.btn-o-primary-r-block,
+a.btn-o-primary-r, .btn-o-custom-r, .btn-o-custom-r-block,
 a.btn-o-custom-r-block,
-a.btn-o-primary-r, .btn-o-custom-r,
 a.btn-o-custom-r, .btn-bee-r, .btn-bee-r-block,
 a.btn-bee-r-block,
 a.btn-bee-r, .btn-secondary-r, .btn-secondary-r-block,
@@ -1574,13 +1574,16 @@ a.btn-bee:hover,
 a.btn-bee.active {
   background-color: #efb90e;
 }
-.btn-o-custom,
+.btn-o-custom, .btn-o-custom-r, .btn-o-custom-r-block,
+a.btn-o-custom-r-block,
+a.btn-o-custom-r, .btn-o-custom-block,
+a.btn-o-custom-block,
 a.btn-o-custom {
   background-color: unset;
   color: var(--custom-btn-color, #6182b7);
   border: solid 1px var(--custom-btn-bg, #6182b7);
 }
-.btn-o-custom:hover, .btn-o-custom.active,
+.btn-o-custom:hover, .btn-o-custom-r:hover, .btn-o-custom-r-block:hover, .btn-o-custom-block:hover, .btn-o-custom.active, .active.btn-o-custom-r, .active.btn-o-custom-r-block, .active.btn-o-custom-block,
 a.btn-o-custom:hover,
 a.btn-o-custom.active {
   background-color: var(--custom-btn-bg-active, #5a79ab);
@@ -1588,18 +1591,15 @@ a.btn-o-custom.active {
   color: var(--custom-btn-color-active, white);
 }
 .btn-o-primary, .btn-o-primary-r, .btn-o-primary-r-block,
-a.btn-o-primary-r-block, .btn-o-custom-r-block,
-a.btn-o-custom-r-block,
+a.btn-o-primary-r-block,
 a.btn-o-primary-r, .btn-o-primary-block,
-a.btn-o-primary-block, .btn-o-custom-block,
-a.btn-o-custom-block, .btn-o-custom-r,
-a.btn-o-custom-r,
+a.btn-o-primary-block,
 a.btn-o-primary {
   background-color: unset;
   color: #6182b7;
   border: solid 1px #6182b7;
 }
-.btn-o-primary:hover, .btn-o-primary-r:hover, .btn-o-primary-r-block:hover, .btn-o-custom-r-block:hover, .btn-o-primary-block:hover, .btn-o-custom-block:hover, .btn-o-custom-r:hover, .btn-o-primary.active, .active.btn-o-primary-r, .active.btn-o-primary-r-block, .active.btn-o-custom-r-block, .active.btn-o-primary-block, .active.btn-o-custom-block, .active.btn-o-custom-r,
+.btn-o-primary:hover, .btn-o-primary-r:hover, .btn-o-primary-r-block:hover, .btn-o-primary-block:hover, .btn-o-primary.active, .active.btn-o-primary-r, .active.btn-o-primary-r-block, .active.btn-o-primary-block,
 a.btn-o-primary:hover,
 a.btn-o-primary.active {
   background-color: #6182b7;
