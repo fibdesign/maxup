@@ -298,7 +298,7 @@ a.btn {
 
     &-custom {
       background-color: unset;
-      color: var(--custom-btn-color, variables.$primary);
+      color: var(--custom-btn-bg, variables.$primary);
       border: solid 1px var(--custom-btn-bg,variables.$primary);
 
       &:hover,

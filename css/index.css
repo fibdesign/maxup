@@ -1580,7 +1580,7 @@ a.btn-o-custom-r, .btn-o-custom-block,
 a.btn-o-custom-block,
 a.btn-o-custom {
   background-color: unset;
-  color: var(--custom-btn-color, #6182b7);
+  color: var(--custom-btn-bg, #6182b7);
   border: solid 1px var(--custom-btn-bg, #6182b7);
 }
 .btn-o-custom:hover, .btn-o-custom-r:hover, .btn-o-custom-r-block:hover, .btn-o-custom-block:hover, .btn-o-custom.active, .active.btn-o-custom-r, .active.btn-o-custom-r-block, .active.btn-o-custom-block,
