@@ -99,8 +99,8 @@
 
   @for $i from 1 through 6 {
     &-#{$i} {
-      flex: 0 0 (1% * (100/$i));
-      max-width: (1% * (100/$i));
+      flex: 0 0 calc(1% * calc(100/$i));
+      max-width: calc(1% * calc(100/$i));
 
       @for $j from 1 through 6 {
         &-#{$j} {
@@ -135,8 +135,8 @@
 
     @for $i from 1 through 6 {
       &-#{$i} {
-        flex: 0 0 (1% * (100/$i));
-        max-width: (1% * (100/$i));
+        flex: 0 0 calc(1% * calc(100/$i));
+        max-width: calc(1% * calc(100/$i));
       }
     }
   }
@@ -187,8 +187,8 @@
 
     @for $i from 1 through 6 {
       &-#{$i} {
-        flex: 0 0 (1% * (100/$i));
-        max-width: (1% * (100/$i));
+        flex: 0 0 calc(1% * calc(100/$i));
+        max-width: calc(1% * calc(100/$i));
       }
     }
   }
