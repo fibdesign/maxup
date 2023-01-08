@@ -1789,8 +1789,8 @@ a.btn-o-bee.active {
   color: #b4b4b4;
 }
 .form.failed, .failed.form-r {
-  border: 1px solid #d9534f;
-  color: #d9534f;
+  border: 1px solid #d9534f !important;
+  color: #d9534f !important;
 }
 .form.failed::placeholder, .failed.form-r::placeholder {
   color: rgba(205, 78, 74, 0.3);

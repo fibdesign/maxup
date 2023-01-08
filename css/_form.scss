@@ -18,8 +18,8 @@
   }
 
   &.failed {
-    border: 1px solid variables.$danger;
-    color: variables.$danger;
+    border: 1px solid variables.$danger!important;
+    color: variables.$danger!important;
 
     &::placeholder {
       color: variables.$dangerG
