@@ -1,7 +1,7 @@
 @use "_variables";
 
 .btn-block {
-  @extend .w-100;
+  width: 100%!important;
 }
 
 .borderless {
@@ -16,7 +16,9 @@ button {
   border: unset;
 }
 
-a.btn{width: fit-content;}
+a.btn{
+  width: fit-content;
+}
 .btn,
 a.btn {
   @extend button;
