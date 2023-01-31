@@ -11,6 +11,26 @@
   --color-success: #009774;
   --color-secondary: #655653;
   --color-bee: #ffc40e;
+  --anchor-color: unset;
+  --nav-link-color: unset;
+}
+
+/*colors*/
+:root {
+  --under-mobile-size: 641px;
+  --under-desktop-size: 961px;
+  --tv-size: 1281px;
+  --color-primary: #6182b7;
+  --color-light: #f1f1f1;
+  --color-dark: #161d20;
+  --color-warning: #ec4908;
+  --color-danger: #d9534f;
+  --color-info: #5bc0de;
+  --color-success: #009774;
+  --color-secondary: #655653;
+  --color-bee: #ffc40e;
+  --anchor-color: unset;
+  --nav-link-color: unset;
 }
 
 /*colors*/
@@ -206,17 +226,38 @@ a.btn {
 .space {
   justify-content: space-between;
 }
-
-.spaceStart {
-  margin-inline-start: auto;
+.space-around {
+  justify-content: space-around;
+}
+.space-justice {
+  justify-content: space-between;
+}
+.space-center {
+  justify-content: center;
+}
+.space-start {
+  justify-content: flex-start;
+}
+.space-end {
+  justify-content: flex-end;
 }
 
-.spaceEnd {
-  margin-inline-end: auto;
+.align-center {
+  align-items: center;
+}
+.align-star {
+  align-items: flex-start;
+}
+.align-end {
+  align-items: flex-end;
 }
 
 .aspectRatioCube {
   aspect-ratio: 1/1;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 .m-0 {
@@ -712,6 +753,9 @@ a.btn {
 .box-s, .navigation {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
 }
+.box-ss {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.062745098);
+}
 .box-l {
   box-shadow: -7px -7px 20px #ffffff, 4px 4px 20px #d3dbe6;
 }
@@ -985,6 +1029,8 @@ a.btn-white {
   --color-success: #009774;
   --color-secondary: #655653;
   --color-bee: #ffc40e;
+  --anchor-color: unset;
+  --nav-link-color: unset;
 }
 
 /*colors*/
@@ -993,7 +1039,8 @@ a.btn-white {
   flex-wrap: nowrap;
   height: fit-content;
 }
-.navigation * {
+.navigation *:not(button, .btn,
+a.btn) {
   padding: 0 5px;
 }
 .navigation .brand {
@@ -1021,22 +1068,25 @@ a.btn-white {
 .navigation ul {
   list-style: none;
 }
-.navigation ul li a:not(.btn, .exlMe) {
+.navigation ul li a:not(.btn, .exlMe, button,
+a.btn) {
   text-transform: capitalize;
   opacity: 0.6;
   transition: 0.2s ease-in-out;
 }
-.navigation ul li a:not(.btn, .exlMe):hover, .navigation ul li a:not(.btn, .exlMe).activeLink {
+.navigation ul li a:not(.btn, .exlMe, button,
+a.btn):hover, .navigation ul li a:not(.btn, .exlMe, button,
+a.btn).activeLink {
   opacity: 1;
-  font-weight: bold;
+  color: var(--nav-link-color, unset) !important;
 }
 .navigation.noshadow {
   box-shadow: unset;
 }
-.navigation.navLight *:not(.brand *) {
+.navigation.navLight *:not(.brand *, button, .btn, button span, .btn span) {
   color: #161d20;
 }
-.navigation.navDark *:not(.brand *) {
+.navigation.navDark *:not(.brand *, button, .btn, button span, .btn span) {
   color: #f1f1f1;
 }
 
@@ -1239,19 +1289,13 @@ a.btn-white {
   --color-success: #009774;
   --color-secondary: #655653;
   --color-bee: #ffc40e;
+  --anchor-color: unset;
+  --nav-link-color: unset;
 }
 
 /*colors*/
 .container {
   padding: 0 8rem;
-}
-
-.alignCenter {
-  align-items: center;
-}
-
-.justifyCenter {
-  justify-content: center;
 }
 
 .row, .column-reverse, .column, .column-c, .row-reverse {
@@ -1438,6 +1482,8 @@ a.btn-white {
   --color-success: #009774;
   --color-secondary: #655653;
   --color-bee: #ffc40e;
+  --anchor-color: unset;
+  --nav-link-color: unset;
 }
 
 /*colors*/
@@ -1774,9 +1820,15 @@ a.btn-o-bee.active {
   --color-success: #009774;
   --color-secondary: #655653;
   --color-bee: #ffc40e;
+  --anchor-color: unset;
+  --nav-link-color: unset;
 }
 
 /*colors*/
+label {
+  display: block;
+}
+
 .form, .form-r {
   border-radius: 10px;
   min-height: calc(2.25rem + 2px);
@@ -1799,6 +1851,12 @@ a.btn-o-bee.active {
 .form.failed::placeholder, .failed.form-r::placeholder {
   color: rgba(205, 78, 74, 0.3);
 }
+.form.disabled, .disabled.form-r {
+  opacity: 0.5;
+  filter: grayscale(100%);
+  pointer-events: none;
+}
+
 .progress {
   height: 10px;
   color: white;
@@ -1863,6 +1921,8 @@ a.btn-o-bee.active {
   --color-success: #009774;
   --color-secondary: #655653;
   --color-bee: #ffc40e;
+  --anchor-color: unset;
+  --nav-link-color: unset;
 }
 
 /*colors*/
@@ -1877,10 +1937,16 @@ body {
 
 * a {
   text-decoration: none;
-  color: unset;
+  color: var(--anchor-color, unset);
 }
 * ul {
   list-style: none;
+}
+* ul.circle {
+  list-style: circle;
+}
+* ul.disk {
+  list-style: disc;
 }
 * p,
 * a:not(.btn) {
@@ -1945,14 +2011,11 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: unset;
 }
 
 hr {
   opacity: 0.3;
-}
-
-.listCircle {
-  list-style: circle !important;
 }
 
 .p-abs {

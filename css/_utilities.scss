@@ -198,21 +198,24 @@
 }
 
 .space {
-  justify-content: space-between
+  justify-content: space-between;
+  &-around{justify-content: space-around;}
+  &-justice{justify-content: space-between;}
+  &-center{justify-content: center;}
+  &-start{justify-content: flex-start;}
+  &-end{justify-content: flex-end;}
 }
-
-.spaceStart {
-  margin-inline-start: auto
+.align{
+  &-center {align-items: center;}
+  &-star {align-items: flex-start;}
+  &-end {align-items: flex-end;}
 }
-
-.spaceEnd {
-  margin-inline-end: auto
-}
-
 .aspectRatioCube {
   aspect-ratio: 1/1
 }
-
+.nowrap{
+  white-space: nowrap;
+}
 .m {
   &-0 {
     margin: 0;
@@ -890,6 +893,9 @@
 .box {
   &-s {
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
+  }
+  &-ss {
+    box-shadow: 0 0 10px #00000010;
   }
 
   &-l {

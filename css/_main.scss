@@ -12,11 +12,13 @@ body {
 * {
     a {
         text-decoration: none;
-        color: unset;
+        color: var(--anchor-color, unset);
     }
 
     ul {
         list-style: none;
+        &.circle{list-style: circle}
+        &.disk{list-style: disc}
     }
 
     p,
@@ -95,14 +97,11 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: unset;
 }
 
 hr {
     opacity: 0.3;
-}
-
-.listCircle {
-    list-style: circle !important;
 }
 
 .p- {

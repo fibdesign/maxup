@@ -1,5 +1,7 @@
 @use "variables";
-
+label{
+  display:block;
+}
 .form {
   @extend .w-100;
   border-radius: 10px;
@@ -29,6 +31,12 @@
   &-r {
     @extend .form,
     .round-50;
+  }
+
+  &.disabled{
+    opacity: 0.5;
+    filter: grayscale(100%);
+    pointer-events: none;
   }
 }
 
