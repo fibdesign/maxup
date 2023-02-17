@@ -1307,6 +1307,7 @@ a.btn).activeLink {
 }
 .row-a {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 .row-c, .avatar {
