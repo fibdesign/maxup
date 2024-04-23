@@ -75,7 +75,7 @@ a.btn, .alert, .alert-bee, .alert-secondary, .alert-success, .alert-info, .alert
   border-radius: 10px !important;
 }
 .round-15 {
-  border-radius: 10px !important;
+  border-radius: 15px !important;
 }
 .round-20 {
   border-radius: 20px !important;
@@ -1068,14 +1068,14 @@ a.btn) {
 .navigation ul {
   list-style: none;
 }
-.navigation ul li a:not(.btn, .exlMe, button,
+.navigation ul li a:not(.exlMe, button, .btn,
 a.btn) {
   text-transform: capitalize;
   opacity: 0.6;
   transition: 0.2s ease-in-out;
 }
-.navigation ul li a:not(.btn, .exlMe, button,
-a.btn):hover, .navigation ul li a:not(.btn, .exlMe, button,
+.navigation ul li a:not(.exlMe, button, .btn,
+a.btn):hover, .navigation ul li a:not(.exlMe, button, .btn,
 a.btn).activeLink {
   opacity: 1;
   color: var(--nav-link-color, unset) !important;
@@ -1083,10 +1083,12 @@ a.btn).activeLink {
 .navigation.noshadow {
   box-shadow: unset;
 }
-.navigation.navLight *:not(.brand *, button, .btn, button span, .btn span) {
+.navigation.navLight *:not(.brand *, button, .btn,
+a.btn, button span, .btn span) {
   color: #161d20;
 }
-.navigation.navDark *:not(.brand *, button, .btn, button span, .btn span) {
+.navigation.navDark *:not(.brand *, button, .btn,
+a.btn, button span, .btn span) {
   color: #f1f1f1;
 }
 
