@@ -1374,7 +1374,7 @@ a.btn, button span, .btn span) {
 }
 .xTable thead tr {
   position: sticky;
-  top: 60px;
+  top: var(--table-stick-from-top, 60px);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.062745098);
   border-radius: 15px;
 }
@@ -1540,6 +1540,12 @@ a.btn, button span, .btn span) {
     width: 50%;
     text-align: right;
     font-weight: bold;
+  }
+  .xTable td.full-cell {
+    padding-right: 1rem;
+  }
+  .xTable td.full-cell:before {
+    display: none;
   }
 }
 @media screen and (max-width: 641px) {

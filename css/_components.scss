@@ -97,7 +97,7 @@
   thead {
     tr{
       position: sticky;
-      top: 60px;
+      top: var(--table-stick-from-top, 60px);
       box-shadow: 0 0 6px #00000010;
       border-radius: 15px;
     }
@@ -306,6 +306,13 @@
         width: 50%;
         text-align: right;
         font-weight: bold;
+      }
+
+      &.full-cell{
+        padding-right: 1rem;
+        &:before{
+          display: none;
+        }
       }
     }
   }
