@@ -128,6 +128,9 @@
   &-auto {
     width: auto;
   }
+  &-fit {
+    width: fit-content;
+  }
 
   &v {
     &-25 {
@@ -167,6 +170,9 @@
 
   &-auto {
     width: auto;
+  }
+  &-fit {
+    width: fit-content;
   }
 
   &v {
@@ -210,8 +216,10 @@
   &-star {align-items: flex-start;}
   &-end {align-items: flex-end;}
 }
-.aspectRatioCube {
-  aspect-ratio: 1/1
+.aspectRatio{
+  &Cube {aspect-ratio: 1/1}
+  &Movie{aspect-ratio: 16/9;}
+  &Dribbble{aspect-ratio: 4/3}
 }
 .nowrap{
   white-space: nowrap;
