@@ -1,8 +1,26 @@
 @use "variables";
 .container {
-  padding: 0 8rem;
+  width: calc(100% - 16rem);
+  margin-inline: auto;
+  @media (max-width: variables.$under-desktop-size){
+    width: calc(100% - 8rem);
+  }
+  @media (max-width: variables.$under-mobile-size){
+    width: calc(100% - 4rem);
+  }
 }
-
+.mid-container{
+  width: calc(100% - 10rem);
+  margin-inline: auto;
+  @media screen and (max-width: 641px){
+    width: calc(100% - 2rem);
+    margin-inline: auto;
+  }
+}
+.super-container{
+  width: min(500px, 90%);
+  margin-inline: auto;
+}
 .ro {
   &w {
     display: flex;
@@ -54,10 +72,16 @@
 }
 
 .corow {
-  width: calc(100% - 8rem);
-  margin-inline-start: 4rem;
+  width: calc(100% - 16rem);
+  margin-inline: auto;
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: variables.$under-desktop-size){
+    width: calc(100% - 8rem);
+  }
+  @media (max-width: variables.$under-mobile-size){
+    width: calc(100% - 4rem);
+  }
 }
 
 [class^=xcol] {
@@ -117,13 +141,6 @@
 
 
 @media (max-width: variables.$under-desktop-size) {
-  .container{
-    padding: 0 4rem;
-  }
-  .corow{
-    width: calc(100% - 4rem);
-    margin-inline-start: 2rem;
-  }
 
   .xcol_media_tablet {
     flex: 0 0 100%;
@@ -169,14 +186,6 @@
 }
 
 @media (max-width: variables.$under-mobile-size) {
-  .container{
-    padding: 0 2rem;
-  }
-
-  .corow{
-    width: calc(100% - 2rem);
-    margin-inline-start: 1rem;
-  }
   .xcol_media_mobile {
     flex: 0 0 100%;
     max-width: 100%;
