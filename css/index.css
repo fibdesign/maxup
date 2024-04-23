@@ -361,7 +361,9 @@ a.btn-dark-r, .btn-light-r, .btn-light-r-block,
 a.btn-light-r-block,
 a.btn-light-r, .btn-primary-r, .btn-primary-r-block,
 a.btn-primary-r-block,
-a.btn-primary-r, .btn-custom-r, .btn-custom-r-block,
+a.btn-primary-r, .btn-custom-secondary-r,
+a.btn-custom-secondary-r, .btn-custom-r, .btn-custom-secondary-r-block,
+a.btn-custom-secondary-r-block, .btn-custom-r-block,
 a.btn-custom-r-block,
 a.btn-custom-r {
   border-radius: 50px !important;
@@ -1816,7 +1818,9 @@ a.btn-dark-block, .btn-light-r-block,
 a.btn-light-r-block, .btn-light-block,
 a.btn-light-block, .btn-primary-r-block,
 a.btn-primary-r-block, .btn-primary-block,
-a.btn-primary-block, .btn-custom-r-block,
+a.btn-primary-block, .btn-custom-secondary-r-block,
+a.btn-custom-secondary-r-block, .btn-custom-secondary-block,
+a.btn-custom-secondary-block, .btn-custom-r-block,
 a.btn-custom-r-block, .btn-custom-block,
 a.btn-custom-block {
   width: 100% !important;
@@ -1837,7 +1841,10 @@ a.btn {
   width: fit-content;
 }
 
-.btn-custom, .btn-custom-r, .btn-custom-r-block,
+.btn-custom, .btn-custom-secondary-r,
+a.btn-custom-secondary-r, .btn-custom-secondary-block,
+a.btn-custom-secondary-block, .btn-custom-r, .btn-custom-secondary-r-block,
+a.btn-custom-secondary-r-block, .btn-custom-r-block,
 a.btn-custom-r-block,
 a.btn-custom-r, .btn-custom-block,
 a.btn-custom-block,
@@ -1845,11 +1852,22 @@ a.btn-custom {
   background-color: var(--custom-btn-bg, #6182b7);
   color: var(--custom-btn-color, #fff);
 }
-.btn-custom:hover, .btn-custom-r:hover, .btn-custom-r-block:hover, .btn-custom-block:hover, .btn-custom.active, .active.btn-custom-r, .active.btn-custom-r-block, .active.btn-custom-block,
+.btn-custom:hover, .btn-custom-secondary-r:hover, .btn-custom-secondary-block:hover, .btn-custom-r:hover, .btn-custom-secondary-r-block:hover, .btn-custom-r-block:hover, .btn-custom-block:hover, .btn-custom.active, .active.btn-custom-secondary-r, .active.btn-custom-secondary-block, .active.btn-custom-r, .active.btn-custom-secondary-r-block, .active.btn-custom-r-block, .active.btn-custom-block,
 a.btn-custom:hover,
 a.btn-custom.active {
   background-color: var(--custom-btn-bg-active, #5a79ab);
   color: var(--custom-btn-color-active, #fff);
+}
+.btn-custom-secondary,
+a.btn-custom-secondary {
+  background-color: var(--custom-btn-bg-secondary, #009774);
+  color: var(--custom-btn-color-secondary, #fff);
+}
+.btn-custom-secondary:hover, .btn-custom-secondary.active,
+a.btn-custom-secondary:hover,
+a.btn-custom-secondary.active {
+  background-color: var(--custom-btn-bg-active-secondary, #008668);
+  color: var(--custom-btn-color-active-secondary, #fff);
 }
 .btn-primary:hover, .btn-primary-r:hover, .btn-primary-r-block:hover, .btn-primary-block:hover, .btn-primary.active, .active.btn-primary-r, .active.btn-primary-r-block, .active.btn-primary-block,
 a.btn-primary:hover,

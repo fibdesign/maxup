@@ -48,6 +48,31 @@ a.btn {
     }
   }
 
+  &-custom-secondary {
+    background-color: var(--custom-btn-bg-secondary, variables.$success);
+    color: var(--custom-btn-color-secondary, #fff);
+    &:hover,
+    &.active {
+      background-color: var(--custom-btn-bg-active-secondary, variables.$successHA);
+      color: var(--custom-btn-color-active-secondary, #fff);
+    }
+
+    &-block {
+      @extend .btn-block,
+      .btn-custom;
+    }
+
+    &-r {
+      @extend .btn-custom,
+      .round-50;
+
+      &-block {
+        @extend .btn-block,
+        .btn-custom-r;
+      }
+    }
+  }
+
   &-primary {
     @extend .f-light,
     .bg-primary;
