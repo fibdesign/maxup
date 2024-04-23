@@ -1391,7 +1391,15 @@ a.btn, button span, .btn span) {
   flex: 0 0 80%;
   max-width: 80%;
 }
+.xcol-body-keep {
+  flex: 0 0 80%;
+  max-width: 80%;
+}
 .xcol-info, .xcol-info-t {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+.xcol-info-keep {
   flex: 0 0 20%;
   max-width: 20%;
 }
@@ -1399,7 +1407,15 @@ a.btn, button span, .btn span) {
   flex: 0 0 70%;
   max-width: 70%;
 }
+.xcol-body-spaced-keep {
+  flex: 0 0 70%;
+  max-width: 70%;
+}
 .xcol-info-spaced, .xcol-info-spaced-t {
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+.xcol-info-spaced-keep {
   flex: 0 0 30%;
   max-width: 30%;
 }

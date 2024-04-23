@@ -97,24 +97,40 @@
     flex: 0 0 80%;
     max-width: 80%;
     &-t{@extend .xcol-body}
+    &-keep{
+      flex: 0 0 80%;
+      max-width: 80%;
+    }
   }
 
   &-info {
     flex: 0 0 20%;
     max-width: 20%;
     &-t{@extend .xcol-info}
+    &-keep{
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
   }
 
   &-body-spaced {
     flex: 0 0 70%;
     max-width: 70%;
     &-t{@extend .xcol-body-spaced}
+    &-keep{
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
   }
 
   &-info-spaced {
     flex: 0 0 30%;
     max-width: 30%;
     &-t{@extend .xcol-info-spaced}
+    &-keep{
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
   }
 
   @for $i from 1 through 6 {
