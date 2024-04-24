@@ -155,6 +155,22 @@
   }
 }
 
+.content-grid {
+  display: grid;
+  grid-template-columns:
+        [full-width-start]  100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px [full-width-end];
+
+  > * {
+    grid-column: content;
+  }
+  > .content-breakout{
+    grid-column: breakout;
+  }
+  > .content-full-width{
+    grid-column: full-width;
+  }
+}
+
 
 @media (max-width: variables.$under-desktop-size) {
 
