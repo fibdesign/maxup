@@ -1287,6 +1287,10 @@ a.btn-white {
     all: unset;
   }
 }
+.isolate {
+  isolation: isolate;
+}
+
 :root {
   --under-mobile-size: 641px;
   --under-desktop-size: 961px;
@@ -1721,8 +1725,15 @@ a.btn, button span, .btn span) {
   max-width: 16.6666666667%;
 }
 .content-grid {
+  --padding-inline: 1rem;
+  --content-max-width: 961px;
+  --breakout-max-width: 1200px;
+  --content-size: min(100% - (var(--padding-inline) * 2),var(--content-max-width));
+  --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
+  --breakout-size-minmax: minmax(0, var(--breakout-size));
+  --full-width-size: minmax(var(--padding-inline), 1fr);
   display: grid;
-  grid-template-columns: [full-width-start] 100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px [full-width-end];
+  grid-template-columns: [full-width-start] var(--full-width-size) [breakout-start] var(--breakout-size-minmax) [content-start] var(--content-size) [content-end] var(--breakout-size-minmax) [breakout-end] var(--full-width-size) [full-width-end];
 }
 .content-grid > * {
   grid-column: content;

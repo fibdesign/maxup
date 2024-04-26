@@ -157,11 +157,12 @@
 
 .content-grid {
   --padding-inline: 1rem;
-  --content-max-width: variables.$under-desktop-size;
+  --content-max-width: 961px;
   --breakout-max-width: 1200px;
 
   --content-size: min(100% - (var(--padding-inline) * 2),var(--content-max-width));
   --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
+  --breakout-size-minmax: minmax(0, var(--breakout-size));
   --full-width-size: minmax(var(--padding-inline), 1fr);
 
   display: grid;
@@ -169,13 +170,13 @@
         [full-width-start]
           var(--full-width-size)
               [breakout-start]
-                minmax(0, var(--breakout-size))
+                var(--breakout-size-minmax)
                   [content-start]
                     var(--content-size)
                   [content-end]
-                minmax(0, var(--breakout-size))
+                var(--breakout-size-minmax)
               [breakout-end]
-          var(--full-width-size)  
+          var(--full-width-size)
         [full-width-end];
 
   > * {
