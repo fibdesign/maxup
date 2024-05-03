@@ -22,18 +22,11 @@
       height: 40px;
     }
   }
-  #nav-check {
-    display: none;
-    &:checked ~ .nav-links{
-      max-height: 100vh !important;
-    }
-  }
 
   .nav-toggle {
     @extend .d-none,
     .rounded;
     background-color: transparent;
-    margin-inline-start: auto;
     cursor: pointer;
     width: fit-content;
     user-select: none;
@@ -212,30 +205,13 @@
 
   .navigation {
     flex-wrap: wrap;
-    //overflow: hidden;
-
-
-    .brand {
-      //flex: 0 0 80%;
-    }
 
     .nav-toggle {
-      //flex: 0 0 10%;
-      display: block !important;
+      display: block;
     }
 
     .nav-links{
-      flex: 0 0 100%;
-      max-height: 0;
-      overflow: hidden;
-    }
-    ul{
-      flex: 0 0 100%;
-      flex-wrap: wrap;
-
-      li {
-        flex: 0 0 100%;
-      }
+      display: none;
     }
   }
 
