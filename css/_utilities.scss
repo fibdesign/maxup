@@ -225,7 +225,7 @@
 }
 .align{
   &-center {align-items: center;}
-  &-star {align-items: flex-start;}
+  &-start {align-items: flex-start;}
   &-end {align-items: flex-end;}
 }
 .aspectRatio{
@@ -233,7 +233,7 @@
   &Movie{aspect-ratio: 16/9;}
   &Dribbble{aspect-ratio: 4/3}
 }
-.nowrap{
+.keep-text{
   white-space: nowrap;
 }
 .m {
@@ -435,6 +435,7 @@
 
   &t {
 
+    &-large{margin-top: 5rem;}
     &-2n {
       margin-top: -20px;
     }
@@ -474,6 +475,7 @@
 
   &b {
 
+    &-large{margin-bottom: 5rem;}
     &-2n {
       margin-bottom: -20px;
     }
@@ -570,6 +572,12 @@
       margin-right: auto;
     }
   }
+
+  &s-auto{margin-inline-start: auto}
+  &e-auto{margin-inline-end: auto}
+  &x-auto{margin-inline: auto}
+  &y-auto{margin-block: auto}
+
 }
 
 .p {
@@ -1098,10 +1106,20 @@
   &-20{gap: 20px;}
 }
 
+@media screen and (min-width: variables.$under-desktop-size) {
+  .hiddenAboveTablet{
+    display: none;
+  }
+}
+@media screen and (min-width: variables.$under-mobile-size) {
+  .hiddenAboveMobile{
+    display: none;
+  }
+}
 @media screen and (max-width: variables.$under-desktop-size) {
 
   .hiddenInTablet {
-    display: none;
+    display: none!important;
   }
 
   .order-t-1 {
@@ -1128,7 +1146,7 @@
 
 @media screen and (max-width: variables.$under-mobile-size) {
   .hiddenInMobile {
-    display: none;
+    display: none!important;
   }
 
   .w {

@@ -40,19 +40,6 @@
       align-items: center;
     }
   }
-
-  &x {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 0 0 100%;
-    max-width: 100%;
-
-    @for $i from 1 through 6 {
-      &-#{$i} {
-        @extend .xcol-#{$i};
-      }
-    }
-  }
 }
 
 .column {

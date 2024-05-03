@@ -63,7 +63,7 @@ body {
 
 
     p {
-        margin: 0 !important;
+        margin: 0;
         line-height: 2;
     }
 
@@ -79,14 +79,17 @@ body {
     .h4,
     .h5,
     .h6 {
-        margin: 0 !important;
-        font-weight: 500;
+        margin: 0;
+        font-weight: bold;
         color: inherit;
         line-height: 2;
     }
 
     :focus {
         outline: none !important;
+    }
+    :focus-visible{
+        outline: solid 1px blue!important;
     }
 
 }
@@ -225,6 +228,9 @@ hr {
 
 .t-0 {
     top: 0;
+}
+.t-offset-nav{
+    top: var(--t-offset-nav, 80px);
 }
 
 .b-0 {

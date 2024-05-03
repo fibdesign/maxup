@@ -40,22 +40,6 @@ label{
   }
 }
 
-.progress {
-  @extend .w-100,
-  .bg-light,
-  .round-50;
-  height: 10px;
-  color: white;
-}
-
-.progress .progressbar {
-  @extend .bg-success,
-  .round-50;
-  width: 60%;
-  height: 10px;
-  padding: 5px 0 5px 0;
-}
-
 .checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;

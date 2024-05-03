@@ -89,7 +89,7 @@ body {
   font-size: 1.2rem;
 }
 * p {
-  margin: 0 !important;
+  margin: 0;
   line-height: 2;
 }
 * h1,
@@ -104,13 +104,16 @@ body {
 * .h4,
 * .h5,
 * .h6 {
-  margin: 0 !important;
-  font-weight: 500;
+  margin: 0;
+  font-weight: bold;
   color: inherit;
   line-height: 2;
 }
 * :focus {
   outline: none !important;
+}
+* :focus-visible {
+  outline: solid 1px blue !important;
 }
 
 *,
@@ -218,6 +221,10 @@ hr {
   top: 0;
 }
 
+.t-offset-nav {
+  top: var(--t-offset-nav, 80px);
+}
+
 .b-0 {
   bottom: 0;
 }
@@ -319,7 +326,7 @@ a.btn, .alert, .alert-bee, .alert-secondary, .alert-success, .alert-info, .alert
 .round-40 {
   border-radius: 40px !important;
 }
-.round-50, .progress .progressbar, .progress, .form-r, .btn-o-bee-r, .btn-o-bee-r-block,
+.round-50, .form-r, .btn-o-bee-r, .btn-o-bee-r-block,
 a.btn-o-bee-r-block,
 a.btn-o-bee-r, .btn-o-secondary-r, .btn-o-secondary-r-block,
 a.btn-o-secondary-r-block,
@@ -418,7 +425,7 @@ a.btn {
 .w-75, .w-75-all {
   width: 75%;
 }
-.w-100, .progress, .form, .form-r, .alert, .alert-bee, .alert-secondary, .alert-success, .alert-info, .alert-danger, .alert-warning, .alert-dark, .alert-light, .alert-primary, .navigation.fixed {
+.w-100, .form, .form-r, .alert, .alert-bee, .alert-secondary, .alert-success, .alert-info, .alert-danger, .alert-warning, .alert-dark, .alert-light, .alert-primary, .navigation.fixed {
   width: 100%;
 }
 .w-auto {
@@ -512,7 +519,7 @@ a.btn {
 .align-center {
   align-items: center;
 }
-.align-star {
+.align-start {
   align-items: flex-start;
 }
 .align-end {
@@ -529,7 +536,7 @@ a.btn {
   aspect-ratio: 4/3;
 }
 
-.nowrap {
+.keep-text {
   white-space: nowrap;
 }
 
@@ -680,6 +687,9 @@ a.btn {
 .m-auto-5 {
   margin: auto 50px;
 }
+.mt-large {
+  margin-top: 5rem;
+}
 .mt-2n {
   margin-top: -20px;
 }
@@ -706,6 +716,9 @@ a.btn {
 }
 .mt-auto {
   margin-top: auto;
+}
+.mb-large {
+  margin-bottom: 5rem;
 }
 .mb-2n {
   margin-bottom: -20px;
@@ -775,6 +788,18 @@ a.btn {
 }
 .mr-auto {
   margin-right: auto;
+}
+.ms-auto {
+  margin-inline-start: auto;
+}
+.me-auto {
+  margin-inline-end: auto;
+}
+.mx-auto {
+  margin-inline: auto;
+}
+.my-auto {
+  margin-block: auto;
 }
 
 .p-0 {
@@ -1039,7 +1064,7 @@ a.btn {
 .bg-transparent {
   background-color: transparent;
 }
-.bg-light, .progress {
+.bg-light {
   background-color: #f1f1f1;
 }
 .bg-dark, .btn-dark, .btn-dark-r, .btn-dark-r-block,
@@ -1063,7 +1088,7 @@ a.btn-warning-block,
 a.btn-warning {
   background-color: #ec4908;
 }
-.bg-success, .progress .progressbar, .btn-success, .btn-success-r, .btn-success-r-block,
+.bg-success, .btn-success, .btn-success-r, .btn-success-r-block,
 a.btn-success-r-block,
 a.btn-success-r, .btn-success-block,
 a.btn-success-block,
@@ -1237,9 +1262,19 @@ a.btn-white {
   gap: 20px;
 }
 
+@media screen and (min-width: 961px) {
+  .hiddenAboveTablet {
+    display: none;
+  }
+}
+@media screen and (min-width: 641px) {
+  .hiddenAboveMobile {
+    display: none;
+  }
+}
 @media screen and (max-width: 961px) {
   .hiddenInTablet {
-    display: none;
+    display: none !important;
   }
   .order-t-1 {
     order: 1;
@@ -1259,7 +1294,7 @@ a.btn-white {
 }
 @media screen and (max-width: 641px) {
   .hiddenInMobile {
-    display: none;
+    display: none !important;
   }
   .w-25-all, .w-33-all, .w-66-all, .w-75-all {
     width: 100%;
@@ -1464,35 +1499,6 @@ a.btn, button span, .btn span) {
   color: #efb90e;
 }
 
-.pagination {
-  display: flex;
-}
-.pagination .disabled {
-  opacity: 0.5;
-}
-.pagination .active {
-  background-color: #3B69B1;
-  color: white;
-}
-.pagination li {
-  padding: 10px;
-  border: solid 1px rgba(0, 0, 0, 0.0823529412);
-}
-.pagination li:last-child {
-  margin-right: 5px;
-  border-top-left-radius: 7px;
-  border-bottom-left-radius: 7px;
-}
-.pagination li:first-child {
-  margin-left: 5px;
-  border-top-right-radius: 7px;
-  border-bottom-right-radius: 7px;
-}
-.pagination li:last-child, .pagination li:first-child {
-  background-color: #3B69B1;
-  color: white;
-}
-
 .avatar {
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -1627,12 +1633,7 @@ a.btn, button span, .btn span) {
   justify-content: center;
   align-items: center;
 }
-.rox {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 0 0 100%;
-  max-width: 100%;
-}
+
 .column, .column-c {
   flex-direction: column;
 }
@@ -1702,27 +1703,27 @@ a.btn, button span, .btn span) {
   flex: 0 0 30%;
   max-width: 30%;
 }
-.xcol-1, .xcol-1-6-3, .xcol-1-6-2, .xcol-1-6, .xcol-1-5-3, .xcol-1-5-2, .xcol-1-5, .xcol-1-4-3, .xcol-1-4-2, .xcol-1-4, .xcol-1-3-3, .xcol-1-3-2, .xcol-1-3, .xcol-1-2-3, .xcol-1-2-2, .xcol-1-2, .xcol-1-1-3, .xcol-1-1-2, .xcol-1-1, .rox-1 {
+.xcol-1, .xcol-1-6-3, .xcol-1-6-2, .xcol-1-6, .xcol-1-5-3, .xcol-1-5-2, .xcol-1-5, .xcol-1-4-3, .xcol-1-4-2, .xcol-1-4, .xcol-1-3-3, .xcol-1-3-2, .xcol-1-3, .xcol-1-2-3, .xcol-1-2-2, .xcol-1-2, .xcol-1-1-3, .xcol-1-1-2, .xcol-1-1 {
   flex: 0 0 100%;
   max-width: 100%;
 }
-.xcol-2, .xcol-2-6-3, .xcol-2-6-2, .xcol-2-6, .xcol-2-5-3, .xcol-2-5-2, .xcol-2-5, .xcol-2-4-3, .xcol-2-4-2, .xcol-2-4, .xcol-2-3-3, .xcol-2-3-2, .xcol-2-3, .xcol-2-2-3, .xcol-2-2-2, .xcol-2-2, .xcol-2-1-3, .xcol-2-1-2, .xcol-2-1, .rox-2 {
+.xcol-2, .xcol-2-6-3, .xcol-2-6-2, .xcol-2-6, .xcol-2-5-3, .xcol-2-5-2, .xcol-2-5, .xcol-2-4-3, .xcol-2-4-2, .xcol-2-4, .xcol-2-3-3, .xcol-2-3-2, .xcol-2-3, .xcol-2-2-3, .xcol-2-2-2, .xcol-2-2, .xcol-2-1-3, .xcol-2-1-2, .xcol-2-1 {
   flex: 0 0 50%;
   max-width: 50%;
 }
-.xcol-3, .xcol-3-6-3, .xcol-3-6-2, .xcol-3-6, .xcol-3-5-3, .xcol-3-5-2, .xcol-3-5, .xcol-3-4-3, .xcol-3-4-2, .xcol-3-4, .xcol-3-3-3, .xcol-3-3-2, .xcol-3-3, .xcol-3-2-3, .xcol-3-2-2, .xcol-3-2, .xcol-3-1-3, .xcol-3-1-2, .xcol-3-1, .rox-3 {
+.xcol-3, .xcol-3-6-3, .xcol-3-6-2, .xcol-3-6, .xcol-3-5-3, .xcol-3-5-2, .xcol-3-5, .xcol-3-4-3, .xcol-3-4-2, .xcol-3-4, .xcol-3-3-3, .xcol-3-3-2, .xcol-3-3, .xcol-3-2-3, .xcol-3-2-2, .xcol-3-2, .xcol-3-1-3, .xcol-3-1-2, .xcol-3-1 {
   flex: 0 0 33.3333333333%;
   max-width: 33.3333333333%;
 }
-.xcol-4, .xcol-4-6-3, .xcol-4-6-2, .xcol-4-6, .xcol-4-5-3, .xcol-4-5-2, .xcol-4-5, .xcol-4-4-3, .xcol-4-4-2, .xcol-4-4, .xcol-4-3-3, .xcol-4-3-2, .xcol-4-3, .xcol-4-2-3, .xcol-4-2-2, .xcol-4-2, .xcol-4-1-3, .xcol-4-1-2, .xcol-4-1, .rox-4 {
+.xcol-4, .xcol-4-6-3, .xcol-4-6-2, .xcol-4-6, .xcol-4-5-3, .xcol-4-5-2, .xcol-4-5, .xcol-4-4-3, .xcol-4-4-2, .xcol-4-4, .xcol-4-3-3, .xcol-4-3-2, .xcol-4-3, .xcol-4-2-3, .xcol-4-2-2, .xcol-4-2, .xcol-4-1-3, .xcol-4-1-2, .xcol-4-1 {
   flex: 0 0 25%;
   max-width: 25%;
 }
-.xcol-5, .xcol-5-6-3, .xcol-5-6-2, .xcol-5-6, .xcol-5-5-3, .xcol-5-5-2, .xcol-5-5, .xcol-5-4-3, .xcol-5-4-2, .xcol-5-4, .xcol-5-3-3, .xcol-5-3-2, .xcol-5-3, .xcol-5-2-3, .xcol-5-2-2, .xcol-5-2, .xcol-5-1-3, .xcol-5-1-2, .xcol-5-1, .rox-5 {
+.xcol-5, .xcol-5-6-3, .xcol-5-6-2, .xcol-5-6, .xcol-5-5-3, .xcol-5-5-2, .xcol-5-5, .xcol-5-4-3, .xcol-5-4-2, .xcol-5-4, .xcol-5-3-3, .xcol-5-3-2, .xcol-5-3, .xcol-5-2-3, .xcol-5-2-2, .xcol-5-2, .xcol-5-1-3, .xcol-5-1-2, .xcol-5-1 {
   flex: 0 0 20%;
   max-width: 20%;
 }
-.xcol-6, .xcol-6-6-3, .xcol-6-6-2, .xcol-6-6, .xcol-6-5-3, .xcol-6-5-2, .xcol-6-5, .xcol-6-4-3, .xcol-6-4-2, .xcol-6-4, .xcol-6-3-3, .xcol-6-3-2, .xcol-6-3, .xcol-6-2-3, .xcol-6-2-2, .xcol-6-2, .xcol-6-1-3, .xcol-6-1-2, .xcol-6-1, .rox-6 {
+.xcol-6, .xcol-6-6-3, .xcol-6-6-2, .xcol-6-6, .xcol-6-5-3, .xcol-6-5-2, .xcol-6-5, .xcol-6-4-3, .xcol-6-4-2, .xcol-6-4, .xcol-6-3-3, .xcol-6-3-2, .xcol-6-3, .xcol-6-2-3, .xcol-6-2-2, .xcol-6-2, .xcol-6-1-3, .xcol-6-1-2, .xcol-6-1 {
   flex: 0 0 16.6666666667%;
   max-width: 16.6666666667%;
 }
@@ -1748,7 +1749,7 @@ a.btn, button span, .btn span) {
 }
 
 @media (max-width: 961px) {
-  .xcol_media_tablet, .xcol-6, .rox-6, .xcol-6-1, .xcol-6-1-2, .xcol-6-1-3, .xcol-6-2, .xcol-6-2-2, .xcol-6-2-3, .xcol-6-3, .xcol-6-3-2, .xcol-6-3-3, .xcol-6-4, .xcol-6-4-2, .xcol-6-4-3, .xcol-6-5, .xcol-6-5-2, .xcol-6-5-3, .xcol-6-6, .xcol-6-6-2, .xcol-6-6-3, .xcol-5, .rox-5, .xcol-5-1, .xcol-5-1-2, .xcol-5-1-3, .xcol-5-2, .xcol-5-2-2, .xcol-5-2-3, .xcol-5-3, .xcol-5-3-2, .xcol-5-3-3, .xcol-5-4, .xcol-5-4-2, .xcol-5-4-3, .xcol-5-5, .xcol-5-5-2, .xcol-5-5-3, .xcol-5-6, .xcol-5-6-2, .xcol-5-6-3, .xcol-4, .rox-4, .xcol-4-1, .xcol-4-1-2, .xcol-4-1-3, .xcol-4-2, .xcol-4-2-2, .xcol-4-2-3, .xcol-4-3, .xcol-4-3-2, .xcol-4-3-3, .xcol-4-4, .xcol-4-4-2, .xcol-4-4-3, .xcol-4-5, .xcol-4-5-2, .xcol-4-5-3, .xcol-4-6, .xcol-4-6-2, .xcol-4-6-3, .xcol-3, .rox-3, .xcol-3-1, .xcol-3-1-2, .xcol-3-1-3, .xcol-3-2, .xcol-3-2-2, .xcol-3-2-3, .xcol-3-3, .xcol-3-3-2, .xcol-3-3-3, .xcol-3-4, .xcol-3-4-2, .xcol-3-4-3, .xcol-3-5, .xcol-3-5-2, .xcol-3-5-3, .xcol-3-6, .xcol-3-6-2, .xcol-3-6-3, .xcol-2, .rox-2, .xcol-2-1, .xcol-2-1-2, .xcol-2-1-3, .xcol-2-2, .xcol-2-2-2, .xcol-2-2-3, .xcol-2-3, .xcol-2-3-2, .xcol-2-3-3, .xcol-2-4, .xcol-2-4-2, .xcol-2-4-3, .xcol-2-5, .xcol-2-5-2, .xcol-2-5-3, .xcol-2-6, .xcol-2-6-2, .xcol-2-6-3, .xcol-1, .rox-1, .xcol-1-1, .xcol-1-1-2, .xcol-1-1-3, .xcol-1-2, .xcol-1-2-2, .xcol-1-2-3, .xcol-1-3, .xcol-1-3-2, .xcol-1-3-3, .xcol-1-4, .xcol-1-4-2, .xcol-1-4-3, .xcol-1-5, .xcol-1-5-2, .xcol-1-5-3, .xcol-1-6, .xcol-1-6-2, .xcol-1-6-3 {
+  .xcol_media_tablet, .xcol-6, .xcol-6-1, .xcol-6-1-2, .xcol-6-1-3, .xcol-6-2, .xcol-6-2-2, .xcol-6-2-3, .xcol-6-3, .xcol-6-3-2, .xcol-6-3-3, .xcol-6-4, .xcol-6-4-2, .xcol-6-4-3, .xcol-6-5, .xcol-6-5-2, .xcol-6-5-3, .xcol-6-6, .xcol-6-6-2, .xcol-6-6-3, .xcol-5, .xcol-5-1, .xcol-5-1-2, .xcol-5-1-3, .xcol-5-2, .xcol-5-2-2, .xcol-5-2-3, .xcol-5-3, .xcol-5-3-2, .xcol-5-3-3, .xcol-5-4, .xcol-5-4-2, .xcol-5-4-3, .xcol-5-5, .xcol-5-5-2, .xcol-5-5-3, .xcol-5-6, .xcol-5-6-2, .xcol-5-6-3, .xcol-4, .xcol-4-1, .xcol-4-1-2, .xcol-4-1-3, .xcol-4-2, .xcol-4-2-2, .xcol-4-2-3, .xcol-4-3, .xcol-4-3-2, .xcol-4-3-3, .xcol-4-4, .xcol-4-4-2, .xcol-4-4-3, .xcol-4-5, .xcol-4-5-2, .xcol-4-5-3, .xcol-4-6, .xcol-4-6-2, .xcol-4-6-3, .xcol-3, .xcol-3-1, .xcol-3-1-2, .xcol-3-1-3, .xcol-3-2, .xcol-3-2-2, .xcol-3-2-3, .xcol-3-3, .xcol-3-3-2, .xcol-3-3-3, .xcol-3-4, .xcol-3-4-2, .xcol-3-4-3, .xcol-3-5, .xcol-3-5-2, .xcol-3-5-3, .xcol-3-6, .xcol-3-6-2, .xcol-3-6-3, .xcol-2, .xcol-2-1, .xcol-2-1-2, .xcol-2-1-3, .xcol-2-2, .xcol-2-2-2, .xcol-2-2-3, .xcol-2-3, .xcol-2-3-2, .xcol-2-3-3, .xcol-2-4, .xcol-2-4-2, .xcol-2-4-3, .xcol-2-5, .xcol-2-5-2, .xcol-2-5-3, .xcol-2-6, .xcol-2-6-2, .xcol-2-6-3, .xcol-1, .xcol-1-1, .xcol-1-1-2, .xcol-1-1-3, .xcol-1-2, .xcol-1-2-2, .xcol-1-2-3, .xcol-1-3, .xcol-1-3-2, .xcol-1-3-3, .xcol-1-4, .xcol-1-4-2, .xcol-1-4-3, .xcol-1-5, .xcol-1-5-2, .xcol-1-5-3, .xcol-1-6, .xcol-1-6-2, .xcol-1-6-3 {
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -1782,7 +1783,7 @@ a.btn, button span, .btn span) {
   }
 }
 @media (max-width: 641px) {
-  .xcol_media_mobile, .xcol-6, .rox-6, .xcol-6-1, .xcol-6-1-2, .xcol-6-1-3, .xcol-6-2, .xcol-6-2-2, .xcol-6-2-3, .xcol-6-3, .xcol-6-3-2, .xcol-6-3-3, .xcol-6-4, .xcol-6-4-2, .xcol-6-4-3, .xcol-6-5, .xcol-6-5-2, .xcol-6-5-3, .xcol-6-6, .xcol-6-6-2, .xcol-6-6-3, .xcol-5, .rox-5, .xcol-5-1, .xcol-5-1-2, .xcol-5-1-3, .xcol-5-2, .xcol-5-2-2, .xcol-5-2-3, .xcol-5-3, .xcol-5-3-2, .xcol-5-3-3, .xcol-5-4, .xcol-5-4-2, .xcol-5-4-3, .xcol-5-5, .xcol-5-5-2, .xcol-5-5-3, .xcol-5-6, .xcol-5-6-2, .xcol-5-6-3, .xcol-4, .rox-4, .xcol-4-1, .xcol-4-1-2, .xcol-4-1-3, .xcol-4-2, .xcol-4-2-2, .xcol-4-2-3, .xcol-4-3, .xcol-4-3-2, .xcol-4-3-3, .xcol-4-4, .xcol-4-4-2, .xcol-4-4-3, .xcol-4-5, .xcol-4-5-2, .xcol-4-5-3, .xcol-4-6, .xcol-4-6-2, .xcol-4-6-3, .xcol-3, .rox-3, .xcol-3-1, .xcol-3-1-2, .xcol-3-1-3, .xcol-3-2, .xcol-3-2-2, .xcol-3-2-3, .xcol-3-3, .xcol-3-3-2, .xcol-3-3-3, .xcol-3-4, .xcol-3-4-2, .xcol-3-4-3, .xcol-3-5, .xcol-3-5-2, .xcol-3-5-3, .xcol-3-6, .xcol-3-6-2, .xcol-3-6-3, .xcol-2, .rox-2, .xcol-2-1, .xcol-2-1-2, .xcol-2-1-3, .xcol-2-2, .xcol-2-2-2, .xcol-2-2-3, .xcol-2-3, .xcol-2-3-2, .xcol-2-3-3, .xcol-2-4, .xcol-2-4-2, .xcol-2-4-3, .xcol-2-5, .xcol-2-5-2, .xcol-2-5-3, .xcol-2-6, .xcol-2-6-2, .xcol-2-6-3, .xcol-1, .rox-1, .xcol-1-1, .xcol-1-1-2, .xcol-1-1-3, .xcol-1-2, .xcol-1-2-2, .xcol-1-2-3, .xcol-1-3, .xcol-1-3-2, .xcol-1-3-3, .xcol-1-4, .xcol-1-4-2, .xcol-1-4-3, .xcol-1-5, .xcol-1-5-2, .xcol-1-5-3, .xcol-1-6, .xcol-1-6-2, .xcol-1-6-3 {
+  .xcol_media_mobile, .xcol-6, .xcol-6-1, .xcol-6-1-2, .xcol-6-1-3, .xcol-6-2, .xcol-6-2-2, .xcol-6-2-3, .xcol-6-3, .xcol-6-3-2, .xcol-6-3-3, .xcol-6-4, .xcol-6-4-2, .xcol-6-4-3, .xcol-6-5, .xcol-6-5-2, .xcol-6-5-3, .xcol-6-6, .xcol-6-6-2, .xcol-6-6-3, .xcol-5, .xcol-5-1, .xcol-5-1-2, .xcol-5-1-3, .xcol-5-2, .xcol-5-2-2, .xcol-5-2-3, .xcol-5-3, .xcol-5-3-2, .xcol-5-3-3, .xcol-5-4, .xcol-5-4-2, .xcol-5-4-3, .xcol-5-5, .xcol-5-5-2, .xcol-5-5-3, .xcol-5-6, .xcol-5-6-2, .xcol-5-6-3, .xcol-4, .xcol-4-1, .xcol-4-1-2, .xcol-4-1-3, .xcol-4-2, .xcol-4-2-2, .xcol-4-2-3, .xcol-4-3, .xcol-4-3-2, .xcol-4-3-3, .xcol-4-4, .xcol-4-4-2, .xcol-4-4-3, .xcol-4-5, .xcol-4-5-2, .xcol-4-5-3, .xcol-4-6, .xcol-4-6-2, .xcol-4-6-3, .xcol-3, .xcol-3-1, .xcol-3-1-2, .xcol-3-1-3, .xcol-3-2, .xcol-3-2-2, .xcol-3-2-3, .xcol-3-3, .xcol-3-3-2, .xcol-3-3-3, .xcol-3-4, .xcol-3-4-2, .xcol-3-4-3, .xcol-3-5, .xcol-3-5-2, .xcol-3-5-3, .xcol-3-6, .xcol-3-6-2, .xcol-3-6-3, .xcol-2, .xcol-2-1, .xcol-2-1-2, .xcol-2-1-3, .xcol-2-2, .xcol-2-2-2, .xcol-2-2-3, .xcol-2-3, .xcol-2-3-2, .xcol-2-3-3, .xcol-2-4, .xcol-2-4-2, .xcol-2-4-3, .xcol-2-5, .xcol-2-5-2, .xcol-2-5-3, .xcol-2-6, .xcol-2-6-2, .xcol-2-6-3, .xcol-1, .xcol-1-1, .xcol-1-1-2, .xcol-1-1-3, .xcol-1-2, .xcol-1-2-2, .xcol-1-2-3, .xcol-1-3, .xcol-1-3-2, .xcol-1-3-3, .xcol-1-4, .xcol-1-4-2, .xcol-1-4-3, .xcol-1-5, .xcol-1-5-2, .xcol-1-5-3, .xcol-1-6, .xcol-1-6-2, .xcol-1-6-3 {
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -1898,6 +1899,7 @@ a.btn {
 
 a.btn {
   width: fit-content;
+  display: block;
 }
 
 .btn-custom, .btn-custom-secondary-r,
@@ -2235,17 +2237,6 @@ label {
   opacity: 0.5;
   filter: grayscale(100%);
   pointer-events: none;
-}
-
-.progress {
-  height: 10px;
-  color: white;
-}
-
-.progress .progressbar {
-  width: 60%;
-  height: 10px;
-  padding: 5px 0 5px 0;
 }
 
 .checkbox {
