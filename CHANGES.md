@@ -9,7 +9,6 @@
 * vue transition class added (only fade) (beta)
 * content grid
 * margin inline and block
-* 
 
 # version 2.0.0 changes:
 
