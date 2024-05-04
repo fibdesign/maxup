@@ -1,4 +1,4 @@
-# version 2.1.0
+# version 2.1.1
 
 * new containers (mid-container, super-container)
 * xcol-body and xcol-info keep version
@@ -8,6 +8,8 @@
 * isolate class
 * vue transition class added (only fade) (beta)
 * content grid
+* margin inline and block
+* 
 
 # version 2.0.0 changes:
 
