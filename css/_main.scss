@@ -88,9 +88,6 @@ body {
     :focus {
         outline: none !important;
     }
-    :focus-visible{
-        outline: solid 1px blue!important;
-    }
 
 }
 
@@ -101,6 +98,7 @@ body {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-tap-highlight-color: unset;
+    tap-highlight-color: unset;
 }
 
 hr {

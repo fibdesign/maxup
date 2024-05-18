@@ -60,16 +60,16 @@ a.btn {
 
     &-block {
       @extend .btn-block,
-      .btn-custom;
+      .btn-custom-secondary;
     }
 
     &-r {
-      @extend .btn-custom,
+      @extend .btn-custom-secondary,
       .round-50;
 
       &-block {
         @extend .btn-block,
-        .btn-custom-r;
+        .btn-custom-secondary-r;
       }
     }
   }
@@ -365,7 +365,7 @@ a.btn {
 
       &-block {
         @extend .btn-block,
-        .btn-o-custom;
+        .btn-o-custom-secondary;
       }
 
       &-r {
@@ -374,7 +374,7 @@ a.btn {
 
         &-block {
           @extend .btn-block,
-          .btn-o-custom-r;
+          .btn-o-custom-secondary-r;
         }
       }
     }
