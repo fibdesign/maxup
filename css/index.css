@@ -1409,6 +1409,8 @@ a.btn, button span, .btn span) {
   top: var(--table-stick-from-top, 60px);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.062745098);
   border-radius: 15px;
+  color: var(--primary-color-text, inherit);
+  z-index: 2;
 }
 .xTable thead th {
   background-color: var(--custom-table-th-bg, #fafafa);
@@ -1614,6 +1616,13 @@ a.btn, button span, .btn span) {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+.flex-gow {
+  flex-grow: 1;
 }
 
 .column, .column-c {

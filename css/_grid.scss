@@ -41,7 +41,14 @@
     }
   }
 }
-
+.flex{
+  &-nowrap{
+    flex-wrap: nowrap;
+  }
+  &-gow{
+    flex-grow: 1;
+  }
+}
 .column {
   @extend .row;
   flex-direction: column;

@@ -93,6 +93,8 @@
       top: var(--table-stick-from-top, 60px);
       box-shadow: 0 0 6px #00000010;
       border-radius: 15px;
+      color: var(--primary-color-text, inherit);
+      z-index: 2;
     }
     th{
       background-color:  var(--custom-table-th-bg, #fafafa);
