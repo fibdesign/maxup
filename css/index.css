@@ -344,9 +344,7 @@ a.btn-o-dark-r, .btn-o-light-r, .btn-o-light-r-block,
 a.btn-o-light-r-block,
 a.btn-o-light-r, .btn-o-primary-r, .btn-o-primary-r-block,
 a.btn-o-primary-r-block,
-a.btn-o-primary-r, .btn-o-custom-secondary-r, .btn-o-custom-secondary-r-block,
-a.btn-o-custom-secondary-r-block,
-a.btn-o-custom-secondary-r, .btn-o-custom-r, .btn-o-custom-r-block,
+a.btn-o-primary-r, .btn-o-custom-r, .btn-o-custom-r-block,
 a.btn-o-custom-r-block,
 a.btn-o-custom-r, .btn-bee-r, .btn-bee-r-block,
 a.btn-bee-r-block,
@@ -368,9 +366,7 @@ a.btn-dark-r, .btn-light-r, .btn-light-r-block,
 a.btn-light-r-block,
 a.btn-light-r, .btn-primary-r, .btn-primary-r-block,
 a.btn-primary-r-block,
-a.btn-primary-r, .btn-custom-secondary-r, .btn-custom-secondary-r-block,
-a.btn-custom-secondary-r-block,
-a.btn-custom-secondary-r, .btn-custom-r, .btn-custom-r-block,
+a.btn-primary-r, .btn-custom-r, .btn-custom-r-block,
 a.btn-custom-r-block,
 a.btn-custom-r {
   border-radius: 50px !important;
@@ -1845,9 +1841,7 @@ a.btn-o-dark-block, .btn-o-light-r-block,
 a.btn-o-light-r-block, .btn-o-light-block,
 a.btn-o-light-block, .btn-o-primary-r-block,
 a.btn-o-primary-r-block, .btn-o-primary-block,
-a.btn-o-primary-block, .btn-o-custom-secondary-r-block,
-a.btn-o-custom-secondary-r-block, .btn-o-custom-secondary-block,
-a.btn-o-custom-secondary-block, .btn-o-custom-r-block,
+a.btn-o-primary-block, .btn-o-custom-r-block,
 a.btn-o-custom-r-block, .btn-o-custom-block,
 a.btn-o-custom-block, .btn-bee-r-block,
 a.btn-bee-r-block, .btn-bee-block,
@@ -1869,9 +1863,7 @@ a.btn-dark-block, .btn-light-r-block,
 a.btn-light-r-block, .btn-light-block,
 a.btn-light-block, .btn-primary-r-block,
 a.btn-primary-r-block, .btn-primary-block,
-a.btn-primary-block, .btn-custom-secondary-r-block,
-a.btn-custom-secondary-r-block, .btn-custom-secondary-block,
-a.btn-custom-secondary-block, .btn-custom-r-block,
+a.btn-primary-block, .btn-custom-r-block,
 a.btn-custom-r-block, .btn-custom-block,
 a.btn-custom-block {
   width: 100% !important;
@@ -1906,20 +1898,6 @@ a.btn-custom:hover,
 a.btn-custom.active {
   background-color: var(--custom-btn-bg-active, #5a79ab);
   color: var(--custom-btn-color-active, #fff);
-}
-.btn-custom-secondary, .btn-custom-secondary-r, .btn-custom-secondary-r-block,
-a.btn-custom-secondary-r-block,
-a.btn-custom-secondary-r, .btn-custom-secondary-block,
-a.btn-custom-secondary-block,
-a.btn-custom-secondary {
-  background-color: var(--custom-btn-bg-secondary, #009774);
-  color: var(--custom-btn-color-secondary, #fff);
-}
-.btn-custom-secondary:hover, .btn-custom-secondary-r:hover, .btn-custom-secondary-r-block:hover, .btn-custom-secondary-block:hover, .btn-custom-secondary.active, .active.btn-custom-secondary-r, .active.btn-custom-secondary-r-block, .active.btn-custom-secondary-block,
-a.btn-custom-secondary:hover,
-a.btn-custom-secondary.active {
-  background-color: var(--custom-btn-bg-active-secondary, #008668);
-  color: var(--custom-btn-color-active-secondary, #fff);
 }
 .btn-primary:hover, .btn-primary-r:hover, .btn-primary-r-block:hover, .btn-primary-block:hover, .btn-primary.active, .active.btn-primary-r, .active.btn-primary-r-block, .active.btn-primary-block,
 a.btn-primary:hover,
@@ -1981,9 +1959,7 @@ a.btn-bee:hover,
 a.btn-bee.active {
   background-color: #efb90e;
 }
-.btn-o-custom, .btn-o-custom-secondary-r, .btn-o-custom-secondary-r-block,
-a.btn-o-custom-secondary-r-block,
-a.btn-o-custom-secondary-r, .btn-o-custom-r, .btn-o-custom-r-block,
+.btn-o-custom, .btn-o-custom-r, .btn-o-custom-r-block,
 a.btn-o-custom-r-block,
 a.btn-o-custom-r, .btn-o-custom-block,
 a.btn-o-custom-block,
@@ -1992,26 +1968,12 @@ a.btn-o-custom {
   color: var(--custom-btn-bg, #6182b7);
   border: solid 1px var(--custom-btn-bg, #6182b7);
 }
-.btn-o-custom:hover, .btn-o-custom-secondary-r:hover, .btn-o-custom-secondary-r-block:hover, .btn-o-custom-r:hover, .btn-o-custom-r-block:hover, .btn-o-custom-block:hover, .btn-o-custom.active, .active.btn-o-custom-secondary-r, .active.btn-o-custom-secondary-r-block, .active.btn-o-custom-r, .active.btn-o-custom-r-block, .active.btn-o-custom-block,
+.btn-o-custom:hover, .btn-o-custom-r:hover, .btn-o-custom-r-block:hover, .btn-o-custom-block:hover, .btn-o-custom.active, .active.btn-o-custom-r, .active.btn-o-custom-r-block, .active.btn-o-custom-block,
 a.btn-o-custom:hover,
 a.btn-o-custom.active {
   background-color: var(--custom-btn-bg-active, #5a79ab);
   border: solid 1px var(--custom-btn-bg-active, #5a79ab);
   color: var(--custom-btn-color-active, white);
-}
-.btn-o-custom-secondary, .btn-o-custom-secondary-block,
-a.btn-o-custom-secondary-block,
-a.btn-o-custom-secondary {
-  background-color: unset;
-  color: var(--custom-btn-bg-secondary, #6182b7);
-  border: solid 1px var(--custom-btn-bg-secondary, #6182b7);
-}
-.btn-o-custom-secondary:hover, .btn-o-custom-secondary-block:hover, .btn-o-custom-secondary.active, .active.btn-o-custom-secondary-block,
-a.btn-o-custom-secondary:hover,
-a.btn-o-custom-secondary.active {
-  background-color: var(--custom-btn-bg-active-secondary, #5a79ab);
-  border: solid 1px var(--custom-btn-bg-active-secondary, #5a79ab);
-  color: var(--custom-btn-color-active-secondary, white);
 }
 .btn-o-primary, .btn-o-primary-r, .btn-o-primary-r-block,
 a.btn-o-primary-r-block,

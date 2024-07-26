@@ -49,31 +49,6 @@ a.btn {
     }
   }
 
-  &-custom-secondary {
-    background-color: var(--custom-btn-bg-secondary, variables.$success);
-    color: var(--custom-btn-color-secondary, #fff);
-    &:hover,
-    &.active {
-      background-color: var(--custom-btn-bg-active-secondary, variables.$successHA);
-      color: var(--custom-btn-color-active-secondary, #fff);
-    }
-
-    &-block {
-      @extend .btn-block,
-      .btn-custom-secondary;
-    }
-
-    &-r {
-      @extend .btn-custom-secondary,
-      .round-50;
-
-      &-block {
-        @extend .btn-block,
-        .btn-custom-secondary-r;
-      }
-    }
-  }
-
   &-primary {
     @extend .f-light,
     .bg-primary;
@@ -351,33 +326,7 @@ a.btn {
         }
       }
     }
-    &-custom-secondary {
-      background-color: unset;
-      color: var(--custom-btn-bg-secondary, variables.$primary);
-      border: solid 1px var(--custom-btn-bg-secondary,variables.$primary);
-
-      &:hover,
-      &.active {
-        background-color: var(--custom-btn-bg-active-secondary,variables.$primaryHA);
-        border: solid 1px var(--custom-btn-bg-active-secondary,variables.$primaryHA);
-        color: var(--custom-btn-color-active-secondary, white);
-      }
-
-      &-block {
-        @extend .btn-block,
-        .btn-o-custom-secondary;
-      }
-
-      &-r {
-        @extend .btn-o-custom,
-        .round-50;
-
-        &-block {
-          @extend .btn-block,
-          .btn-o-custom-secondary-r;
-        }
-      }
-    }
+    
     &-primary {
       background-color: unset;
       color: variables.$primary;
